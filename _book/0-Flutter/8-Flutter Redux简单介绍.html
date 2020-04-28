@@ -1,0 +1,1047 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Redux 介绍 · david zhong 的文档库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zhongshan">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Android-old/ArrayList源码学习.html" />
+    
+    
+    <link rel="prev" href="7-Flutter 引擎启动v1-12.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"DavidZhong003","width":"160","type":"follow","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">0-Flutter</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1-Flutter图片加载.html">
+            
+                <a href="1-Flutter图片加载.html">
+            
+                    
+                    Flutter 图片加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2-Flutter 应用启动分析.html">
+            
+                <a href="2-Flutter 应用启动分析.html">
+            
+                    
+                    Flutter 应用启动分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3-Flutter 混合工程.html">
+            
+                <a href="3-Flutter 混合工程.html">
+            
+                    
+                    Flutter 混合工程搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4-Flutter 混合工程踩坑记录.html">
+            
+                <a href="4-Flutter 混合工程踩坑记录.html">
+            
+                    
+                    Flutter混合工程踩坑记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="5-Flutter 混合工程上传AAR.html">
+            
+                <a href="5-Flutter 混合工程上传AAR.html">
+            
+                    
+                    Flutter 混合工程上传AAR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="6-Flutter 引擎启动v1-9.html">
+            
+                <a href="6-Flutter 引擎启动v1-9.html">
+            
+                    
+                    Flutter 引擎启动（1.9）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="7-Flutter 引擎启动v1-12.html">
+            
+                <a href="7-Flutter 引擎启动v1-12.html">
+            
+                    
+                    Flutter引擎启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="8-Flutter Redux简单介绍.html">
+            
+                <a href="8-Flutter Redux简单介绍.html">
+            
+                    
+                    Redux 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Android-old</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Android-old/ArrayList源码学习.html">
+            
+                <a href="../Android-old/ArrayList源码学习.html">
+            
+                    
+                    ArrayList 源码学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Android-old/Fragmentation 库学习笔记.html">
+            
+                <a href="../Android-old/Fragmentation 库学习笔记.html">
+            
+                    
+                    Fragmentation 库学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Android-old/HashMap源码学习.html">
+            
+                <a href="../Android-old/HashMap源码学习.html">
+            
+                    
+                    HashMap 源码学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../Android-old/JVM学习笔记.html">
+            
+                <a href="../Android-old/JVM学习笔记.html">
+            
+                    
+                    JVM 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../Android-old/LinkedList源码学习.html">
+            
+                <a href="../Android-old/LinkedList源码学习.html">
+            
+                    
+                    LinkedList 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../Android-old/Okhttp源码学习.html">
+            
+                <a href="../Android-old/Okhttp源码学习.html">
+            
+                    
+                    Okhttp 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../Android-old/Retrofit 学习笔记.html">
+            
+                <a href="../Android-old/Retrofit 学习笔记.html">
+            
+                    
+                    Retrofit 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../Android-old/Set集合源码学习.html">
+            
+                <a href="../Android-old/Set集合源码学习.html">
+            
+                    
+                    Set 集合源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../Android-old/沉浸式状态栏.html">
+            
+                <a href="../Android-old/沉浸式状态栏.html">
+            
+                    
+                    沉浸式状态栏
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">machine</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../machine/1-机器学习学习笔记--基础.html">
+            
+                <a href="../machine/1-机器学习学习笔记--基础.html">
+            
+                    
+                    机器学习笔记-基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../machine/2- 机器学习学习笔记--autograd自动求导.html">
+            
+                <a href="../machine/2- 机器学习学习笔记--autograd自动求导.html">
+            
+                    
+                    机器学习笔记-autograd自动求导
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../machine/3- 机器学习学习笔记--NDArray处理数据.html">
+            
+                <a href="../machine/3- 机器学习学习笔记--NDArray处理数据.html">
+            
+                    
+                    机器学习笔记-NDArray处理数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../machine/4-Numpy 教程.html">
+            
+                <a href="../machine/4-Numpy 教程.html">
+            
+                    
+                    机器学习笔记-Numpy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../machine/5-机器学习笔记--矩阵.html">
+            
+                <a href="../machine/5-机器学习笔记--矩阵.html">
+            
+                    
+                    机器学习笔记-矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../machine/6-机器学习笔记--线性回归.html">
+            
+                <a href="../machine/6-机器学习笔记--线性回归.html">
+            
+                    
+                    机器学习笔记-线性回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../其他/1-Conda常用命令.html">
+            
+                <a href="../其他/1-Conda常用命令.html">
+            
+                    
+                    管理conda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../其他/2-Git学习笔记.html">
+            
+                <a href="../其他/2-Git学习笔记.html">
+            
+                    
+                    Git 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../其他/3-UML类图.html">
+            
+                <a href="../其他/3-UML类图.html">
+            
+                    
+                    UML 类图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Redux 介绍</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#redux-&#x4ECB;&#x7ECD;"><b></b>Redux &#x4ECB;&#x7ECD;</a></li><ul><ul><li><span class="title-icon "></span><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;redux"><b></b>&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;redux</a></li><li><span class="title-icon "></span><a href="#redux-&#x6838;&#x5FC3;&#x6982;&#x5FF5;"><b></b>Redux &#x6838;&#x5FC3;&#x6982;&#x5FF5;</a></li><li><span class="title-icon "></span><a href="#flutterredux-&#x4E2D;&#x91CD;&#x8981;&#x7684;&#x7C7B;"><b></b>FlutterRedux &#x4E2D;&#x91CD;&#x8981;&#x7684;&#x7C7B;</a></li></ul></ul><li><span class="title-icon "></span><a href="#redux-&#x4F7F;&#x7528;"><b></b>Redux &#x4F7F;&#x7528;</a></li><ul><li><span class="title-icon "></span><a href="#1-&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;"><b></b>1. &#x6DFB;&#x52A0;&#x4F9D;&#x8D56;</a></li><li><span class="title-icon "></span><a href="#2-&#x521B;&#x5EFA;action"><b></b>2. &#x521B;&#x5EFA;Action</a></li><li><span class="title-icon "></span><a href="#3--&#x521B;&#x5EFA;state"><b></b>3.  &#x521B;&#x5EFA;State</a></li><li><span class="title-icon "></span><a href="#4-&#x521B;&#x5EFA;reducer"><b></b>4. &#x521B;&#x5EFA;Reducer</a></li><li><span class="title-icon "></span><a href="#5-&#x521B;&#x5EFA;store"><b></b>5. &#x521B;&#x5EFA;Store</a></li><li><span class="title-icon "></span><a href="#6-&#x9876;&#x5C42;storeprovider"><b></b>6. &#x9876;&#x5C42;StoreProvider</a></li><li><span class="title-icon "></span><a href="#7-&#x53D1;&#x8D77;action"><b></b>7. &#x53D1;&#x8D77;Action</a></li><li><span class="title-icon "></span><a href="#8-&#x54CD;&#x5E94;"><b></b>8. &#x54CD;&#x5E94;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5B9E;&#x9645;&#x4F7F;&#x7528;"><b></b>&#x5B9E;&#x9645;&#x4F7F;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x539F;&#x7406;"><b></b>&#x539F;&#x7406;</a></li><ul><li><span class="title-icon "></span><a href="#storeprovider_1"><b></b>StoreProvider</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B50;&#x6811;&#x83B7;&#x53D6;store"><b></b>&#x5B50;&#x6811;&#x83B7;&#x53D6;Store</a></li></ul><li><span class="title-icon "></span><a href="#storedispath"><b></b>Store.dispath</a></li><li><span class="title-icon "></span><a href="#storeconnector_1"><b></b>StoreConnector</a></li><ul><li><span class="title-icon "></span><a href="#storestreamlistener"><b></b>_StoreStreamListener</a></li></ul><li><span class="title-icon "></span><a href="#&#x6D41;&#x7A0B;&#x56FE;"><b></b>&#x6D41;&#x7A0B;&#x56FE;</a></li></ul></ul></div><a href="#redux-&#x4ECB;&#x7ECD;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="redux-&#x4ECB;&#x7ECD;"><a name="redux-&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#redux-&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>Redux &#x4ECB;&#x7ECD;</h1>
+<p><strong>&#x72B6;&#x6001;&#x7BA1;&#x7406;&#x6846;&#x67B6;</strong>&#xFF0C;&#x6E90;&#x81EA;JS &#xFF0C;React &#xFF0C;<a href="https://www.redux.org.cn/" target="_blank">&#x4E2D;&#x6587;&#x6587;&#x6863;</a></p>
+<h3 id="&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;redux"><a name="&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;redux" class="anchor-navigation-ex-anchor" href="#&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;redux"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;redux</h3>
+<ol>
+<li><p>&#x7A0B;&#x5E8F;&#x590D;&#x6742;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;</p>
+<ul>
+<li>&#x72B6;&#x6001;&#x591A;</li>
+<li>&#x6570;&#x636E;&#x6E90;&#x591A;</li>
+<li>&#x53D8;&#x5316;&#x96BE;&#x63A7;</li>
+</ul>
+</li>
+<li><p>Flutter &#x7684;&#x72B6;&#x6001;&#x7BA1;&#x7406;</p>
+<p>StatefulWidget</p>
+</li>
+<li><p>&#x5176;&#x4ED6;&#x7B2C;&#x4E09;&#x65B9;&#x72B6;&#x6001;&#x7BA1;&#x7406;&#x6846;&#x67B6;</p>
+<p>ScopedModel&#xFF0C;BLoC&#xFF0C;Redux&#xFF0C;MobX</p>
+</li>
+</ol>
+<h3 id="redux-&#x6838;&#x5FC3;&#x6982;&#x5FF5;"><a name="redux-&#x6838;&#x5FC3;&#x6982;&#x5FF5;" class="anchor-navigation-ex-anchor" href="#redux-&#x6838;&#x5FC3;&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a>Redux &#x6838;&#x5FC3;&#x6982;&#x5FF5;</h3>
+<h4 id="&#x4E09;&#x5927;&#x539F;&#x5219;"><a name="&#x4E09;&#x5927;&#x539F;&#x5219;" class="anchor-navigation-ex-anchor" href="#&#x4E09;&#x5927;&#x539F;&#x5219;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x5927;&#x539F;&#x5219;</h4>
+<ul>
+<li>&#x5355;&#x4E00;&#x6570;&#x636E;&#x6E90;&#x3002;</li>
+<li>state &#x53EA;&#x53EF;&#x8BFB;&#x3002;</li>
+<li>reducer &#x4E3A;&#x7EAF;&#x51FD;&#x6570;&#x3002;</li>
+</ul>
+<h4 id="&#x91CD;&#x8981;&#x89D2;&#x8272;&#x6982;&#x5FF5;"><a name="&#x91CD;&#x8981;&#x89D2;&#x8272;&#x6982;&#x5FF5;" class="anchor-navigation-ex-anchor" href="#&#x91CD;&#x8981;&#x89D2;&#x8272;&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x91CD;&#x8981;&#x89D2;&#x8272;&#x6982;&#x5FF5;</h4>
+<p><img src="https://hackernoon.com/hn-images/0*cntBtPADjE2ykLSP.png" alt="&#x6982;&#x5FF5;&#x56FE;"></p>
+<h5 id="action"><a name="action" class="anchor-navigation-ex-anchor" href="#action"><i class="fa fa-link" aria-hidden="true"></i></a>action</h5>
+<p>&#x5E94;&#x7528;&#xFF08;View&#xFF09;&#x5C42;&#x53D1;&#x8D77;&#x7684;&#x66F4;&#x6539;&#x610F;&#x56FE;&#xFF0C;&#x53EA;&#x63CF;&#x8FF0;&#x4E8B;&#x60C5;&#x53D1;&#x751F;&#x52A8;&#x4F5C;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x4EFB;&#x4F55;&#x5BF9;&#x8C61;&#x3002;</p>
+<ul>
+<li>type</li>
+<li>payload</li>
+<li>&#x5C3D;&#x91CF;&#x51CF;&#x5C11;&#x5728; action &#x4E2D;&#x4F20;&#x9012;&#x7684;&#x6570;&#x636E;</li>
+</ul>
+<h5 id="reducer"><a name="reducer" class="anchor-navigation-ex-anchor" href="#reducer"><i class="fa fa-link" aria-hidden="true"></i></a>reducer</h5>
+<p>&#x54CD;&#x5E94;action&#xFF0C;&#x5904;&#x7406;&#x6570;&#x636E;&#x5E76;&#x4FDD;&#x5B58;&#x65B0;&#x6570;&#x636E;&#x5230;store&#x4E2D;&#x3002;</p>
+<ul>
+<li>&#x7EAF;&#x51FD;&#x6570;</li>
+<li>&#x53EF;&#x62C6;&#x5206;</li>
+<li>(action , state) =&gt; state;</li>
+</ul>
+<p><strong>&#x6839;&#x636E;&#x5B83;&#x4EEC;&#x7684; key &#x6765;&#x7B5B;&#x9009;&#x51FA; state &#x4E2D;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x6570;&#x636E;&#x5E76;&#x5904;&#x7406;</strong></p>
+<h5 id="store"><a name="store" class="anchor-navigation-ex-anchor" href="#store"><i class="fa fa-link" aria-hidden="true"></i></a>store</h5>
+<p>&#x5355;&#x4E00;&#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5668;&#x3002;</p>
+<ul>
+<li><p>&#x7EF4;&#x62A4;&#x5E94;&#x7528;state</p>
+</li>
+<li><p>&#x63D0;&#x8FC7;getstate&#xFF0C;&#x83B7;&#x53D6;state</p>
+</li>
+<li><p>&#x63D0;&#x4F9B;dispatch &#xFF0C;&#x66F4;&#x65B0;state</p>
+</li>
+<li><p>&#x6DFB;&#x52A0;&#x76D1;&#x542C;&#x5668;&#xFF0C;subscribe(listener)</p>
+</li>
+</ul>
+<h5 id="middleware"><a name="middleware" class="anchor-navigation-ex-anchor" href="#middleware"><i class="fa fa-link" aria-hidden="true"></i></a>middleware</h5>
+<p>&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x62E6;&#x622A;&#x5668;&#x3002;</p>
+<ul>
+<li>&#x51FD;&#x6570;</li>
+<li>&#xFF08;stroe&#xFF09;=&gt;dynamic</li>
+</ul>
+<p><img src="https://pic2.zhimg.com/v2-404460ceece985d433e1ed1f36cd4215_b.webp" alt="xxxx"></p>
+<h3 id="flutterredux-&#x4E2D;&#x91CD;&#x8981;&#x7684;&#x7C7B;"><a name="flutterredux-&#x4E2D;&#x91CD;&#x8981;&#x7684;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#flutterredux-&#x4E2D;&#x91CD;&#x8981;&#x7684;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>FlutterRedux &#x4E2D;&#x91CD;&#x8981;&#x7684;&#x7C7B;</h3>
+<h4 id="storeprovider"><a name="storeprovider" class="anchor-navigation-ex-anchor" href="#storeprovider"><i class="fa fa-link" aria-hidden="true"></i></a>StoreProvider</h4>
+<pre class="language-"><code class="lang-dart">  <span class="token keyword">const</span> <span class="token function">StoreProvider</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    Key key<span class="token punctuation">,</span>
+    <span class="token metadata symbol">@required</span> Store<span class="token operator">&lt;</span>S<span class="token operator">&gt;</span> store<span class="token punctuation">,</span>
+    <span class="token metadata symbol">@required</span> Widget child<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>  <span class="token punctuation">:</span> <span class="token keyword">assert</span><span class="token punctuation">(</span>store <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">assert</span><span class="token punctuation">(</span>child <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        _store <span class="token operator">=</span> store<span class="token punctuation">,</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span>key<span class="token punctuation">:</span> key<span class="token punctuation">,</span> child<span class="token punctuation">:</span> child<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="storeconnector"><a name="storeconnector" class="anchor-navigation-ex-anchor" href="#storeconnector"><i class="fa fa-link" aria-hidden="true"></i></a>StoreConnector</h4>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">const</span> <span class="token function">StoreConnector</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  Key key<span class="token punctuation">,</span>
+  <span class="token metadata symbol">@required</span> <span class="token keyword">this</span><span class="token punctuation">.</span>builder<span class="token punctuation">,</span>
+  <span class="token metadata symbol">@required</span> <span class="token keyword">this</span><span class="token punctuation">.</span>converter<span class="token punctuation">,</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>distinct <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>onInit<span class="token punctuation">,</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>onDispose<span class="token punctuation">,</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>rebuildOnChange <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>ignoreChange<span class="token punctuation">,</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>onWillChange<span class="token punctuation">,</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>onDidChange<span class="token punctuation">,</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>onInitialBuild<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>  <span class="token punctuation">:</span> <span class="token keyword">assert</span><span class="token punctuation">(</span>builder <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token keyword">assert</span><span class="token punctuation">(</span>converter <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token keyword">super</span><span class="token punctuation">(</span>key<span class="token punctuation">:</span> key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li><p>buidler</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">typedef</span> ViewModelBuilder<span class="token operator">&lt;</span>ViewModel<span class="token operator">&gt;</span> <span class="token operator">=</span> Widget <span class="token function">Function</span><span class="token punctuation">(</span>
+  BuildContext context<span class="token punctuation">,</span>
+  ViewModel vm<span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>converter</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">typedef</span> StoreConverter<span class="token operator">&lt;</span>S<span class="token punctuation">,</span> ViewModel<span class="token operator">&gt;</span> <span class="token operator">=</span> ViewModel <span class="token function">Function</span><span class="token punctuation">(</span>
+  Store<span class="token operator">&lt;</span>S<span class="token operator">&gt;</span> store<span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h1 id="redux-&#x4F7F;&#x7528;"><a name="redux-&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#redux-&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>Redux &#x4F7F;&#x7528;</h1>
+<h2 id="1-&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;"><a name="1-&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;" class="anchor-navigation-ex-anchor" href="#1-&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6DFB;&#x52A0;&#x4F9D;&#x8D56;</h2>
+<ul>
+<li><a href="https://pub.dev/packages/redux#-installing-tab-" target="_blank">redux</a></li>
+<li><a href="https://pub.dev/packages/flutter_redux#-readme-tab-" target="_blank">flutter_redux</a></li>
+</ul>
+<h2 id="2-&#x521B;&#x5EFA;action"><a name="2-&#x521B;&#x5EFA;action" class="anchor-navigation-ex-anchor" href="#2-&#x521B;&#x5EFA;action"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x521B;&#x5EFA;Action</h2>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">enum</span> DemoAction <span class="token punctuation">{</span> increment <span class="token punctuation">}</span>
+</code></pre>
+<h2 id="3--&#x521B;&#x5EFA;state"><a name="3--&#x521B;&#x5EFA;state" class="anchor-navigation-ex-anchor" href="#3--&#x521B;&#x5EFA;state"><i class="fa fa-link" aria-hidden="true"></i></a>3.  &#x521B;&#x5EFA;State</h2>
+<pre class="language-"><code class="lang-dart"><span class="token comment">///&#x521B;&#x5EFA;&#x4E00;&#x4E2A;State</span>
+<span class="token metadata symbol">@immutable</span>
+<span class="token keyword">class</span> <span class="token class-name">DemoState</span> <span class="token punctuation">{</span>
+  <span class="token keyword">final</span> int _count<span class="token punctuation">;</span>
+
+  <span class="token keyword">get</span> count <span class="token operator">=</span><span class="token operator">&gt;</span> _count<span class="token punctuation">;</span>
+
+  <span class="token function">DemoState</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>_count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  DemoState<span class="token punctuation">.</span><span class="token function">initState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    _count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="4-&#x521B;&#x5EFA;reducer"><a name="4-&#x521B;&#x5EFA;reducer" class="anchor-navigation-ex-anchor" href="#4-&#x521B;&#x5EFA;reducer"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x521B;&#x5EFA;Reducer</h2>
+<pre class="language-"><code class="lang-dart"><span class="token comment">///&#x521B;&#x5EFA;&#x72B6;&#x6001;&#x751F;&#x6210;&#x5668;</span>
+<span class="token comment">///&#x6784;&#x9020;&#x4E00;&#x4E2A;Store &#x5B58;&#x50A8;&#x5668;&#x65F6;&#x5019;&#x9700;&#x8981;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x751F;&#x6210;&#x5668;</span>
+<span class="token comment">///&#x751F;&#x6210;&#x5668;&#x7684;&#x5B9A;&#x4E49;:</span>
+<span class="token comment">///typedef State Reducer&lt;State&gt;(State state, dynamic action);</span>
+<span class="token comment">///&#x672C;&#x8D28;&#x662F;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;</span>
+DemoState <span class="token function">reducer</span><span class="token punctuation">(</span>DemoState state<span class="token punctuation">,</span> action<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>action <span class="token operator">==</span> DemoAction<span class="token punctuation">.</span>increment<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">DemoState</span><span class="token punctuation">(</span>state<span class="token punctuation">.</span>count<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> state<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="5-&#x521B;&#x5EFA;store"><a name="5-&#x521B;&#x5EFA;store" class="anchor-navigation-ex-anchor" href="#5-&#x521B;&#x5EFA;store"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x521B;&#x5EFA;Store</h2>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">final</span> store <span class="token operator">=</span> Store<span class="token operator">&lt;</span>DemoState<span class="token operator">&gt;</span><span class="token punctuation">(</span>reducer<span class="token punctuation">,</span> initialState<span class="token punctuation">:</span> DemoState<span class="token punctuation">.</span><span class="token function">initState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="6-&#x9876;&#x5C42;storeprovider"><a name="6-&#x9876;&#x5C42;storeprovider" class="anchor-navigation-ex-anchor" href="#6-&#x9876;&#x5C42;storeprovider"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x9876;&#x5C42;StoreProvider</h2>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">class</span> <span class="token class-name">MyApp</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+
+  <span class="token metadata symbol">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> StoreProvider<span class="token operator">&lt;</span>DemoState<span class="token operator">&gt;</span><span class="token punctuation">(</span>
+      store<span class="token punctuation">:</span> store<span class="token punctuation">,</span>
+      child<span class="token punctuation">:</span> <span class="token function">MaterialApp</span><span class="token punctuation">(</span>
+        title<span class="token punctuation">:</span> <span class="token string">&apos;Flutter Demo&apos;</span><span class="token punctuation">,</span>
+        theme<span class="token punctuation">:</span> <span class="token function">ThemeData</span><span class="token punctuation">(</span>
+          primarySwatch<span class="token punctuation">:</span> Colors<span class="token punctuation">.</span>blue<span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+        home<span class="token punctuation">:</span> <span class="token function">MyHomePage</span><span class="token punctuation">(</span>title<span class="token punctuation">:</span> <span class="token string">&apos;Flutter Demo Home Page&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="7-&#x53D1;&#x8D77;action"><a name="7-&#x53D1;&#x8D77;action" class="anchor-navigation-ex-anchor" href="#7-&#x53D1;&#x8D77;action"><i class="fa fa-link" aria-hidden="true"></i></a>7. &#x53D1;&#x8D77;Action</h2>
+<pre class="language-"><code class="lang-dart">        floatingActionButton<span class="token punctuation">:</span> StoreConnector<span class="token operator">&lt;</span>DemoState<span class="token punctuation">,</span> VoidCallback<span class="token operator">&gt;</span><span class="token punctuation">(</span>
+          converter<span class="token punctuation">:</span> <span class="token punctuation">(</span>store<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span>DemoAction<span class="token punctuation">.</span>increment<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          builder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">,</span> callback<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token function">FloatingActionButton</span><span class="token punctuation">(</span>
+              onPressed<span class="token punctuation">:</span> callback<span class="token punctuation">,</span>
+              tooltip<span class="token punctuation">:</span> <span class="token string">&apos;Increment&apos;</span><span class="token punctuation">,</span>
+              child<span class="token punctuation">:</span> <span class="token function">Icon</span><span class="token punctuation">(</span>Icons<span class="token punctuation">.</span>add<span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span>
+</code></pre>
+<h2 id="8-&#x54CD;&#x5E94;"><a name="8-&#x54CD;&#x5E94;" class="anchor-navigation-ex-anchor" href="#8-&#x54CD;&#x5E94;"><i class="fa fa-link" aria-hidden="true"></i></a>8. &#x54CD;&#x5E94;</h2>
+<pre class="language-"><code class="lang-dart">              StoreConnector<span class="token operator">&lt;</span>DemoState<span class="token punctuation">,</span> int<span class="token operator">&gt;</span><span class="token punctuation">(</span>
+                converter<span class="token punctuation">:</span> <span class="token punctuation">(</span>store<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>count<span class="token punctuation">,</span>
+                builder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">,</span> count<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token keyword">return</span> <span class="token function">Text</span><span class="token punctuation">(</span>
+                    <span class="token string">&apos;$count&apos;</span><span class="token punctuation">,</span>
+                    style<span class="token punctuation">:</span> Theme
+                        <span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span>
+                        <span class="token punctuation">.</span>textTheme
+                        <span class="token punctuation">.</span>display1<span class="token punctuation">,</span>
+                  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">)</span>
+</code></pre>
+<h1 id="&#x5B9E;&#x9645;&#x4F7F;&#x7528;"><a name="&#x5B9E;&#x9645;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x9645;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x9645;&#x4F7F;&#x7528;</h1>
+<p>&#x9700;&#x6C42;&#xFF1A;</p>
+<ol>
+<li><p>&#x8BA1;&#x6570;&#x5668;&#x6539;&#x9020;&#x6210;Redux&#x5B9E;&#x73B0;&#x3002;</p>
+</li>
+<li><p>&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x8F93;&#x5165;&#x4FE1;&#x606F;&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x83B7;&#x53D6;&#x4FE1;&#x606F;&#x3002;</p>
+</li>
+</ol>
+<h1 id="&#x539F;&#x7406;"><a name="&#x539F;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x539F;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x539F;&#x7406;</h1>
+<h2 id="storeprovider_1"><a name="storeprovider_1" class="anchor-navigation-ex-anchor" href="#storeprovider_1"><i class="fa fa-link" aria-hidden="true"></i></a>StoreProvider</h2>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">class</span> <span class="token class-name">StoreProvider</span><span class="token operator">&lt;</span>S<span class="token operator">&gt;</span> <span class="token keyword">extends</span> <span class="token class-name">InheritedWidget</span> <span class="token punctuation">{</span>
+  <span class="token keyword">final</span> Store<span class="token operator">&lt;</span>S<span class="token operator">&gt;</span> _store<span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token function">StoreProvider</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    Key key<span class="token punctuation">,</span>
+    <span class="token metadata symbol">@required</span> Store<span class="token operator">&lt;</span>S<span class="token operator">&gt;</span> store<span class="token punctuation">,</span>
+    <span class="token metadata symbol">@required</span> Widget child<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>  <span class="token punctuation">:</span> <span class="token keyword">assert</span><span class="token punctuation">(</span>store <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">assert</span><span class="token punctuation">(</span>child <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        _store <span class="token operator">=</span> store<span class="token punctuation">,</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span>key<span class="token punctuation">:</span> key<span class="token punctuation">,</span> child<span class="token punctuation">:</span> child<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+  <span class="token metadata symbol">@override</span>
+  bool <span class="token function">updateShouldNotify</span><span class="token punctuation">(</span>StoreProvider<span class="token operator">&lt;</span>S<span class="token operator">&gt;</span> oldWidget<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span>
+      _store <span class="token operator">!=</span> oldWidget<span class="token punctuation">.</span>_store<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><a href="https://api.flutter-io.cn/flutter/widgets/InheritedWidget-class.html" target="_blank">InheritedWidget</a></p>
+<p>&#x539F;&#x751F;&#x6570;&#x636E;&#x5171;&#x4EAB;Widget&#xFF0C;&#x6570;&#x636E;&#x4ECE;&#x4E0A;&#x5230;&#x4E0B;&#x4F20;&#x9012;&#x3002;</p>
+<p><a href="https://book.flutterchina.club/chapter7/inherited_widget.html" target="_blank">&#x4E2D;&#x6587;&#x6587;&#x6863;</a></p>
+<p>&#x643A;&#x5E26;&#x5171;&#x4EAB;&#x6570;&#x636E;</p>
+<p><strong>updateShouldNotify</strong> &#x786E;&#x8BA4;&#x5B50;&#x6811;&#x662F;&#x5426;&#x9700;&#x8981;&#x91CD;&#x5EFA;&#x3002;</p>
+<h3 id="&#x5B50;&#x6811;&#x83B7;&#x53D6;store"><a name="&#x5B50;&#x6811;&#x83B7;&#x53D6;store" class="anchor-navigation-ex-anchor" href="#&#x5B50;&#x6811;&#x83B7;&#x53D6;store"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B50;&#x6811;&#x83B7;&#x53D6;Store</h3>
+<pre class="language-"><code class="lang-dart">  <span class="token keyword">static</span> Store<span class="token operator">&lt;</span>S<span class="token operator">&gt;</span> of<span class="token operator">&lt;</span>S<span class="token operator">&gt;</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">,</span> <span class="token punctuation">{</span>bool listen <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">final</span> type <span class="token operator">=</span> _typeOf<span class="token operator">&lt;</span>StoreProvider<span class="token operator">&lt;</span>S<span class="token operator">&gt;&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">final</span> provider <span class="token operator">=</span> <span class="token punctuation">(</span>listen
+        <span class="token operator">?</span> context<span class="token punctuation">.</span><span class="token function">inheritFromWidgetOfExactType</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span>
+        <span class="token punctuation">:</span> context
+            <span class="token punctuation">.</span><span class="token function">ancestorInheritedElementForWidgetOfExactType</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span>
+            <span class="token operator">?</span><span class="token punctuation">.</span>widget<span class="token punctuation">)</span> <span class="token operator">as</span> StoreProvider<span class="token operator">&lt;</span>S<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>provider <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">throw</span> <span class="token function">StoreProviderError</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> provider<span class="token punctuation">.</span>_store<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>inheritFromWidgetOfExactType &#x5B50;&#x6811;&#x91CD;&#x6784;</li>
+<li>ancestorInheritedElementForWidgetOfExactType &#x5B50;&#x6811;&#x4E0D;&#x53D8;&#x5316;</li>
+</ul>
+<h2 id="storedispath"><a name="storedispath" class="anchor-navigation-ex-anchor" href="#storedispath"><i class="fa fa-link" aria-hidden="true"></i></a>Store.dispath</h2>
+<pre class="language-"><code class="lang-dart">List<span class="token operator">&lt;</span>NextDispatcher<span class="token operator">&gt;</span> _dispatchers<span class="token punctuation">;</span>  
+
+<span class="token keyword">dynamic</span> <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token keyword">dynamic</span> action<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> _dispatchers<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">(</span>action<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5206;&#x53D1;&#x5668;&#x5904;&#x7406;&#x52A8;&#x4F5C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">class</span> <span class="token class-name">Store</span><span class="token operator">&lt;</span>State<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+
+  Reducer<span class="token operator">&lt;</span>State<span class="token operator">&gt;</span> reducer<span class="token punctuation">;</span>
+
+  <span class="token keyword">final</span> StreamController<span class="token operator">&lt;</span>State<span class="token operator">&gt;</span> _changeController<span class="token punctuation">;</span>
+  State _state<span class="token punctuation">;</span>
+  List<span class="token operator">&lt;</span>NextDispatcher<span class="token operator">&gt;</span> _dispatchers<span class="token punctuation">;</span>
+
+  <span class="token function">Store</span><span class="token punctuation">(</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>reducer<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    State initialState<span class="token punctuation">,</span>
+    List<span class="token operator">&lt;</span>Middleware<span class="token operator">&lt;</span>State<span class="token operator">&gt;&gt;</span> middleware <span class="token operator">=</span> <span class="token keyword">const</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    bool syncStream <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    bool distinct <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> _changeController <span class="token operator">=</span> StreamController<span class="token punctuation">.</span><span class="token function">broadcast</span><span class="token punctuation">(</span>sync<span class="token punctuation">:</span> syncStream<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    _state <span class="token operator">=</span> initialState<span class="token punctuation">;</span>
+    _dispatchers <span class="token operator">=</span> <span class="token function">_createDispatchers</span><span class="token punctuation">(</span>
+      middleware<span class="token punctuation">,</span>
+      <span class="token function">_createReduceAndNotify</span><span class="token punctuation">(</span>distinct<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+
+  NextDispatcher <span class="token function">_createReduceAndNotify</span><span class="token punctuation">(</span>bool distinct<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token keyword">dynamic</span> action<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">//reducer &#x5904;&#x7406;action</span>
+      <span class="token keyword">final</span> state <span class="token operator">=</span> <span class="token function">reducer</span><span class="token punctuation">(</span>_state<span class="token punctuation">,</span> action<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// &#x5982;&#x679C;distance &#x4E3A;true &#x800C;&#x4E14;&#x65B0;&#x7684;state &#x4E0E;&#x65E7;&#x7684;&#x76F8;&#x540C; return &#x5904;&#x7406;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>distinct <span class="token operator">&amp;&amp;</span> state <span class="token operator">==</span> _state<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// &#x66F4;&#x65B0;state</span>
+      _state <span class="token operator">=</span> state<span class="token punctuation">;</span>
+      <span class="token comment">// &#x6DFB;&#x52A0;&#x5230;Stream &#x4E2D;</span>
+      _changeController<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  List<span class="token operator">&lt;</span>NextDispatcher<span class="token operator">&gt;</span> <span class="token function">_createDispatchers</span><span class="token punctuation">(</span>
+    List<span class="token operator">&lt;</span>Middleware<span class="token operator">&lt;</span>State<span class="token operator">&gt;&gt;</span> middleware<span class="token punctuation">,</span>
+    NextDispatcher reduceAndNotify<span class="token punctuation">,</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">final</span> dispatchers <span class="token operator">=</span> <span class="token operator">&lt;</span>NextDispatcher<span class="token operator">&gt;</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>reduceAndNotify<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// &#x8F6C;&#x6362;&#x4E2D;&#x95F4;&#x4EF6;Middleware&#x4E3A;&#x5206;&#x53D1;&#x5668;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> nextMiddleware <span class="token keyword">in</span> middleware<span class="token punctuation">.</span>reversed<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">final</span> next <span class="token operator">=</span> dispatchers<span class="token punctuation">.</span>last<span class="token punctuation">;</span>
+
+      dispatchers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>
+        <span class="token punctuation">(</span><span class="token keyword">dynamic</span> action<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">nextMiddleware</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> action<span class="token punctuation">,</span> next<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> dispatchers<span class="token punctuation">.</span>reversed<span class="token punctuation">.</span><span class="token function">toList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5728;&#x521B;&#x5EFA;store &#x65F6;&#x5019;:</p>
+<ul>
+<li>&#x8C03;&#x7528;_createReduceAndNotify&#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;NextDispatcher&#x5206;&#x53D1;&#x5668;&#xFF0C;</li>
+<li>&#x8C03;&#x7528;_createDispatchers&#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5206;&#x53D1;&#x5668;&#x94FE;&#x3002;</li>
+</ul>
+<p>&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x628A;&#x4E2D;&#x95F4;&#x4EF6;&#x4EE5;&#x53CA;reducer &#x5305;&#x88C5;&#x6210;NextDispatcher&#x5B58;&#x50A8;&#xFF0C;&#x7ECF;&#x8FC7;&#x4E24;&#x6B21;reversed&#x540E;&#xFF0C;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x662F;&#x5148;&#x4E2D;&#x95F4;&#x4EF6;list &#xFF0C;&#x518D;reducer&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x5F53;&#x6267;&#x884C;store.dispath&#x64CD;&#x4F5C;&#x540E;&#xFF0C;&#x6700;&#x7EC8;&#x6267;&#x884C;_createReduceAndNotify&#x65B9;&#x6CD5;&#x5185;&#x751F;&#x6210;&#x7684;&#x5206;&#x53D1;&#x5668;&#xFF0C;</p>
+<ul>
+<li>action &#x7ECF;&#x8FC7;reducer &#x5904;&#x7406;&#x83B7;&#x53D6;&#x65B0;&#x7684;state&#x3002;</li>
+<li>&#x5224;&#x65AD;state &#x662F;&#x5426;&#x53D8;&#x5316;&#xFF08;&#x53EF;&#x9009;&#xFF09;&#x3002;</li>
+<li>&#x66F4;&#x65B0;state&#x3002;</li>
+<li>&#x6DFB;&#x52A0;&#x8FDB;StreamController &#x4E2D;&#x901A;&#x77E5;&#x66F4;&#x65B0;&#x3002;</li>
+</ul>
+<h2 id="storeconnector_1"><a name="storeconnector_1" class="anchor-navigation-ex-anchor" href="#storeconnector_1"><i class="fa fa-link" aria-hidden="true"></i></a>StoreConnector</h2>
+<pre class="language-"><code class="lang-dart">  <span class="token metadata symbol">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> _StoreStreamListener<span class="token operator">&lt;</span>S<span class="token punctuation">,</span> ViewModel<span class="token operator">&gt;</span><span class="token punctuation">(</span>
+      store<span class="token punctuation">:</span> StoreProvider<span class="token punctuation">.</span>of<span class="token operator">&lt;</span>S<span class="token operator">&gt;</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      builder<span class="token punctuation">:</span> builder<span class="token punctuation">,</span>
+      converter<span class="token punctuation">:</span> converter<span class="token punctuation">,</span>
+      distinct<span class="token punctuation">:</span> distinct<span class="token punctuation">,</span>
+      onInit<span class="token punctuation">:</span> onInit<span class="token punctuation">,</span>
+      onDispose<span class="token punctuation">:</span> onDispose<span class="token punctuation">,</span>
+      rebuildOnChange<span class="token punctuation">:</span> rebuildOnChange<span class="token punctuation">,</span>
+      ignoreChange<span class="token punctuation">:</span> ignoreChange<span class="token punctuation">,</span>
+      onWillChange<span class="token punctuation">:</span> onWillChange<span class="token punctuation">,</span>
+      onDidChange<span class="token punctuation">:</span> onDidChange<span class="token punctuation">,</span>
+      onInitialBuild<span class="token punctuation">:</span> onInitialBuild<span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x672C;&#x8D28;&#x662F;&#x4E00;&#x4E2A;_StoreStreamListener&#xFF0C;&#x5176;&#x4E2D;Store &#x662F;StoreProvider &#x5168;&#x5C40;Store&#x3002;</p>
+<h3 id="storestreamlistener"><a name="storestreamlistener" class="anchor-navigation-ex-anchor" href="#storestreamlistener"><i class="fa fa-link" aria-hidden="true"></i></a>_StoreStreamListener</h3>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">class</span> <span class="token class-name">_StoreStreamListenerState</span><span class="token operator">&lt;</span>S<span class="token punctuation">,</span> ViewModel<span class="token operator">&gt;</span>
+    <span class="token keyword">extends</span> <span class="token class-name">State</span><span class="token operator">&lt;</span>_StoreStreamListener<span class="token operator">&lt;</span>S<span class="token punctuation">,</span> ViewModel<span class="token operator">&gt;&gt;</span> <span class="token punctuation">{</span>
+  Stream<span class="token operator">&lt;</span>ViewModel<span class="token operator">&gt;</span> stream<span class="token punctuation">;</span>
+  ViewModel latestValue<span class="token punctuation">;</span>
+
+  <span class="token metadata symbol">@override</span>
+  <span class="token keyword">void</span> <span class="token function">initState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">///&#x6267;&#x884C;onInit</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>widget<span class="token punctuation">.</span>onInit <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      widget<span class="token punctuation">.</span><span class="token function">onInit</span><span class="token punctuation">(</span>widget<span class="token punctuation">.</span>store<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+        <span class="token comment">/// &#x6267;&#x884C; onInitialBuild</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>widget<span class="token punctuation">.</span>onInitialBuild <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      WidgetsBinding<span class="token punctuation">.</span>instance<span class="token punctuation">.</span><span class="token function">addPostFrameCallback</span><span class="token punctuation">(</span><span class="token punctuation">(</span>_<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        widget<span class="token punctuation">.</span><span class="token function">onInitialBuild</span><span class="token punctuation">(</span>latestValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+        <span class="token comment">/// state &#x8F6C;&#x6362;</span>
+    latestValue <span class="token operator">=</span> widget<span class="token punctuation">.</span><span class="token function">converter</span><span class="token punctuation">(</span>widget<span class="token punctuation">.</span>store<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">/// &#x521D;&#x59CB;&#x5316;&#x6D41;</span>
+    <span class="token function">_createStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">initState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+ <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+  <span class="token metadata symbol">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token comment">/// rebuildOnChange &#x9ED8;&#x8BA4;&#x4E3A;true,&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;StreamBuilder&#x5BF9;&#x8C61;</span>
+    <span class="token keyword">return</span> widget<span class="token punctuation">.</span>rebuildOnChange
+        <span class="token operator">?</span> StreamBuilder<span class="token operator">&lt;</span>ViewModel<span class="token operator">&gt;</span><span class="token punctuation">(</span>
+            stream<span class="token punctuation">:</span> stream<span class="token punctuation">,</span>
+            builder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">,</span> snapshot<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> widget<span class="token punctuation">.</span><span class="token function">builder</span><span class="token punctuation">(</span>
+              context<span class="token punctuation">,</span>
+              latestValue<span class="token punctuation">,</span>
+            <span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">)</span>
+        <span class="token punctuation">:</span> widget<span class="token punctuation">.</span><span class="token function">builder</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> latestValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token comment">/// &#x521B;&#x5EFA;Stream&#xFF0C;&#x5728;initState &#x548C;didUpdateWidget &#x4E2D;&#x8C03;&#x7528;</span>
+  <span class="token keyword">void</span> <span class="token function">_createStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    stream <span class="token operator">=</span> widget<span class="token punctuation">.</span>store<span class="token punctuation">.</span>onChange
+        <span class="token punctuation">.</span><span class="token function">where</span><span class="token punctuation">(</span>_ignoreChange<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>_mapConverter<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">where</span><span class="token punctuation">(</span>_whereDistinct<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">transform</span><span class="token punctuation">(</span>StreamTransformer<span class="token punctuation">.</span><span class="token function">fromHandlers</span><span class="token punctuation">(</span>handleData<span class="token punctuation">:</span> _handleChange<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+    <span class="token comment">/// &#x66F4;&#x65B0;viewModel</span>
+  <span class="token keyword">void</span> <span class="token function">_handleChange</span><span class="token punctuation">(</span>ViewModel vm<span class="token punctuation">,</span> EventSink<span class="token operator">&lt;</span>ViewModel<span class="token operator">&gt;</span> sink<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>widget<span class="token punctuation">.</span>onWillChange <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      widget<span class="token punctuation">.</span><span class="token function">onWillChange</span><span class="token punctuation">(</span>latestValue<span class="token punctuation">,</span> vm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    latestValue <span class="token operator">=</span> vm<span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>widget<span class="token punctuation">.</span>onDidChange <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">///&#x5B89;&#x5168;&#x6267;&#x884C;onDidChange</span>
+      WidgetsBinding<span class="token punctuation">.</span>instance<span class="token punctuation">.</span><span class="token function">addPostFrameCallback</span><span class="token punctuation">(</span><span class="token punctuation">(</span>_<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        widget<span class="token punctuation">.</span><span class="token function">onDidChange</span><span class="token punctuation">(</span>latestValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    sink<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>vm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E3B;&#x8981;&#x6D41;&#x7A0B;&#x662F;&#xFF1A;</p>
+<ul>
+<li>initState &#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x6267;&#x884C;&#x76F8;&#x5173;&#x56DE;&#x8C03;&#xFF08;onInit&#xFF0C;onInitialBuild&#xFF09;&#xFF0C;&#x521B;&#x5EFA;Stream</li>
+<li>build &#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x5982;&#x679C;<strong>rebuildOnChange</strong> true &#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;StreamBuilder&#xFF0C;&#x5426;&#x5219;&#x76F4;&#x63A5;&#x6267;&#x884C;widget &#x7684;build &#x65B9;&#x6CD5;&#x3002;</li>
+</ul>
+<p>&#x800C;Stream &#x7684;&#x521B;&#x5EFA;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x83B7;&#x53D6;store &#x4E2D;&#x7684;StreamControl</li>
+<li>&#x6267;&#x884C;_ignoreChange &#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86;ignoreChange &#x56DE;&#x8C03;&#x5219;&#x6267;&#x884C;</li>
+<li>&#x6267;&#x884C;_mapConverter &#x65B9;&#x6CD5;&#xFF0C;&#x6267;&#x884C;&#x8BBE;&#x7F6E;&#x7684;converter &#x65B9;&#x6CD5;&#xFF0C;&#x628A;&#x9876;&#x5C42;state &#x8F6C;&#x4E3A;&#x4E3A;&#x76F8;&#x5173;viewmodel</li>
+<li>&#x6267;&#x884C;_whereDistinct &#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x8BBE;&#x7F6E;distinct(&#x9ED8;&#x8BA4;&#x4E3A;false),&#x6BD4;&#x8F83;&#x65B0;&#x65E7;viewmodel</li>
+<li>&#x6267;&#x884C;_handleChange&#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86;onWillChange &#xFF0C;onDidChange &#x56DE;&#x8C03;&#x5219;&#x6267;&#x884C;</li>
+</ul>
+<h2 id="&#x6D41;&#x7A0B;&#x56FE;"><a name="&#x6D41;&#x7A0B;&#x56FE;" class="anchor-navigation-ex-anchor" href="#&#x6D41;&#x7A0B;&#x56FE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D41;&#x7A0B;&#x56FE;</h2>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gar8zx5eu2j31020u0n8d.jpg" alt="img"></p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; david 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-03-30 10:09:40
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="7-Flutter 引擎启动v1-12.html" class="navigation navigation-prev " aria-label="Previous page: Flutter引擎启动">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Android-old/ArrayList源码学习.html" class="navigation navigation-next " aria-label="Next page: ArrayList 源码学习">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Redux 介绍","level":"1.9","depth":1,"next":{"title":"ArrayList 源码学习","level":"2.1","depth":1,"path":"Android-old/ArrayList源码学习.md","ref":"Android-old/ArrayList源码学习.md","articles":[]},"previous":{"title":"Flutter引擎启动","level":"1.8","depth":1,"path":"0-Flutter/7-Flutter 引擎启动v1-12.md","ref":"0-Flutter/7-Flutter 引擎启动v1-12.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","prism","-highlight","copy-code-button","search-pro","-search","-lunr","expandable-chapters","splitter","-sharing","github-buttons","tbfed-pagefooter","anchor-navigation-ex","summary"],"styles":{"website":"./public-repertory/css/gitbook-configure.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy david 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"summary":{},"splitter":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"github-buttons":{"buttons":[{"user":"DavidZhong003","width":"160","type":"follow","count":true,"size":"small"}]},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"zhongshan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"david zhong 的文档库","language":"zh-hans","gitbook":"*","description":"zhongshan 的文档库. 里面包含了个人撰写的文章"},"file":{"path":"0-Flutter/8-Flutter Redux简单介绍.md","mtime":"2020-03-30T02:09:40.641Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-28T08:17:14.512Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

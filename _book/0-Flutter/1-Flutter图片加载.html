@@ -1,0 +1,1130 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Flutter 图片加载 · david zhong 的文档库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zhongshan">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2-Flutter 应用启动分析.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"DavidZhong003","width":"160","type":"follow","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">0-Flutter</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="1-Flutter图片加载.html">
+            
+                <a href="1-Flutter图片加载.html">
+            
+                    
+                    Flutter 图片加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2-Flutter 应用启动分析.html">
+            
+                <a href="2-Flutter 应用启动分析.html">
+            
+                    
+                    Flutter 应用启动分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3-Flutter 混合工程.html">
+            
+                <a href="3-Flutter 混合工程.html">
+            
+                    
+                    Flutter 混合工程搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4-Flutter 混合工程踩坑记录.html">
+            
+                <a href="4-Flutter 混合工程踩坑记录.html">
+            
+                    
+                    Flutter混合工程踩坑记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="5-Flutter 混合工程上传AAR.html">
+            
+                <a href="5-Flutter 混合工程上传AAR.html">
+            
+                    
+                    Flutter 混合工程上传AAR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="6-Flutter 引擎启动v1-9.html">
+            
+                <a href="6-Flutter 引擎启动v1-9.html">
+            
+                    
+                    Flutter 引擎启动（1.9）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="7-Flutter 引擎启动v1-12.html">
+            
+                <a href="7-Flutter 引擎启动v1-12.html">
+            
+                    
+                    Flutter引擎启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="8-Flutter Redux简单介绍.html">
+            
+                <a href="8-Flutter Redux简单介绍.html">
+            
+                    
+                    Redux 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Android-old</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Android-old/ArrayList源码学习.html">
+            
+                <a href="../Android-old/ArrayList源码学习.html">
+            
+                    
+                    ArrayList 源码学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Android-old/Fragmentation 库学习笔记.html">
+            
+                <a href="../Android-old/Fragmentation 库学习笔记.html">
+            
+                    
+                    Fragmentation 库学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Android-old/HashMap源码学习.html">
+            
+                <a href="../Android-old/HashMap源码学习.html">
+            
+                    
+                    HashMap 源码学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../Android-old/JVM学习笔记.html">
+            
+                <a href="../Android-old/JVM学习笔记.html">
+            
+                    
+                    JVM 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../Android-old/LinkedList源码学习.html">
+            
+                <a href="../Android-old/LinkedList源码学习.html">
+            
+                    
+                    LinkedList 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../Android-old/Okhttp源码学习.html">
+            
+                <a href="../Android-old/Okhttp源码学习.html">
+            
+                    
+                    Okhttp 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../Android-old/Retrofit 学习笔记.html">
+            
+                <a href="../Android-old/Retrofit 学习笔记.html">
+            
+                    
+                    Retrofit 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../Android-old/Set集合源码学习.html">
+            
+                <a href="../Android-old/Set集合源码学习.html">
+            
+                    
+                    Set 集合源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../Android-old/沉浸式状态栏.html">
+            
+                <a href="../Android-old/沉浸式状态栏.html">
+            
+                    
+                    沉浸式状态栏
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">machine</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../machine/1-机器学习学习笔记--基础.html">
+            
+                <a href="../machine/1-机器学习学习笔记--基础.html">
+            
+                    
+                    机器学习笔记-基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../machine/2- 机器学习学习笔记--autograd自动求导.html">
+            
+                <a href="../machine/2- 机器学习学习笔记--autograd自动求导.html">
+            
+                    
+                    机器学习笔记-autograd自动求导
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../machine/3- 机器学习学习笔记--NDArray处理数据.html">
+            
+                <a href="../machine/3- 机器学习学习笔记--NDArray处理数据.html">
+            
+                    
+                    机器学习笔记-NDArray处理数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../machine/4-Numpy 教程.html">
+            
+                <a href="../machine/4-Numpy 教程.html">
+            
+                    
+                    机器学习笔记-Numpy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../machine/5-机器学习笔记--矩阵.html">
+            
+                <a href="../machine/5-机器学习笔记--矩阵.html">
+            
+                    
+                    机器学习笔记-矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../machine/6-机器学习笔记--线性回归.html">
+            
+                <a href="../machine/6-机器学习笔记--线性回归.html">
+            
+                    
+                    机器学习笔记-线性回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../其他/1-Conda常用命令.html">
+            
+                <a href="../其他/1-Conda常用命令.html">
+            
+                    
+                    管理conda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../其他/2-Git学习笔记.html">
+            
+                <a href="../其他/2-Git学习笔记.html">
+            
+                    
+                    Git 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../其他/3-UML类图.html">
+            
+                <a href="../其他/3-UML类图.html">
+            
+                    
+                    UML 类图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Flutter 图片加载</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#flutter-&#x56FE;&#x7247;&#x52A0;&#x8F7D;"><b></b>Flutter &#x56FE;&#x7247;&#x52A0;&#x8F7D;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;"><b></b>&#x4F7F;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x5206;&#x6790;"><b></b>&#x5206;&#x6790;</a></li><ul><li><span class="title-icon "></span><a href="#image"><b></b>Image</a></li><li><span class="title-icon "></span><a href="#imageproviderresolve"><b></b>ImageProvider.resolve</a></li><li><span class="title-icon "></span><a href="#putifabsent"><b></b>putIfAbsent</a></li><ul><li><span class="title-icon "></span><a href="#imagecache"><b></b>ImageCache</a></li><li><span class="title-icon "></span><a href="#putifabsent_1"><b></b>putIfAbsent</a></li></ul><li><span class="title-icon "></span><a href="#loader"><b></b>loader</a></li><li><span class="title-icon "></span><a href="#loadasync"><b></b>_loadAsync</a></li><li><span class="title-icon "></span><a href="#decode"><b></b>decode</a></li><ul><li><span class="title-icon "></span><a href="#futurize"><b></b>_futurize</a></li><li><span class="title-icon "></span><a href="#instantiateimagecodec"><b></b>_instantiateImageCodec</a></li></ul><li><span class="title-icon "></span><a href="#handlecodecready"><b></b>_handleCodecReady</a></li><li><span class="title-icon "></span><a href="#decodenextframeandschedule"><b></b>_decodeNextFrameAndSchedule</a></li><ul><li><span class="title-icon "></span><a href="#emitframe"><b></b>_emitFrame</a></li><li><span class="title-icon "></span><a href="#scheduleappframe"><b></b>_scheduleAppFrame</a></li></ul></ul></ul></div><a href="#flutter-&#x56FE;&#x7247;&#x52A0;&#x8F7D;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="flutter-&#x56FE;&#x7247;&#x52A0;&#x8F7D;"><a name="flutter-&#x56FE;&#x7247;&#x52A0;&#x8F7D;" class="anchor-navigation-ex-anchor" href="#flutter-&#x56FE;&#x7247;&#x52A0;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a>Flutter &#x56FE;&#x7247;&#x52A0;&#x8F7D;</h1>
+<p>&#x8BB0;&#x5F55;&#x5206;&#x6790;Flutter &#x52A0;&#x8F7D;&#x56FE;&#x7247;&#x8FC7;&#x7A0B;&#x3002;</p>
+<h1 id="&#x4F7F;&#x7528;"><a name="&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;</h1>
+<p>&#x5728;Flutter &#x4E2D;&#x52A0;&#x8F7D;&#x56FE;&#x7247;&#x53EF;Image &#x63A7;&#x4EF6;&#x3002;&#x9664;&#x4E86;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x6784;&#x9020;&#xFF0C;Image &#x63D0;&#x4F9B;&#x4E86;4&#x79CD;&#x65B9;&#x5F0F;&#x52A0;&#x8F7D;&#xFF0C;&#x5206;&#x522B;&#x662F;&#xFF1A;</p>
+<ul>
+<li><p>Image.asset  &#x4ECE;AssetBundle &#x4E2D;&#x52A0;&#x8F7D;&#x56FE;&#x7247;&#xFF0C;&#x5373;&#x662F;&#x5728;pubspec.yaml&#x4E2D;&#x6CE8;&#x518C;&#x7684;&#x56FE;&#x7247;&#x3002;</p>
+<blockquote>
+<p>&#x5728;pubspec.yaml&#x4E2D;&#x6CE8;&#x518C;&#x7684;&#x56FE;&#x7247;&#x5728;&#x6253;&#x5305;&#x65F6;&#x5019;&#x4F1A;&#x6309;&#x7167;K-V &#x5F62;&#x5F0F;&#x5199;&#x5165; asset/flutter_assets/AssetManifest.json &#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+</blockquote>
+</li>
+<li><p>Image.file &#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x52A0;&#x8F7D;&#x3002;</p>
+</li>
+<li>Image.memory &#x5185;&#x5B58;&#x4E2D;&#x52A0;&#x8F7D;&#x3002;</li>
+<li>Image.network &#x7F51;&#x7EDC;&#x4E2D;&#x52A0;&#x8F7D;&#x3002;</li>
+</ul>
+<h1 id="&#x5206;&#x6790;"><a name="&#x5206;&#x6790;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5206;&#x6790;</h1>
+<p>&#x4EE5;Image.network&#x4E3A;&#x4F8B;:</p>
+<pre class="language-"><code class="lang-dart">  Image<span class="token punctuation">.</span><span class="token function">network</span><span class="token punctuation">(</span>
+    String src<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    Key key<span class="token punctuation">,</span>
+    double scale <span class="token operator">=</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> image <span class="token operator">=</span> ResizeImage<span class="token punctuation">.</span><span class="token function">resizeIfNeeded</span><span class="token punctuation">(</span>cacheWidth<span class="token punctuation">,</span> cacheHeight<span class="token punctuation">,</span> <span class="token function">NetworkImage</span><span class="token punctuation">(</span>src<span class="token punctuation">,</span> scale<span class="token punctuation">:</span> scale<span class="token punctuation">,</span> headers<span class="token punctuation">:</span> headers<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+       <span class="token keyword">assert</span><span class="token punctuation">(</span>alignment <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+       <span class="token keyword">assert</span><span class="token punctuation">(</span>repeat <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+       <span class="token keyword">assert</span><span class="token punctuation">(</span>matchTextDirection <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+       <span class="token keyword">assert</span><span class="token punctuation">(</span>cacheWidth <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> cacheWidth <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+       <span class="token keyword">assert</span><span class="token punctuation">(</span>cacheHeight <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> cacheHeight <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+       <span class="token keyword">super</span><span class="token punctuation">(</span>key<span class="token punctuation">:</span> key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;image&#x4E3A;ImageProvider&#x5BF9;&#x8C61;&#x3002;ImageProvider &#x662F;&#x4E2A;&#x62BD;&#x8C61;&#x7C7B;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x52A0;&#x8F7D;&#x65B9;&#x5F0F;&#x5185;&#x90E8;&#x4E5F;&#x662F;&#x521B;&#x5EFA;&#x4E0D;&#x540C;&#x7684;ImageProvider&#x3002;</p>
+<h2 id="image"><a name="image" class="anchor-navigation-ex-anchor" href="#image"><i class="fa fa-link" aria-hidden="true"></i></a>Image</h2>
+<p>Image &#x662F;&#x4E00;&#x4E2A;StatefulWidget&#x3002;&#x5176;&#x4E2D;State &#x4E3A;_ImageState&#x3002;</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">class</span> <span class="token class-name">_ImageState</span> <span class="token keyword">extends</span> <span class="token class-name">State</span><span class="token operator">&lt;</span>Image<span class="token operator">&gt;</span> <span class="token keyword">with</span> WidgetsBindingObserver <span class="token punctuation">{</span>
+  ImageStream _imageStream<span class="token punctuation">;</span>
+  ImageInfo _imageInfo<span class="token punctuation">;</span>
+  ImageChunkEvent _loadingProgress<span class="token punctuation">;</span>
+  bool _isListeningToStream <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  bool _invertColors<span class="token punctuation">;</span>
+  int _frameNumber<span class="token punctuation">;</span>
+  bool _wasSynchronouslyLoaded<span class="token punctuation">;</span>
+
+  <span class="token metadata symbol">@override</span>
+  <span class="token keyword">void</span> <span class="token function">initState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">initState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    WidgetsBinding<span class="token punctuation">.</span>instance<span class="token punctuation">.</span><span class="token function">addObserver</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token metadata symbol">@override</span>
+  <span class="token keyword">void</span> <span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">assert</span><span class="token punctuation">(</span>_imageStream <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    WidgetsBinding<span class="token punctuation">.</span>instance<span class="token punctuation">.</span><span class="token function">removeObserver</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">_stopListeningToStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token metadata symbol">@override</span>
+  <span class="token keyword">void</span> <span class="token function">didChangeDependencies</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">_updateInvertColors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">_resolveImage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>TickerMode<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token function">_listenToStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span>
+      <span class="token function">_stopListeningToStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">didChangeDependencies</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token keyword">void</span> <span class="token function">_resolveImage</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">final</span> ImageStream newStream <span class="token operator">=</span>
+      widget<span class="token punctuation">.</span>image<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token function">createLocalImageConfiguration</span><span class="token punctuation">(</span>
+        context<span class="token punctuation">,</span>
+        size<span class="token punctuation">:</span> widget<span class="token punctuation">.</span>width <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> widget<span class="token punctuation">.</span>height <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">?</span> <span class="token function">Size</span><span class="token punctuation">(</span>widget<span class="token punctuation">.</span>width<span class="token punctuation">,</span> widget<span class="token punctuation">.</span>height<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">assert</span><span class="token punctuation">(</span>newStream <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">_updateSourceStream</span><span class="token punctuation">(</span>newStream<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token metadata symbol">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x89C1;&#x5728;didChangeDependencies &#x65B9;&#x6CD5;&#x4E2D;&#x4F1A;&#x8C03;&#x7528;_resolveImage&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x91CC;&#x4F1A;&#x8FDB;&#x884C;&#x56FE;&#x7247;&#x52A0;&#x8F7D;&#x64CD;&#x4F5C;&#x3002;&#x800C;<strong>widget.image</strong> &#x5C31;&#x662F;&#x4E0A;&#x9762;&#x63D0;&#x5230;&#x7684;<strong>ImageProvider</strong>&#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x91CC;&#x662F;&#x5148;&#x8C03;&#x7528;createLocalImageConfiguration&#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x56FE;&#x7247;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;ImageConfiguration&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;ImageProvider&#x7684;&#x8BA9;resolve&#x65B9;&#x6CD5;&#x3002;</p>
+<h2 id="imageproviderresolve"><a name="imageproviderresolve" class="anchor-navigation-ex-anchor" href="#imageproviderresolve"><i class="fa fa-link" aria-hidden="true"></i></a>ImageProvider.resolve</h2>
+<pre class="language-"><code class="lang-dart">  ImageStream <span class="token function">resolve</span><span class="token punctuation">(</span>ImageConfiguration configuration<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">assert</span><span class="token punctuation">(</span>configuration <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">final</span> ImageStream stream <span class="token operator">=</span> <span class="token function">ImageStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    T obtainedKey<span class="token punctuation">;</span>
+    bool didError <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    Future<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span> <span class="token function">handleError</span><span class="token punctuation">(</span><span class="token keyword">dynamic</span> exception<span class="token punctuation">,</span> StackTrace stack<span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>didError<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      didError <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+      <span class="token keyword">await</span> <span class="token keyword">null</span><span class="token punctuation">;</span> <span class="token comment">// wait an event turn in case a listener has been added to the image stream.</span>
+      <span class="token keyword">final</span> _ErrorImageCompleter imageCompleter <span class="token operator">=</span> <span class="token function">_ErrorImageCompleter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      stream<span class="token punctuation">.</span><span class="token function">setCompleter</span><span class="token punctuation">(</span>imageCompleter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      imageCompleter<span class="token punctuation">.</span><span class="token function">setError</span><span class="token punctuation">(</span>
+        exception<span class="token punctuation">:</span> exception<span class="token punctuation">,</span>
+        stack<span class="token punctuation">:</span> stack<span class="token punctuation">,</span>
+        context<span class="token punctuation">:</span> <span class="token function">ErrorDescription</span><span class="token punctuation">(</span><span class="token string">&apos;while resolving an image&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        silent<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// could be a network error or whatnot</span>
+        informationCollector<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">sync*</span> <span class="token punctuation">{</span>
+          <span class="token comment">// &#x751F;&#x6210;&#x8FED;&#x4EE3;&#x5668;</span>
+          <span class="token keyword">yield</span> DiagnosticsProperty<span class="token operator">&lt;</span>ImageProvider<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token string">&apos;Image provider&apos;</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">yield</span> DiagnosticsProperty<span class="token operator">&lt;</span>ImageConfiguration<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token string">&apos;Image configuration&apos;</span><span class="token punctuation">,</span> configuration<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">yield</span> DiagnosticsProperty<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token string">&apos;Image key&apos;</span><span class="token punctuation">,</span> obtainedKey<span class="token punctuation">,</span> defaultValue<span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+        <span class="token comment">// fork &#x51FA;&#x4E00;&#x4E2A;Zone&#xFF0C;&#x6DFB;&#x52A0;&#x4E0A;&#x9762;&#x7684;&#x9519;&#x8BEF;&#x5904;&#x7406;</span>
+    <span class="token keyword">final</span> Zone dangerZone <span class="token operator">=</span> Zone<span class="token punctuation">.</span>current<span class="token punctuation">.</span><span class="token function">fork</span><span class="token punctuation">(</span>
+      specification<span class="token punctuation">:</span> <span class="token function">ZoneSpecification</span><span class="token punctuation">(</span>
+        handleUncaughtError<span class="token punctuation">:</span> <span class="token punctuation">(</span>Zone zone<span class="token punctuation">,</span> ZoneDelegate delegate<span class="token punctuation">,</span> Zone parent<span class="token punctuation">,</span> Object error<span class="token punctuation">,</span> StackTrace stackTrace<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">handleError</span><span class="token punctuation">(</span>error<span class="token punctuation">,</span> stackTrace<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    dangerZone<span class="token punctuation">.</span><span class="token function">runGuarded</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      Future<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> key<span class="token punctuation">;</span>
+      <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token comment">// &#x56FE;&#x7247;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x751F;&#x6210;Key&#x503C;&#xFF0C;&#x7F51;&#x7EDC;&#x56FE;&#x7247;&#x901A;&#x8FC7;url&#x548C;&#x7F29;&#x653E;&#x6BD4;scale &#x4F5C;&#x4E3A;key&#x503C;</span>
+        key <span class="token operator">=</span> <span class="token function">obtainKey</span><span class="token punctuation">(</span>configuration<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">,</span> stackTrace<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">handleError</span><span class="token punctuation">(</span>error<span class="token punctuation">,</span> stackTrace<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      key<span class="token punctuation">.</span>then<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">(</span>T key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        obtainedKey <span class="token operator">=</span> key<span class="token punctuation">;</span>
+        <span class="token comment">// &#x52A0;&#x8F7D;</span>
+        <span class="token keyword">final</span> ImageStreamCompleter completer <span class="token operator">=</span> PaintingBinding<span class="token punctuation">.</span>instance<span class="token punctuation">.</span>imageCache<span class="token punctuation">.</span><span class="token function">putIfAbsent</span><span class="token punctuation">(</span>
+          key<span class="token punctuation">,</span>
+          <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">load</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> PaintingBinding<span class="token punctuation">.</span>instance<span class="token punctuation">.</span>instantiateImageCodec<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          onError<span class="token punctuation">:</span> handleError<span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>completer <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          stream<span class="token punctuation">.</span><span class="token function">setCompleter</span><span class="token punctuation">(</span>completer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catchError</span><span class="token punctuation">(</span>handleError<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> stream<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<h2 id="putifabsent"><a name="putifabsent" class="anchor-navigation-ex-anchor" href="#putifabsent"><i class="fa fa-link" aria-hidden="true"></i></a>putIfAbsent</h2>
+<p>&#x4E0A;&#x8C03;&#x7528;&#x4E86;PaintingBinding.instance.imageCache&#x7684;putIfAbsent&#x65B9;&#x6CD5;&#xFF0C;imageCache &#x662F;&#x5565;&#xFF1F;putIfAbsent &#x65B9;&#x6CD5;&#x53C8;&#x505A;&#x4E86;&#x4EC0;&#x4E48;&#x4E8B;&#x60C5;&#x3002;</p>
+<h3 id="imagecache"><a name="imagecache" class="anchor-navigation-ex-anchor" href="#imagecache"><i class="fa fa-link" aria-hidden="true"></i></a>ImageCache</h3>
+<p>ImageCache &#x662F;Framework &#x5C42;&#x63D0;&#x4F9B;&#x7684;&#x56FE;&#x7247;&#x7F13;&#x5B58;&#x5B58;&#x50A8;&#x7C7B;&#xFF0C;&#x6700;&#x591A;&#x7F13;&#x5B58;1000&#x5F20;&#x56FE;&#x7247;&#xFF0C;&#x6700;&#x5927;&#x7F13;&#x5B58;&#x91CF;&#x4E3A;100M&#x3002;LRU &#x7F13;&#x5B58;&#x673A;&#x5236;&#x3002;&#x5185;&#x90E8;&#x6709;&#x4E24;&#x4E2A;Map&#xFF0C;&#x5206;&#x522B;&#x5B58;&#x50A8;&#x5F85;&#x5904;&#x7406;&#x7684;&#x56FE;&#x7247;&#x4EE5;&#x53CA;&#x7F13;&#x5B58;&#x7684;&#x56FE;&#x7247;&#x3002;</p>
+<h3 id="putifabsent_1"><a name="putifabsent_1" class="anchor-navigation-ex-anchor" href="#putifabsent_1"><i class="fa fa-link" aria-hidden="true"></i></a>putIfAbsent</h3>
+<pre class="language-"><code class="lang-dart">  ImageStreamCompleter <span class="token function">putIfAbsent</span><span class="token punctuation">(</span>Object key<span class="token punctuation">,</span> ImageStreamCompleter <span class="token function">loader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> ImageErrorListener onError <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">assert</span><span class="token punctuation">(</span>key <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">assert</span><span class="token punctuation">(</span>loader <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ImageStreamCompleter result <span class="token operator">=</span> _pendingImages<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token operator">?</span><span class="token punctuation">.</span>completer<span class="token punctuation">;</span>
+    <span class="token comment">// &#x5982;&#x679C;&#x56FE;&#x7247;&#x662F;&#x5F85;&#x5904;&#x7406;&#x4E2D;&#xFF0C;return</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>result <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+      <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+    <span class="token comment">// &#x5982;&#x679C;&#x7F13;&#x5B58;&#x4E2D;&#x6709;&#xFF0C;&#x53D6;&#x51FA;&#xFF0C;&#x653E;&#x5230;&#x524D;&#x9762;&#xFF0C;&#x8FD4;&#x56DE;&#x7F13;&#x5B58;&#x56FE;&#x7247;</span>
+    <span class="token keyword">final</span> _CachedImage image <span class="token operator">=</span> _cache<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>image <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      _cache<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> image<span class="token punctuation">;</span>
+      <span class="token keyword">return</span> image<span class="token punctuation">.</span>completer<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token comment">// &#x6267;&#x884C;loader &#x51FD;&#x6570;&#xFF0C;&#x83B7;&#x53D6;&#x7ED3;&#x679C;</span>
+      result <span class="token operator">=</span> <span class="token function">loader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">,</span> stackTrace<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>onError <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">onError</span><span class="token punctuation">(</span>error<span class="token punctuation">,</span> stackTrace<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">// &#x7EE7;&#x7EED;&#x4F20;&#x64AD;&#x5F02;&#x5E38;</span>
+        <span class="token keyword">rethrow</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">void</span> <span class="token function">listener</span><span class="token punctuation">(</span>ImageInfo info<span class="token punctuation">,</span> bool syncCall<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Images that fail to load don&apos;t contribute to cache size.</span>
+      <span class="token keyword">final</span> int imageSize <span class="token operator">=</span> info<span class="token operator">?</span><span class="token punctuation">.</span>image <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">?</span> <span class="token number">0</span> <span class="token punctuation">:</span> info<span class="token punctuation">.</span>image<span class="token punctuation">.</span>height <span class="token operator">*</span> info<span class="token punctuation">.</span>image<span class="token punctuation">.</span>width <span class="token operator">*</span> <span class="token number">4</span><span class="token punctuation">;</span>
+      <span class="token keyword">final</span> _CachedImage image <span class="token operator">=</span> <span class="token function">_CachedImage</span><span class="token punctuation">(</span>result<span class="token punctuation">,</span> imageSize<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// &#x8C03;&#x6574;&#x6700;&#x5927;size</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>maximumSizeBytes <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> imageSize <span class="token operator">&gt;</span> maximumSizeBytes<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        _maximumSizeBytes <span class="token operator">=</span> imageSize <span class="token operator">+</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      _currentSizeBytes <span class="token operator">+=</span> imageSize<span class="token punctuation">;</span>
+      <span class="token keyword">final</span> _PendingImage pendingImage <span class="token operator">=</span> _pendingImages<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>pendingImage <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        pendingImage<span class="token punctuation">.</span><span class="token function">removeListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      _cache<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> image<span class="token punctuation">;</span>
+      <span class="token function">_checkCacheSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// &#x56DE;&#x8C03;&#x76D1;&#x542C;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>maximumSize <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> maximumSizeBytes <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">final</span> ImageStreamListener streamListener <span class="token operator">=</span> <span class="token function">ImageStreamListener</span><span class="token punctuation">(</span>listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      _pendingImages<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">_PendingImage</span><span class="token punctuation">(</span>result<span class="token punctuation">,</span> streamListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// Listener is removed in [_PendingImage.removeListener].</span>
+      result<span class="token punctuation">.</span><span class="token function">addListener</span><span class="token punctuation">(</span>streamListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<h2 id="loader"><a name="loader" class="anchor-navigation-ex-anchor" href="#loader"><i class="fa fa-link" aria-hidden="true"></i></a>loader</h2>
+<pre class="language-"><code class="lang-dart"><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">load</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> PaintingBinding<span class="token punctuation">.</span>instance<span class="token punctuation">.</span>instantiateImageCodec<span class="token punctuation">)</span>
+</code></pre>
+<p>load&#x65B9;&#x6CD5;&#x662F;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x540C;ImageProvider &#x6709;&#x4E0D;&#x540C;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x8FD9;&#x91CC;&#x4EE5;NetImage&#x4E3A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart">  ImageStreamCompleter <span class="token function">load</span><span class="token punctuation">(</span>image_provider<span class="token punctuation">.</span>NetworkImage key<span class="token punctuation">,</span> image_provider<span class="token punctuation">.</span>DecoderCallback decode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Ownership of this controller is handed off to [_loadAsync]; it is that</span>
+    <span class="token comment">// method&apos;s responsibility to close the controller&apos;s stream when the image</span>
+    <span class="token comment">// has been loaded or an error is thrown.</span>
+    <span class="token keyword">final</span> StreamController<span class="token operator">&lt;</span>ImageChunkEvent<span class="token operator">&gt;</span> chunkEvents <span class="token operator">=</span> StreamController<span class="token operator">&lt;</span>ImageChunkEvent<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token function">MultiFrameImageStreamCompleter</span><span class="token punctuation">(</span>
+      codec<span class="token punctuation">:</span> <span class="token function">_loadAsync</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> chunkEvents<span class="token punctuation">,</span> decode<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      chunkEvents<span class="token punctuation">:</span> chunkEvents<span class="token punctuation">.</span>stream<span class="token punctuation">,</span>
+      scale<span class="token punctuation">:</span> key<span class="token punctuation">.</span>scale<span class="token punctuation">,</span>
+      informationCollector<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">&lt;</span>DiagnosticsNode<span class="token operator">&gt;</span><span class="token punctuation">[</span>
+          DiagnosticsProperty<span class="token operator">&lt;</span>image_provider<span class="token punctuation">.</span>ImageProvider<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token string">&apos;Image provider&apos;</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          DiagnosticsProperty<span class="token operator">&lt;</span>image_provider<span class="token punctuation">.</span>NetworkImage<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token string">&apos;Image key&apos;</span><span class="token punctuation">,</span> key<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;ImageStreamCompleter&#x7684;&#x5B50;&#x7C7B;MultiFrameImageStreamCompleter&#x5BF9;&#x8C61;&#xFF0C;&#x800C;<strong>ImageStreamCompleter</strong>&#x662F;&#x4E2A;&#x62BD;&#x8C61;&#x7C7B;&#xFF0C;&#x91CC;&#x9762;&#x662F;&#x4E00;&#x4E9B;&#x56FE;&#x7247;&#x52A0;&#x8F7D;&#x8FC7;&#x7A0B;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x53EF;&#x7528;&#x6765;&#x76D1;&#x542C;&#x56FE;&#x7247;&#x52A0;&#x8F7D;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<pre class="language-"><code class="lang-dart">  <span class="token function">MultiFrameImageStreamCompleter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token metadata symbol">@required</span> Future<span class="token operator">&lt;</span>ui<span class="token punctuation">.</span>Codec<span class="token operator">&gt;</span> codec<span class="token punctuation">,</span>
+    <span class="token metadata symbol">@required</span> double scale<span class="token punctuation">,</span>
+    Stream<span class="token operator">&lt;</span>ImageChunkEvent<span class="token operator">&gt;</span> chunkEvents<span class="token punctuation">,</span>
+    InformationCollector informationCollector<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token keyword">assert</span><span class="token punctuation">(</span>codec <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+       _informationCollector <span class="token operator">=</span> informationCollector<span class="token punctuation">,</span>
+       _scale <span class="token operator">=</span> scale <span class="token punctuation">{</span>
+    codec<span class="token punctuation">.</span>then<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>_handleCodecReady<span class="token punctuation">,</span> onError<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token keyword">dynamic</span> error<span class="token punctuation">,</span> StackTrace stack<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">reportError</span><span class="token punctuation">(</span>
+        context<span class="token punctuation">:</span> <span class="token function">ErrorDescription</span><span class="token punctuation">(</span><span class="token string">&apos;resolving an image codec&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        exception<span class="token punctuation">:</span> error<span class="token punctuation">,</span>
+        stack<span class="token punctuation">:</span> stack<span class="token punctuation">,</span>
+        informationCollector<span class="token punctuation">:</span> informationCollector<span class="token punctuation">,</span>
+        silent<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x521B;&#x5EFA;MultiFrameImageStreamCompleter&#x4E2D;&#x4F1A;&#x6267;&#x884C;codec &#x51FD;&#x6570;&#xFF0C;&#x800C;codec &#x662F;&#x4E2A;Future&#x51FD;&#x6570;&#xFF0C;&#x5373;&#x662F;&#x524D;&#x9762;&#x7684;</p>
+<p><em>_loadAsync</em></p>
+<h2 id="loadasync"><a name="loadasync" class="anchor-navigation-ex-anchor" href="#loadasync"><i class="fa fa-link" aria-hidden="true"></i></a>_loadAsync</h2>
+<pre class="language-"><code class="lang-dart">Future<span class="token operator">&lt;</span>ui<span class="token punctuation">.</span>Codec<span class="token operator">&gt;</span> <span class="token function">_loadAsync</span><span class="token punctuation">(</span>
+  NetworkImage key<span class="token punctuation">,</span>
+  StreamController<span class="token operator">&lt;</span>ImageChunkEvent<span class="token operator">&gt;</span> chunkEvents<span class="token punctuation">,</span>
+  image_provider<span class="token punctuation">.</span>DecoderCallback decode<span class="token punctuation">,</span>
+<span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">assert</span><span class="token punctuation">(</span>key <span class="token operator">==</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// &#x89E3;&#x6790;&#x56FE;&#x7247;&#x5730;&#x5740;</span>
+    <span class="token keyword">final</span> Uri resolved <span class="token operator">=</span> Uri<span class="token punctuation">.</span>base<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>key<span class="token punctuation">.</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x6784;&#x5EFA;&#x8BF7;&#x6C42;</span>
+    <span class="token keyword">final</span> HttpClientRequest request <span class="token operator">=</span> <span class="token keyword">await</span> _httpClient<span class="token punctuation">.</span><span class="token function">getUrl</span><span class="token punctuation">(</span>resolved<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x8BF7;&#x6C42;&#x5934;&#x4E0D;&#x4E3A;&#x7A7A;&#x8BDD;&#x6DFB;&#x52A0;&#x8BF7;&#x6C42;&#x5934;</span>
+    headers<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>String name<span class="token punctuation">,</span> String value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      request<span class="token punctuation">.</span>headers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//&#x89E3;&#x6790;&#x83B7;&#x53D6;&#x54CD;&#x5E94;</span>
+    <span class="token keyword">final</span> HttpClientResponse response <span class="token operator">=</span> <span class="token keyword">await</span> request<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x54CD;&#x5E94;&#x5931;&#x8D25;&#x5904;&#x7406;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>statusCode <span class="token operator">!=</span> HttpStatus<span class="token punctuation">.</span>ok<span class="token punctuation">)</span>
+      <span class="token keyword">throw</span> image_provider<span class="token punctuation">.</span><span class="token function">NetworkImageLoadException</span><span class="token punctuation">(</span>statusCode<span class="token punctuation">:</span> response<span class="token punctuation">.</span>statusCode<span class="token punctuation">,</span> uri<span class="token punctuation">:</span> resolved<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// &#x54CD;&#x5E94;&#x8F6C;&#x4E3A;&#x5B57;&#x8282;&#x6570;&#x7EC4;</span>
+    <span class="token keyword">final</span> Uint8List bytes <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">consolidateHttpClientResponseBytes</span><span class="token punctuation">(</span>
+      response<span class="token punctuation">,</span>
+      onBytesReceived<span class="token punctuation">:</span> <span class="token punctuation">(</span>int cumulative<span class="token punctuation">,</span> int total<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        chunkEvents<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token function">ImageChunkEvent</span><span class="token punctuation">(</span>
+          cumulativeBytesLoaded<span class="token punctuation">:</span> cumulative<span class="token punctuation">,</span>
+          expectedTotalBytes<span class="token punctuation">:</span> total<span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>bytes<span class="token punctuation">.</span>lengthInBytes <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+      <span class="token keyword">throw</span> <span class="token function">Exception</span><span class="token punctuation">(</span><span class="token string">&apos;NetworkImage is an empty file: $resolved&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// &#x89E3;&#x7801;&#x56FE;&#x7247;&#x8FD4;&#x56DE;</span>
+    <span class="token keyword">return</span> <span class="token function">decode</span><span class="token punctuation">(</span>bytes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+    chunkEvents<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="decode"><a name="decode" class="anchor-navigation-ex-anchor" href="#decode"><i class="fa fa-link" aria-hidden="true"></i></a>decode</h2>
+<p>&#x4E0A;&#x9762;&#x7684;decode &#x5BF9;&#x8C61;&#x662F;<code>PaintingBinding.instance.instantiateImageCodec</code>&#xFF08;&#x5728;ImageProvider &#x7684;resolve&#x65B9;&#x6CD5;&#x5185;&#x8D4B;&#x503C;&#x4F20;&#x5165;&#xFF09;,</p>
+<pre class="language-"><code class="lang-dart">  Future<span class="token operator">&lt;</span>ui<span class="token punctuation">.</span>Codec<span class="token operator">&gt;</span> <span class="token function">instantiateImageCodec</span><span class="token punctuation">(</span>Uint8List bytes<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    int cacheWidth<span class="token punctuation">,</span>
+    int cacheHeight<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">assert</span><span class="token punctuation">(</span>cacheWidth <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> cacheWidth <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">assert</span><span class="token punctuation">(</span>cacheHeight <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> cacheHeight <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> ui<span class="token punctuation">.</span><span class="token function">instantiateImageCodec</span><span class="token punctuation">(</span>
+      bytes<span class="token punctuation">,</span>
+      targetWidth<span class="token punctuation">:</span> cacheWidth<span class="token punctuation">,</span>
+      targetHeight<span class="token punctuation">:</span> cacheHeight<span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x8C03;&#x7528;painting.dart &#x4E0B;&#x7684;instantiateImageCodec&#x51FD;&#x6570;</p>
+<pre class="language-"><code class="lang-dart">Future<span class="token operator">&lt;</span>Codec<span class="token operator">&gt;</span> <span class="token function">instantiateImageCodec</span><span class="token punctuation">(</span>Uint8List list<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  int targetWidth<span class="token punctuation">,</span>
+  int targetHeight<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">_futurize</span><span class="token punctuation">(</span>
+    <span class="token punctuation">(</span>_Callback<span class="token operator">&lt;</span>Codec<span class="token operator">&gt;</span> callback<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">_instantiateImageCodec</span><span class="token punctuation">(</span>list<span class="token punctuation">,</span> callback<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> targetWidth <span class="token operator">?</span><span class="token operator">?</span> _kDoNotResizeDimension<span class="token punctuation">,</span> targetHeight <span class="token operator">?</span><span class="token operator">?</span> _kDoNotResizeDimension<span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="futurize"><a name="futurize" class="anchor-navigation-ex-anchor" href="#futurize"><i class="fa fa-link" aria-hidden="true"></i></a>_futurize</h3>
+<p>_futurize&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5F0F;&#x628A;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5305;&#x88C5;&#x6210;Future&#x51FD;&#x6570;&#x3002;</p>
+<pre class="language-"><code class="lang-dart">Future<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> _futurize<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span><span class="token punctuation">(</span>_Callbacker<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> callbacker<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">final</span> Completer<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> completer <span class="token operator">=</span> Completer<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token function">sync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">final</span> String error <span class="token operator">=</span> <span class="token function">callbacker</span><span class="token punctuation">(</span><span class="token punctuation">(</span>T t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>t <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      completer<span class="token punctuation">.</span><span class="token function">completeError</span><span class="token punctuation">(</span><span class="token function">Exception</span><span class="token punctuation">(</span><span class="token string">&apos;operation failed&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      completer<span class="token punctuation">.</span><span class="token function">complete</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>error <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+    <span class="token keyword">throw</span> <span class="token function">Exception</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> completer<span class="token punctuation">.</span>future<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x662F;&#x901A;&#x8FC7;&#x6784;&#x5EFA;Complete&#x5BF9;&#x8C61;&#x6765;&#x628A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5305;&#x88C5;&#x6210;future&#xFF0C;&#x4E0E;&#x76F4;&#x63A5;&#x521B;&#x5EFA;Future&#x4E0D;&#x540C;&#x662F;&#xFF0C;Complete&#x53EF;&#x624B;&#x52A8;&#x63A7;&#x5236;&#x7ED3;&#x675F;Future&#x3002;</p>
+<h3 id="instantiateimagecodec"><a name="instantiateimagecodec" class="anchor-navigation-ex-anchor" href="#instantiateimagecodec"><i class="fa fa-link" aria-hidden="true"></i></a>_instantiateImageCodec</h3>
+<pre class="language-"><code class="lang-dart">String <span class="token function">_instantiateImageCodec</span><span class="token punctuation">(</span>Uint8List list<span class="token punctuation">,</span> _Callback<span class="token operator">&lt;</span>Codec<span class="token operator">&gt;</span> callback<span class="token punctuation">,</span> _ImageInfo imageInfo<span class="token punctuation">,</span> int targetWidth<span class="token punctuation">,</span> int targetHeight<span class="token punctuation">)</span>
+  native <span class="token string">&apos;instantiateImageCodec&apos;</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x6240;&#x4EE5;&#x89E3;&#x7801;&#x7684;&#x4EFB;&#x52A1;&#x4EA4;&#x7ED9;native &#x53BB;&#x5B9E;&#x73B0;&#x3002;</p>
+<h2 id="handlecodecready"><a name="handlecodecready" class="anchor-navigation-ex-anchor" href="#handlecodecready"><i class="fa fa-link" aria-hidden="true"></i></a>_handleCodecReady</h2>
+<p>&#x5728;&#x56FE;&#x7247;&#x4E0B;&#x8F7D;&#x89E3;&#x7801;&#x540E;&#x8FDB;&#x884C;&#x6E32;&#x67D3;&#x5DE5;&#x4F5C;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5B9A;&#x4E49;&#x5728;<strong>MultiFrameImageStreamCompleter</strong>&#xFF0C;</p>
+<pre class="language-"><code class="lang-dart">    codec<span class="token punctuation">.</span>then<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>_handleCodecReady<span class="token punctuation">,</span> onError<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x5728;&#x89E3;&#x7801;&#x56FE;&#x7247;&#x5B8C;&#x6210;&#x540E;&#x8C03;&#x7528;_handleCodecReady&#x3002;</p>
+<pre class="language-"><code class="lang-dart">  <span class="token keyword">void</span> <span class="token function">_handleCodecReady</span><span class="token punctuation">(</span>ui<span class="token punctuation">.</span>Codec codec<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    _codec <span class="token operator">=</span> codec<span class="token punctuation">;</span>
+    <span class="token keyword">assert</span><span class="token punctuation">(</span>_codec <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>hasListeners<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">_decodeNextFrameAndSchedule</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x800C;&#x5728;Image Widget &#x7684;_updateSourceStream&#x65B9;&#x6CD5;&#x4E2D;&#x4F1A;&#x6DFB;&#x52A0;&#x76D1;&#x542C;&#x5668;&#xFF0C;&#x6240;&#x4EE5;hasListeners &#x4E3A;true&#x3002;</p>
+<h2 id="decodenextframeandschedule"><a name="decodenextframeandschedule" class="anchor-navigation-ex-anchor" href="#decodenextframeandschedule"><i class="fa fa-link" aria-hidden="true"></i></a>_decodeNextFrameAndSchedule</h2>
+<pre class="language-"><code class="lang-dart">Future<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span> <span class="token function">_decodeNextFrameAndSchedule</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token comment">//&#x83B7;&#x53D6;&#x4E0B;&#x4E00;&#x5E27;</span>
+    _nextFrame <span class="token operator">=</span> <span class="token keyword">await</span> _codec<span class="token punctuation">.</span><span class="token function">getNextFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>exception<span class="token punctuation">,</span> stack<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">reportError</span><span class="token punctuation">(</span>
+      context<span class="token punctuation">:</span> <span class="token function">ErrorDescription</span><span class="token punctuation">(</span><span class="token string">&apos;resolving an image frame&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      exception<span class="token punctuation">:</span> exception<span class="token punctuation">,</span>
+      stack<span class="token punctuation">:</span> stack<span class="token punctuation">,</span>
+      informationCollector<span class="token punctuation">:</span> _informationCollector<span class="token punctuation">,</span>
+      silent<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// &#x5982;&#x679C;&#x56FE;&#x7247;&#x53EA;&#x6709;&#x4E00;&#x5E27;&#xFF08;&#x975E;&#x52A8;&#x56FE;&#xFF09;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>_codec<span class="token punctuation">.</span>frameCount <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// &#x975E;&#x52A8;&#x56FE;&#x5904;&#x7406;</span>
+    <span class="token function">_emitFrame</span><span class="token punctuation">(</span><span class="token function">ImageInfo</span><span class="token punctuation">(</span>image<span class="token punctuation">:</span> _nextFrame<span class="token punctuation">.</span>image<span class="token punctuation">,</span> scale<span class="token punctuation">:</span> _scale<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// &#x52A8;&#x56FE;&#x5904;&#x7406;</span>
+  <span class="token function">_scheduleAppFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x662F;&#x83B7;&#x53D6;&#x56FE;&#x7247;&#x4E0B;&#x4E00;&#x5E27;&#xFF0C;&#x8FDB;&#x884C;&#x52A8;&#x56FE;&#x6216;&#x8005;&#x975E;&#x52A8;&#x56FE;&#x5904;&#x7406;</p>
+<h3 id="emitframe"><a name="emitframe" class="anchor-navigation-ex-anchor" href="#emitframe"><i class="fa fa-link" aria-hidden="true"></i></a>_emitFrame</h3>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">void</span> <span class="token function">_emitFrame</span><span class="token punctuation">(</span>ImageInfo imageInfo<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">setImage</span><span class="token punctuation">(</span>imageInfo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  _framesEmitted <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+  <span class="token keyword">void</span> <span class="token function">setImage</span><span class="token punctuation">(</span>ImageInfo image<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    _currentImage <span class="token operator">=</span> image<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>_listeners<span class="token punctuation">.</span>isEmpty<span class="token punctuation">)</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x521B;&#x5EFA;&#x76D1;&#x542C;&#x5668;&#x96C6;&#x5408;&#x526F;&#x672C;&#xFF0C;&#x9632;&#x6B62;&#x5E76;&#x53D1;&#x4FEE;&#x6539;&#x3002;</span>
+    <span class="token keyword">final</span> List<span class="token operator">&lt;</span>ImageStreamListener<span class="token operator">&gt;</span> localListeners <span class="token operator">=</span>
+        List<span class="token operator">&lt;</span>ImageStreamListener<span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>_listeners<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>ImageStreamListener listener <span class="token keyword">in</span> localListeners<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token comment">// &#x8C03;&#x7528;&#x76D1;&#x542C;&#x5668;onImage&#x65B9;&#x6CD5;</span>
+        listener<span class="token punctuation">.</span><span class="token function">onImage</span><span class="token punctuation">(</span>image<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>exception<span class="token punctuation">,</span> stack<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">reportError</span><span class="token punctuation">(</span>
+          context<span class="token punctuation">:</span> <span class="token function">ErrorDescription</span><span class="token punctuation">(</span><span class="token string">&apos;by an image listener&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          exception<span class="token punctuation">:</span> exception<span class="token punctuation">,</span>
+          stack<span class="token punctuation">:</span> stack<span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x7684;&#x903B;&#x8F91;&#x662F;&#x53D6;&#x51FA;&#x76D1;&#x542C;&#x5668;&#xFF0C;&#x5E76;&#x4E14;&#x8C03;&#x7528;onImage&#x65B9;&#x6CD5;&#x3002;&#x800C;&#x76D1;&#x542C;&#x5668;&#x662F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart">ImageStreamListener <span class="token function">_getListener</span><span class="token punctuation">(</span><span class="token punctuation">[</span>ImageLoadingBuilder loadingBuilder<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  loadingBuilder <span class="token operator">?</span><span class="token operator">?</span><span class="token operator">=</span> widget<span class="token punctuation">.</span>loadingBuilder<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token function">ImageStreamListener</span><span class="token punctuation">(</span>
+    _handleImageFrame<span class="token punctuation">,</span>
+    onChunk<span class="token punctuation">:</span> loadingBuilder <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">?</span> <span class="token keyword">null</span> <span class="token punctuation">:</span> _handleImageChunk<span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x800C;onImage&#x65B9;&#x6CD5;&#x5C31;&#x662F;_handleImageFrame</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">void</span> <span class="token function">_handleImageFrame</span><span class="token punctuation">(</span>ImageInfo imageInfo<span class="token punctuation">,</span> bool synchronousCall<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    _imageInfo <span class="token operator">=</span> imageInfo<span class="token punctuation">;</span>
+    _loadingProgress <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    _frameNumber <span class="token operator">=</span> _frameNumber <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">?</span> <span class="token number">0</span> <span class="token punctuation">:</span> _frameNumber <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    _wasSynchronouslyLoaded <span class="token operator">|=</span> synchronousCall<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x662F;&#x8C03;&#x7528;setState &#x6765;&#x5237;&#x65B0;Widget&#x754C;&#x9762;&#x3002;</p>
+<h3 id="scheduleappframe"><a name="scheduleappframe" class="anchor-navigation-ex-anchor" href="#scheduleappframe"><i class="fa fa-link" aria-hidden="true"></i></a>_scheduleAppFrame</h3>
+<pre class="language-"><code class="lang-dart">  <span class="token keyword">void</span> <span class="token function">_scheduleAppFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>_frameCallbackScheduled<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    _frameCallbackScheduled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token comment">//&#x6CE8;&#x518C;&#x4E0B;&#x4E00;&#x5E27;&#x7684;&#x56DE;&#x8C03;</span>
+    SchedulerBinding<span class="token punctuation">.</span>instance<span class="token punctuation">.</span><span class="token function">scheduleFrameCallback</span><span class="token punctuation">(</span>_handleAppFrame<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<h4 id="scheduleframecallback"><a name="scheduleframecallback" class="anchor-navigation-ex-anchor" href="#scheduleframecallback"><i class="fa fa-link" aria-hidden="true"></i></a>scheduleFrameCallback</h4>
+<p>&#xFF08;binding.dart&#xFF09;</p>
+<pre class="language-"><code class="lang-dart">int <span class="token function">scheduleFrameCallback</span><span class="token punctuation">(</span>FrameCallback callback<span class="token punctuation">,</span> <span class="token punctuation">{</span> bool rescheduling <span class="token operator">=</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">scheduleFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  _nextFrameCallbackId <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token comment">//callback &#x6DFB;&#x52A0;&#x5230;_transientCallbacks&#x4E2D;</span>
+  _transientCallbacks<span class="token punctuation">[</span>_nextFrameCallbackId<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">_FrameCallbackEntry</span><span class="token punctuation">(</span>callback<span class="token punctuation">,</span> rescheduling<span class="token punctuation">:</span> rescheduling<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> _nextFrameCallbackId<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x8C03;&#x7528;&#x4E86;scheduleFrame&#xFF0C;&#x800C;scheduleFrame&#x5185;&#x8C03;&#x7528;window.scheduleFrame(); &#x6765;&#x6CE8;&#x518C;Vsync &#x4FE1;&#x53F7;&#x56DE;&#x8C03;&#x3002;&#x5728;Engine&#x6536;&#x5230;Vsync &#x4FE1;&#x53F7;&#x540E;&#x4F1A;&#x8C03;&#x7528;onBeginFrame &#x4EE5;&#x53CA;onDrawFrame &#x65B9;&#x6CD5;&#xFF0C;&#x800C;&#x5728;binding&#x91CC;&#x4F1A;&#x6267;&#x884C;handleBeginFrame&#x65B9;&#x6CD5;&#x3002;</p>
+<pre class="language-"><code class="lang-dart">  <span class="token keyword">void</span> <span class="token function">handleBeginFrame</span><span class="token punctuation">(</span>Duration rawTimeStamp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Timeline<span class="token punctuation">.</span><span class="token function">startSync</span><span class="token punctuation">(</span><span class="token string">&apos;Frame&apos;</span><span class="token punctuation">,</span> arguments<span class="token punctuation">:</span> timelineWhitelistArguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _firstRawTimeStampInEpoch <span class="token operator">?</span><span class="token operator">?</span><span class="token operator">=</span> rawTimeStamp<span class="token punctuation">;</span>
+    _currentFrameTimeStamp <span class="token operator">=</span> <span class="token function">_adjustForEpoch</span><span class="token punctuation">(</span>rawTimeStamp <span class="token operator">?</span><span class="token operator">?</span> _lastRawTimeStamp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>rawTimeStamp <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+      _lastRawTimeStamp <span class="token operator">=</span> rawTimeStamp<span class="token punctuation">;</span>
+
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    _hasScheduledFrame <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token comment">// TRANSIENT FRAME CALLBACKS</span>
+      Timeline<span class="token punctuation">.</span><span class="token function">startSync</span><span class="token punctuation">(</span><span class="token string">&apos;Animate&apos;</span><span class="token punctuation">,</span> arguments<span class="token punctuation">:</span> timelineWhitelistArguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      _schedulerPhase <span class="token operator">=</span> SchedulerPhase<span class="token punctuation">.</span>transientCallbacks<span class="token punctuation">;</span>
+      <span class="token comment">// &#x83B7;&#x53D6;_transientCallbacks</span>
+      <span class="token keyword">final</span> Map<span class="token operator">&lt;</span>int<span class="token punctuation">,</span> _FrameCallbackEntry<span class="token operator">&gt;</span> callbacks <span class="token operator">=</span> _transientCallbacks<span class="token punctuation">;</span>
+      <span class="token comment">//_transientCallbacks&#x7F6E;&#x7A7A;</span>
+      _transientCallbacks <span class="token operator">=</span> <span class="token operator">&lt;</span>int<span class="token punctuation">,</span> _FrameCallbackEntry<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+      callbacks<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>int id<span class="token punctuation">,</span> _FrameCallbackEntry callbackEntry<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>_removedIds<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">)</span>  
+          <span class="token comment">//&#x8C03;&#x7528;callback</span>
+          <span class="token function">_invokeFrameCallback</span><span class="token punctuation">(</span>callbackEntry<span class="token punctuation">.</span>callback<span class="token punctuation">,</span> _currentFrameTimeStamp<span class="token punctuation">,</span> callbackEntry<span class="token punctuation">.</span>debugStack<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      _removedIds<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+      _schedulerPhase <span class="token operator">=</span> SchedulerPhase<span class="token punctuation">.</span>midFrameMicrotasks<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<h4 id="handleappframe"><a name="handleappframe" class="anchor-navigation-ex-anchor" href="#handleappframe"><i class="fa fa-link" aria-hidden="true"></i></a>_handleAppFrame</h4>
+<p>&#x4E0A;&#x9762;&#x5206;&#x6790;&#x4E86;&#x4E0B;&#x4E00;&#x5E27;&#x4FE1;&#x53F7;&#x6765;&#x7684;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x6267;&#x884C;_handAppFrame&#x56DE;&#x8C03;&#x3002;</p>
+<p>&#xFF08;image_stream.dart/MultiFrameImageStreamCompleter&#xFF09;</p>
+<pre class="language-"><code class="lang-dart">  <span class="token keyword">void</span> <span class="token function">_handleAppFrame</span><span class="token punctuation">(</span>Duration timestamp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    _frameCallbackScheduled <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x6CA1;&#x6709;&#x76D1;&#x542C;return</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>hasListeners<span class="token punctuation">)</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x5982;&#x679C;&#x662F;&#x7B2C;&#x4E00;&#x5E27;&#xFF0C;&#x6216;&#x8005;&#x8D85;&#x8FC7;&#x67D0;&#x4E00;&#x5E27;&#x7EF4;&#x6301;&#x65F6;&#x95F4;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">_isFirstFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token function">_hasFrameDurationPassed</span><span class="token punctuation">(</span>timestamp<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// &#x63D2;&#x5165;&#x4E00;&#x5E27;</span>
+      <span class="token function">_emitFrame</span><span class="token punctuation">(</span><span class="token function">ImageInfo</span><span class="token punctuation">(</span>image<span class="token punctuation">:</span> _nextFrame<span class="token punctuation">.</span>image<span class="token punctuation">,</span> scale<span class="token punctuation">:</span> _scale<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// &#x66F4;&#x65B0;&#x5F53;&#x524D;&#x5E27;&#x663E;&#x793A;&#x65F6;&#x95F4;</span>
+      _shownTimestamp <span class="token operator">=</span> timestamp<span class="token punctuation">;</span>
+      <span class="token comment">// &#x66F4;&#x65B0;&#x5F53;&#x524D;&#x5E27;&#x6301;&#x7EED;&#x65F6;&#x95F4;</span>
+      _frameDuration <span class="token operator">=</span> _nextFrame<span class="token punctuation">.</span>duration<span class="token punctuation">;</span>
+      _nextFrame <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+      <span class="token comment">// &#x5224;&#x65AD;&#x9700;&#x8981;&#x91CD;&#x590D;&#x6267;&#x884C;</span>
+      <span class="token keyword">final</span> int completedCycles <span class="token operator">=</span> _framesEmitted <span class="token operator">~/</span> _codec<span class="token punctuation">.</span>frameCount<span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>_codec<span class="token punctuation">.</span>repetitionCount <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">||</span> completedCycles <span class="token operator">&lt;=</span> _codec<span class="token punctuation">.</span>repetitionCount<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">_decodeNextFrameAndSchedule</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// &#x8BA1;&#x7B97;&#x95F4;&#x9694;&#x65F6;&#x95F4;</span>
+    <span class="token keyword">final</span> Duration delay <span class="token operator">=</span> _frameDuration <span class="token operator">-</span> <span class="token punctuation">(</span>timestamp <span class="token operator">-</span> _shownTimestamp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x5B9A;&#x65F6;&#x5237;&#x65B0;</span>
+    _timer <span class="token operator">=</span> <span class="token function">Timer</span><span class="token punctuation">(</span>delay <span class="token operator">*</span> timeDilation<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">_scheduleAppFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x5BF9;&#x4E8E;&#x52A8;&#x56FE;&#xFF0C;&#x6838;&#x5FC3;&#x903B;&#x8F91;&#x662F;&#x5BF9;&#x4E8E;&#x9700;&#x8981;&#x91CD;&#x7ED8;&#x7684;&#x5E27;&#x8C03;&#x7528;_emitFrame&#x53BB;&#x5237;&#x65B0;&#x3002;&#x5982;&#x679C;&#x662F;&#x7B2C;&#x4E00;&#x5E27;&#x6216;&#x8005;&#x8D85;&#x8FC7;&#x5F53;&#x524D;&#x5E27;&#x7684;&#x7EF4;&#x6301;&#x65F6;&#x95F4;&#xFF0C;&#x8C03;&#x7528; _emitFrame &#x65B9;&#x6CD5;&#x663E;&#x793A;&#x4E00;&#x5E27;&#x56FE;&#x7247;&#xFF0C;&#x5426;&#x5219;&#x8BA1;&#x7B97;&#x4E0B;&#x4E00;&#x5E27;&#x7684;&#x95F4;&#x9694;&#x65F6;&#x95F4;&#xFF0C;&#x6267;&#x884C;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x518D;&#x6B21;&#x8C03;&#x7528; _scheduleAppFrame&#x65B9;&#x6CD5;&#x3002;&#x6240;&#x4EE5;&#x52A8;&#x56FE;&#x672C;&#x8D28;&#x4E5F;&#x662F;&#x4E00;&#x5E27;&#x4E00;&#x5E27;&#x53BB;&#x663E;&#x793A;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; david 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-04-28 15:21:18
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2-Flutter 应用启动分析.html" class="navigation navigation-next " aria-label="Next page: Flutter 应用启动分析">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Flutter 图片加载","level":"1.2","depth":1,"next":{"title":"Flutter 应用启动分析","level":"1.3","depth":1,"path":"0-Flutter/2-Flutter 应用启动分析.md","ref":"0-Flutter/2-Flutter 应用启动分析.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","prism","-highlight","copy-code-button","search-pro","-search","-lunr","expandable-chapters","splitter","-sharing","github-buttons","tbfed-pagefooter","anchor-navigation-ex","summary"],"styles":{"website":"./public-repertory/css/gitbook-configure.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy david 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"summary":{},"splitter":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"github-buttons":{"buttons":[{"user":"DavidZhong003","width":"160","type":"follow","count":true,"size":"small"}]},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"zhongshan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"david zhong 的文档库","language":"zh-hans","gitbook":"*","description":"zhongshan 的文档库. 里面包含了个人撰写的文章"},"file":{"path":"0-Flutter/1-Flutter图片加载.md","mtime":"2020-04-28T07:21:18.071Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-28T08:17:14.512Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

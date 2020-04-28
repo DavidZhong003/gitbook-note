@@ -1,0 +1,627 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Set 集合源码 · david zhong 的文档库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zhongshan">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="沉浸式状态栏.html" />
+    
+    
+    <link rel="prev" href="Retrofit 学习笔记.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"DavidZhong003","width":"160","type":"follow","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">0-Flutter</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../0-Flutter/1-Flutter图片加载.html">
+            
+                <a href="../0-Flutter/1-Flutter图片加载.html">
+            
+                    
+                    Flutter 图片加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0-Flutter/2-Flutter 应用启动分析.html">
+            
+                <a href="../0-Flutter/2-Flutter 应用启动分析.html">
+            
+                    
+                    Flutter 应用启动分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0-Flutter/3-Flutter 混合工程.html">
+            
+                <a href="../0-Flutter/3-Flutter 混合工程.html">
+            
+                    
+                    Flutter 混合工程搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../0-Flutter/4-Flutter 混合工程踩坑记录.html">
+            
+                <a href="../0-Flutter/4-Flutter 混合工程踩坑记录.html">
+            
+                    
+                    Flutter混合工程踩坑记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../0-Flutter/5-Flutter 混合工程上传AAR.html">
+            
+                <a href="../0-Flutter/5-Flutter 混合工程上传AAR.html">
+            
+                    
+                    Flutter 混合工程上传AAR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../0-Flutter/6-Flutter 引擎启动v1-9.html">
+            
+                <a href="../0-Flutter/6-Flutter 引擎启动v1-9.html">
+            
+                    
+                    Flutter 引擎启动（1.9）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../0-Flutter/7-Flutter 引擎启动v1-12.html">
+            
+                <a href="../0-Flutter/7-Flutter 引擎启动v1-12.html">
+            
+                    
+                    Flutter引擎启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../0-Flutter/8-Flutter Redux简单介绍.html">
+            
+                <a href="../0-Flutter/8-Flutter Redux简单介绍.html">
+            
+                    
+                    Redux 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Android-old</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="ArrayList源码学习.html">
+            
+                <a href="ArrayList源码学习.html">
+            
+                    
+                    ArrayList 源码学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Fragmentation 库学习笔记.html">
+            
+                <a href="Fragmentation 库学习笔记.html">
+            
+                    
+                    Fragmentation 库学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="HashMap源码学习.html">
+            
+                <a href="HashMap源码学习.html">
+            
+                    
+                    HashMap 源码学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="JVM学习笔记.html">
+            
+                <a href="JVM学习笔记.html">
+            
+                    
+                    JVM 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="LinkedList源码学习.html">
+            
+                <a href="LinkedList源码学习.html">
+            
+                    
+                    LinkedList 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="Okhttp源码学习.html">
+            
+                <a href="Okhttp源码学习.html">
+            
+                    
+                    Okhttp 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="Retrofit 学习笔记.html">
+            
+                <a href="Retrofit 学习笔记.html">
+            
+                    
+                    Retrofit 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.8" data-path="Set集合源码学习.html">
+            
+                <a href="Set集合源码学习.html">
+            
+                    
+                    Set 集合源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="沉浸式状态栏.html">
+            
+                <a href="沉浸式状态栏.html">
+            
+                    
+                    沉浸式状态栏
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">machine</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../machine/1-机器学习学习笔记--基础.html">
+            
+                <a href="../machine/1-机器学习学习笔记--基础.html">
+            
+                    
+                    机器学习笔记-基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../machine/2- 机器学习学习笔记--autograd自动求导.html">
+            
+                <a href="../machine/2- 机器学习学习笔记--autograd自动求导.html">
+            
+                    
+                    机器学习笔记-autograd自动求导
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../machine/3- 机器学习学习笔记--NDArray处理数据.html">
+            
+                <a href="../machine/3- 机器学习学习笔记--NDArray处理数据.html">
+            
+                    
+                    机器学习笔记-NDArray处理数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../machine/4-Numpy 教程.html">
+            
+                <a href="../machine/4-Numpy 教程.html">
+            
+                    
+                    机器学习笔记-Numpy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../machine/5-机器学习笔记--矩阵.html">
+            
+                <a href="../machine/5-机器学习笔记--矩阵.html">
+            
+                    
+                    机器学习笔记-矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../machine/6-机器学习笔记--线性回归.html">
+            
+                <a href="../machine/6-机器学习笔记--线性回归.html">
+            
+                    
+                    机器学习笔记-线性回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../其他/1-Conda常用命令.html">
+            
+                <a href="../其他/1-Conda常用命令.html">
+            
+                    
+                    管理conda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../其他/2-Git学习笔记.html">
+            
+                <a href="../其他/2-Git学习笔记.html">
+            
+                    
+                    Git 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../其他/3-UML类图.html">
+            
+                <a href="../其他/3-UML类图.html">
+            
+                    
+                    UML 类图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Set 集合源码</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#set-&#x96C6;&#x5408;&#x6E90;&#x7801;"><b></b>Set &#x96C6;&#x5408;&#x6E90;&#x7801;</a></li><li><span class="title-icon "></span><a href="#set&#x96C6;&#x5408;&#x7B80;&#x4ECB;"><b></b>Set&#x96C6;&#x5408;&#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#set-&#x5B9E;&#x73B0;&#x7C7B;"><b></b>Set &#x5B9E;&#x73B0;&#x7C7B;</a></li><ul><li><span class="title-icon "></span><a href="#hashset"><b></b>HashSet</a></li></ul></ul></div><a href="#set-&#x96C6;&#x5408;&#x6E90;&#x7801;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="set-&#x96C6;&#x5408;&#x6E90;&#x7801;"><a name="set-&#x96C6;&#x5408;&#x6E90;&#x7801;" class="anchor-navigation-ex-anchor" href="#set-&#x96C6;&#x5408;&#x6E90;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>Set &#x96C6;&#x5408;&#x6E90;&#x7801;</h1>
+<h1 id="set&#x96C6;&#x5408;&#x7B80;&#x4ECB;"><a name="set&#x96C6;&#x5408;&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#set&#x96C6;&#x5408;&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>Set&#x96C6;&#x5408;&#x7B80;&#x4ECB;</h1>
+<p>Set &#x548C;List&#x90FD;&#x7EE7;&#x627F;Collection ,&#x4ECE;&#x63A5;&#x53E3;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x6CD5;&#x90FD;&#x53EF;&#x770B;&#x51FA;&#xFF0C;List&#x5B58;&#x653E;&#x7684;&#x5143;&#x7D20;&#x6709;&#x987A;&#x5E8F;&#xFF0C;&#x800C;Set&#x5B58;&#x653E;&#x7684;&#x5143;&#x7D20;&#x6CA1;&#x6709;&#x7D22;&#x5F15;&#xFF0C;&#x65E0;&#x987A;&#x5E8F;&#x3002;&#x8FD9;&#x4E5F;&#x5BFC;&#x81F4;Set&#x96C6;&#x5408;&#x4E0D;&#x80FD;&#x5B58;&#x653E;&#x76F8;&#x540C;&#x5143;&#x7D20;&#xFF08;&#x65E0;&#x6CD5;&#x533A;&#x5206;&#xFF09;&#x3002;</p>
+<h1 id="set-&#x5B9E;&#x73B0;&#x7C7B;"><a name="set-&#x5B9E;&#x73B0;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#set-&#x5B9E;&#x73B0;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>Set &#x5B9E;&#x73B0;&#x7C7B;</h1>
+<h2 id="hashset"><a name="hashset" class="anchor-navigation-ex-anchor" href="#hashset"><i class="fa fa-link" aria-hidden="true"></i></a>HashSet</h2>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; david 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-04-28 15:07:46
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Retrofit 学习笔记.html" class="navigation navigation-prev " aria-label="Previous page: Retrofit 学习笔记">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="沉浸式状态栏.html" class="navigation navigation-next " aria-label="Next page: 沉浸式状态栏">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Set 集合源码","level":"2.8","depth":1,"next":{"title":"沉浸式状态栏","level":"2.9","depth":1,"path":"Android-old/沉浸式状态栏.md","ref":"Android-old/沉浸式状态栏.md","articles":[]},"previous":{"title":"Retrofit 学习笔记","level":"2.7","depth":1,"path":"Android-old/Retrofit 学习笔记.md","ref":"Android-old/Retrofit 学习笔记.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","prism","-highlight","copy-code-button","search-pro","-search","-lunr","expandable-chapters","splitter","-sharing","github-buttons","tbfed-pagefooter","anchor-navigation-ex","summary"],"styles":{"website":"./public-repertory/css/gitbook-configure.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy david 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"summary":{},"splitter":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"github-buttons":{"buttons":[{"user":"DavidZhong003","width":"160","type":"follow","count":true,"size":"small"}]},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"zhongshan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"david zhong 的文档库","language":"zh-hans","gitbook":"*","description":"zhongshan 的文档库. 里面包含了个人撰写的文章"},"file":{"path":"Android-old/Set集合源码学习.md","mtime":"2020-04-28T07:07:46.142Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-28T08:17:14.512Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

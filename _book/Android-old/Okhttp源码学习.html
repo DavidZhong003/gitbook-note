@@ -1,0 +1,1094 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Okhttp 学习笔记 · david zhong 的文档库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zhongshan">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Retrofit 学习笔记.html" />
+    
+    
+    <link rel="prev" href="LinkedList源码学习.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"DavidZhong003","width":"160","type":"follow","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">0-Flutter</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../0-Flutter/1-Flutter图片加载.html">
+            
+                <a href="../0-Flutter/1-Flutter图片加载.html">
+            
+                    
+                    Flutter 图片加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0-Flutter/2-Flutter 应用启动分析.html">
+            
+                <a href="../0-Flutter/2-Flutter 应用启动分析.html">
+            
+                    
+                    Flutter 应用启动分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0-Flutter/3-Flutter 混合工程.html">
+            
+                <a href="../0-Flutter/3-Flutter 混合工程.html">
+            
+                    
+                    Flutter 混合工程搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../0-Flutter/4-Flutter 混合工程踩坑记录.html">
+            
+                <a href="../0-Flutter/4-Flutter 混合工程踩坑记录.html">
+            
+                    
+                    Flutter混合工程踩坑记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../0-Flutter/5-Flutter 混合工程上传AAR.html">
+            
+                <a href="../0-Flutter/5-Flutter 混合工程上传AAR.html">
+            
+                    
+                    Flutter 混合工程上传AAR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../0-Flutter/6-Flutter 引擎启动v1-9.html">
+            
+                <a href="../0-Flutter/6-Flutter 引擎启动v1-9.html">
+            
+                    
+                    Flutter 引擎启动（1.9）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../0-Flutter/7-Flutter 引擎启动v1-12.html">
+            
+                <a href="../0-Flutter/7-Flutter 引擎启动v1-12.html">
+            
+                    
+                    Flutter引擎启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../0-Flutter/8-Flutter Redux简单介绍.html">
+            
+                <a href="../0-Flutter/8-Flutter Redux简单介绍.html">
+            
+                    
+                    Redux 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Android-old</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="ArrayList源码学习.html">
+            
+                <a href="ArrayList源码学习.html">
+            
+                    
+                    ArrayList 源码学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Fragmentation 库学习笔记.html">
+            
+                <a href="Fragmentation 库学习笔记.html">
+            
+                    
+                    Fragmentation 库学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="HashMap源码学习.html">
+            
+                <a href="HashMap源码学习.html">
+            
+                    
+                    HashMap 源码学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="JVM学习笔记.html">
+            
+                <a href="JVM学习笔记.html">
+            
+                    
+                    JVM 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="LinkedList源码学习.html">
+            
+                <a href="LinkedList源码学习.html">
+            
+                    
+                    LinkedList 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.6" data-path="Okhttp源码学习.html">
+            
+                <a href="Okhttp源码学习.html">
+            
+                    
+                    Okhttp 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="Retrofit 学习笔记.html">
+            
+                <a href="Retrofit 学习笔记.html">
+            
+                    
+                    Retrofit 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="Set集合源码学习.html">
+            
+                <a href="Set集合源码学习.html">
+            
+                    
+                    Set 集合源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="沉浸式状态栏.html">
+            
+                <a href="沉浸式状态栏.html">
+            
+                    
+                    沉浸式状态栏
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">machine</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../machine/1-机器学习学习笔记--基础.html">
+            
+                <a href="../machine/1-机器学习学习笔记--基础.html">
+            
+                    
+                    机器学习笔记-基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../machine/2- 机器学习学习笔记--autograd自动求导.html">
+            
+                <a href="../machine/2- 机器学习学习笔记--autograd自动求导.html">
+            
+                    
+                    机器学习笔记-autograd自动求导
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../machine/3- 机器学习学习笔记--NDArray处理数据.html">
+            
+                <a href="../machine/3- 机器学习学习笔记--NDArray处理数据.html">
+            
+                    
+                    机器学习笔记-NDArray处理数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../machine/4-Numpy 教程.html">
+            
+                <a href="../machine/4-Numpy 教程.html">
+            
+                    
+                    机器学习笔记-Numpy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../machine/5-机器学习笔记--矩阵.html">
+            
+                <a href="../machine/5-机器学习笔记--矩阵.html">
+            
+                    
+                    机器学习笔记-矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../machine/6-机器学习笔记--线性回归.html">
+            
+                <a href="../machine/6-机器学习笔记--线性回归.html">
+            
+                    
+                    机器学习笔记-线性回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../其他/1-Conda常用命令.html">
+            
+                <a href="../其他/1-Conda常用命令.html">
+            
+                    
+                    管理conda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../其他/2-Git学习笔记.html">
+            
+                <a href="../其他/2-Git学习笔记.html">
+            
+                    
+                    Git 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../其他/3-UML类图.html">
+            
+                <a href="../其他/3-UML类图.html">
+            
+                    
+                    UML 类图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Okhttp 学习笔记</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#okhttp-&#x5B66;&#x4E60;&#x7B14;&#x8BB0;"><b></b>Okhttp &#x5B66;&#x4E60;&#x7B14;&#x8BB0;</a></li><li><span class="title-icon "></span><a href="#&#x57FA;&#x672C;&#x4F7F;&#x7528;"><b></b>&#x57FA;&#x672C;&#x4F7F;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x57FA;&#x672C;&#x6D41;&#x7A0B;"><b></b>&#x57FA;&#x672C;&#x6D41;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#okhttpclient"><b></b>OkHttpClient</a></li><li><span class="title-icon "></span><a href="#request&#x7C7B;"><b></b>Request&#x7C7B;</a></li><li><span class="title-icon "></span><a href="#realcall"><b></b>RealCall</a></li><li><span class="title-icon "></span><a href="#&#x62E6;&#x622A;&#x5668;&#x5206;&#x6790;"><b></b>&#x62E6;&#x622A;&#x5668;&#x5206;&#x6790;</a></li><ul><li><span class="title-icon "></span><a href="#retryandfollowupinterceptor"><b></b>RetryAndFollowUpInterceptor</a></li><li><span class="title-icon "></span><a href="#bridgeinterceptor"><b></b>BridgeInterceptor</a></li><li><span class="title-icon "></span><a href="#connectinterceptor"><b></b>ConnectInterceptor</a></li><li><span class="title-icon "></span><a href="#&#x8865;&#x5145;&#x77E5;&#x8BC6;&#x70B9;okio"><b></b>&#x8865;&#x5145;&#x77E5;&#x8BC6;&#x70B9;Okio</a></li><li><span class="title-icon "></span><a href="#callserverinterceptor"><b></b>CallServerInterceptor</a></li></ul></ul></div><a href="#okhttp-&#x5B66;&#x4E60;&#x7B14;&#x8BB0;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="okhttp-&#x5B66;&#x4E60;&#x7B14;&#x8BB0;"><a name="okhttp-&#x5B66;&#x4E60;&#x7B14;&#x8BB0;" class="anchor-navigation-ex-anchor" href="#okhttp-&#x5B66;&#x4E60;&#x7B14;&#x8BB0;"><i class="fa fa-link" aria-hidden="true"></i></a>Okhttp &#x5B66;&#x4E60;&#x7B14;&#x8BB0;</h1>
+<h1 id="&#x57FA;&#x672C;&#x4F7F;&#x7528;"><a name="&#x57FA;&#x672C;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x57FA;&#x672C;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57FA;&#x672C;&#x4F7F;&#x7528;</h1>
+<p>&#x65E0;&#x8BBA;&#x662F;&#x662F;post&#x8FD8;&#x662F;get&#x8BF7;&#x6C42;,&#x57FA;&#x672C;&#x662F;&#x5982;&#x4E0B;4&#x6B65;:</p>
+<ol>
+<li>&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;OkHttpClient&#x5BF9;&#x8C61;(&#x5305;&#x542B;&#x534F;&#x8BAE;&#x8DEF;&#x7531;,&#x62E6;&#x622A;&#x5668;&#x7B49;&#x4FE1;&#x606F;)&#x3002;</li>
+<li>&#x521B;&#x5EFA;Request&#x5BF9;&#x8C61;&#xFF0C;&#x6307;&#x5B9A;&#x8BF7;&#x6C42;url&#x548C;&#x53C2;&#x6570;&#x7B49;&#x3002;</li>
+<li>&#x901A;&#x8FC7;client&#x521B;&#x5EFA;call&#x5BF9;&#x8C61;&#xFF08;newCall&#x65B9;&#x6CD5;&#xFF09;</li>
+<li>call&#x6267;&#x884C;&#x540C;&#x6B65;&#x6216;&#x8005;&#x5F02;&#x6B65;&#x65B9;&#x6CD5;</li>
+</ol>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code>OkHttpClient client = new OkHttpClient();
+RequestBody body = RequestBody.create(JSON, json);
+Request request = new Request.Builder()
+ .url(url)
+ .post(body)
+ .build();
+Response response = client.newCall(request).execute());
+</code></pre><h1 id="&#x57FA;&#x672C;&#x6D41;&#x7A0B;"><a name="&#x57FA;&#x672C;&#x6D41;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x57FA;&#x672C;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57FA;&#x672C;&#x6D41;&#x7A0B;</h1>
+<p>&#x6E90;&#x7801;&#x5206;&#x6790;:</p>
+<ol>
+<li><p>client.newcall&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x7684;&#x662F;&#x4E00;&#x4E2A;RealCall&#x5BF9;&#x8C61;&#x3002;</p>
+<p>   /**</p>
+<pre class="language-"><code>* Prepares the {@code request} to be executed at some point in the future.
+*/
+</code></pre><p>  @Override public Call newCall(Request request) {</p>
+<pre class="language-"><code> return new RealCall(this, request, false /* for web socket */);
+</code></pre><p>   }</p>
+</li>
+</ol>
+<p>2.&#x5B9E;&#x9645;&#x6267;&#x884C;&#x7684;&#x662F;RealCall&#x65B9;&#x6CD5;&#x7684;execute&#x65B9;&#x6CD5;</p>
+<pre class="language-"><code>@Override public Response execute() throws IOException {
+synchronized (this) {
+  if (executed) throw new IllegalStateException(&quot;Already Executed&quot;);
+  executed = true;
+}
+captureCallStackTrace();
+try {
+  client.dispatcher().executed(this);
+  Response result = getResponseWithInterceptorChain();
+  if (result == null) throw new IOException(&quot;Canceled&quot;);
+  return result;
+} finally {
+  client.dispatcher().finished(this);
+}
+  }
+</code></pre><p>&#x5176;&#x4E2D;&#x903B;&#x8F91;&#x662F;&#x5148;&#x5224;&#x65AD;&#x662F;&#x5426;&#x88AB;&#x6267;&#x884C;&#x3002;&#x6CA1;&#x6709;&#x6267;&#x884C;&#x8C03;&#x7528;client&#x4E2D;&#x7684;&#x8C03;&#x5EA6;&#x5668;&#x6267;&#x884C;&#xFF0C;&#x901A;&#x8FC7;getResponseWithInterceptorChain&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x54CD;&#x5E94;&#x7ED3;&#x679C;&#x3002;</p>
+<p>3.getResponseWithInterceptorChain&#x65B9;&#x6CD5;&#x4E3B;&#x8981;&#x5185;&#x5BB9;&#x662F;</p>
+<pre class="language-"><code>Response getResponseWithInterceptorChain() throws IOException {
+// Build a full stack of interceptors.
+List<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Interceptor</span><span class="token punctuation">&gt;</span></span> interceptors = new ArrayList&lt;&gt;();
+interceptors.addAll(client.interceptors());
+interceptors.add(retryAndFollowUpInterceptor);
+interceptors.add(new BridgeInterceptor(client.cookieJar()));
+interceptors.add(new CacheInterceptor(client.internalCache()));
+interceptors.add(new ConnectInterceptor(client));
+if (!forWebSocket) {
+  interceptors.addAll(client.networkInterceptors());
+}
+interceptors.add(new CallServerInterceptor(forWebSocket));
+
+Interceptor.Chain chain = new RealInterceptorChain(
+interceptors, null, null, null, 0, originalRequest);
+return chain.proceed(originalRequest);
+  } 
+</code></pre><p>&#x4E3B;&#x8981;&#x903B;&#x8F91;&#x662F;&#xFF0C;&#x628A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x62E6;&#x622A;&#x5668;&#x4EE5;&#x53CA;&#x5185;&#x7F6E;&#x7684;BridgeInterceptor&#x3001;CacheInterceptor&#x3001;ConnectInterceptor&#x3001;CallServerInterceptor&#x7B49;&#x62E6;&#x622A;&#x5668;&#x6DFB;&#x52A0;&#x8FDB;&#x96C6;&#x5408;&#x6784;&#x5EFA;RealInterceptorChain&#x5BF9;&#x8C61;&#x518D;&#x6267;&#x884C;&#x5B83;&#x7684;proceed&#x65B9;&#x6CD5;&#x3002;
+&#x8FD9;&#x91CC;&#x7ED9;&#x6211;&#x4EEC;&#x7559;&#x4E0B;&#x7591;&#x95EE;&#xFF1A;1&#x3001;RealInterceptorChain&#x662F;&#x5565;2&#x3001;&#x90A3;&#x4E9B;&#x5185;&#x7F6E;&#x7684;&#x62E6;&#x622A;&#x5668;&#x7684;&#x4F5C;&#x7528;</p>
+<p>4.RealInterceptorChain&#x4E2D;proceed&#x65B9;&#x6CD5;</p>
+<pre class="language-"><code>public Response proceed(Request request, StreamAllocation streamAllocation, HttpCodec httpCodec,
+  Connection connection) throws IOException {
+if (index &gt;= interceptors.size()) throw new AssertionError();
+
+calls++;
+
+// If we already have a stream, confirm that the incoming request will use it.
+if (this.httpCodec != null &amp;&amp; !sameConnection(request.url())) {
+  throw new IllegalStateException(&quot;network interceptor &quot; + interceptors.get(index - 1)
+  + &quot; must retain the same host and port&quot;);
+}
+
+// If we already have a stream, confirm that this is the only call to chain.proceed().
+if (this.httpCodec != null &amp;&amp; calls &gt; 1) {
+  throw new IllegalStateException(&quot;network interceptor &quot; + interceptors.get(index - 1)
+  + &quot; must call proceed() exactly once&quot;);
+}
+
+// Call the next interceptor in the chain.
+RealInterceptorChain next = new RealInterceptorChain(
+interceptors, streamAllocation, httpCodec, connection, index + 1, request);
+Interceptor interceptor = interceptors.get(index);
+Response response = interceptor.intercept(next);
+
+// Confirm that the next interceptor made its required call to chain.proceed().
+if (httpCodec != null &amp;&amp; index + 1 &lt; interceptors.size() &amp;&amp; next.calls != 1) {
+  throw new IllegalStateException(&quot;network interceptor &quot; + interceptor
+  + &quot; must call proceed() exactly once&quot;);
+}
+
+// Confirm that the intercepted response isn&apos;t null.
+if (response == null) {
+  throw new NullPointerException(&quot;interceptor &quot; + interceptor + &quot; returned null&quot;);
+}
+
+return response;
+  }
+</code></pre><p> &#x53BB;&#x9664;&#x4E2D;&#x95F4;&#x5224;&#x65AD;&#x903B;&#x8F91;,&#x4E3B;&#x8981;&#x5185;&#x5BB9;&#x662F;&#x6784;&#x5EFA;next RealInterceptorChain(&#x91CC;&#x9762;&#x62E6;&#x622A;&#x5668;&#x7D22;&#x5F15;+1)&#x5BF9;&#x8C61;,&#x7136;&#x540E;&#x8C03;&#x7528;&#x62E6;&#x622A;&#x5668;intercept&#x7684;intercept&#x65B9;&#x6CD5;</p>
+<p>5.&#x62E6;&#x622A;&#x5668;&#x7684;intercept&#x65B9;&#x6CD5;</p>
+<p>Interceptor&#x662F;&#x63A5;&#x53E3;,&#x4EE5;&#x4E00;&#x4E2A;&#x5B83;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x7C7B;BridgeInterceptor&#x4E3A;&#x4F8B;&#x3002;intercept&#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;chain&#x5BF9;&#x8C61;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E4B;&#x524D;&#x521B;&#x5EFA;&#x7684;RealInterceptorChain&#x5BF9;&#x8C61;&#xFF0C;&#x91CC;&#x9762;&#x903B;&#x8F91;&#x662F;&#x53D6;&#x51FA;&#x8BF7;&#x6C42;Request,&#x7ECF;&#x8FC7;&#x5904;&#x7406;&#x540E;&#xFF0C;&#x4F20;&#x5165;chain&#x4E2D;&#x5F97;&#x5230;&#x54CD;&#x5E94;Response &#x7136;&#x540E;&#x7ECF;&#x8FC7;&#x5904;&#x7406;&#x540E;&#x518D;&#x8FD4;&#x56DE;&#x3002;
+&#x6574;&#x4E2A;&#x6D41;&#x7A0B;&#x5C31;&#x662F;<strong>&#x8BF7;&#x6C42;--&#x62E6;&#x622A;&#x5668;1&#x5904;&#x7406;&#x8BF7;&#x6C42;--&#x62E6;&#x622A;&#x5668;2&#x5904;&#x7406;&#x8BF7;&#x6C42;--.....--&#x62E6;&#x622A;&#x5668;2&#x5904;&#x7406;&#x54CD;&#x5E94;--&#x62E6;&#x622A;&#x5668;2&#x5904;&#x7406;&#x54CD;&#x5E94;--&#x54CD;&#x5E94;</strong>&#xFF0C;&#x8FD9;&#x662F;&#x7ECF;&#x5178;&#x7684;&#x8D23;&#x4EFB;&#x94FE;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x3002;</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1639355-64b91013d44e15d5.png?imageMogr2/auto-orient/" alt="okhttp&#x6D41;&#x7A0B;&#x56FE;"></p>
+<p>&#x5176;&#x4E2D;&#x5185;&#x7F6E;&#x7684;&#x62E6;&#x622A;&#x5668;&#x6709;&#xFF0C;</p>
+<ul>
+<li>RetryAndFollowUpInterceptor(&#x91CD;&#x8BD5;&#xFF0C;&#x91CD;&#x5B9A;&#x5411;&#x62E6;&#x622A;&#x5668;)</li>
+<li>BridgeInterceptor&#xFF08;&#x6865;&#x63A5;&#x62E6;&#x622A;&#x5668;&#xFF0C;&#x8F6C;&#x6362;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#xFF0C;&#x6DFB;&#x52A0;&#x5934;&#x90E8;&#x4FE1;&#x606F;&#xFF09;</li>
+<li>CacheInerceptor&#xFF08;&#x7F13;&#x5B58;&#x62E6;&#x622A;&#x5668;&#xFF09;</li>
+<li>ConnectInerceptor&#xFF08;&#x8FDE;&#x63A5;&#x62E6;&#x622A;&#x5668;&#xFF0C;&#x4E3B;&#x8981;&#x8FDE;&#x63A5;&#x670D;&#x52A1;&#x5668;&#xFF0C;http&#xFF0C;https&#x5305;&#x88C5;&#xFF09;</li>
+<li>CallServerInterceptor&#xFF08;&#x670D;&#x52A1;&#x62E6;&#x622A;&#x5668;,&#x4E3B;&#x8981;&#x8D1F;&#x8D23;&#x6570;&#x636E;&#x53D1;&#x9001;&#xFF0C;&#x8BFB;&#x53D6;&#xFF09;</li>
+</ul>
+<h1 id="okhttpclient"><a name="okhttpclient" class="anchor-navigation-ex-anchor" href="#okhttpclient"><i class="fa fa-link" aria-hidden="true"></i></a>OkHttpClient</h1>
+<p>&#x5176;&#x4E2D;&#x91CD;&#x8981;&#x7684;&#x5C31;&#x662F;Builder&#x5185;&#x90E8;&#x7C7B;
+&#x4E3B;&#x8981;&#x8981;&#x6784;&#x5EFA;&#x7684;&#x53C2;&#x6570;&#x6709;&#xFF1A;</p>
+<pre class="language-"><code>Dispatcher dispatcher;
+//&#x4EE3;&#x7406; &#xFF0C; &#x76F4;&#x8FDE;&#x63A5;&#xFF0C;http&#xFF0C;socket
+Proxy proxy;
+List<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Protocol</span><span class="token punctuation">&gt;</span></span> protocols;
+List<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ConnectionSpec</span><span class="token punctuation">&gt;</span></span> connectionSpecs;
+final List<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Interceptor</span><span class="token punctuation">&gt;</span></span> interceptors = new ArrayList&lt;&gt;();
+final List<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Interceptor</span><span class="token punctuation">&gt;</span></span> networkInterceptors = new ArrayList&lt;&gt;();
+ProxySelector proxySelector;
+CookieJar cookieJar;
+Cache cache;
+InternalCache internalCache;
+SocketFactory socketFactory;
+SSLSocketFactory sslSocketFactory;
+CertificateChainCleaner certificateChainCleaner;
+HostnameVerifier hostnameVerifier;
+CertificatePinner certificatePinner;
+Authenticator proxyAuthenticator;
+Authenticator authenticator;
+ConnectionPool connectionPool;
+Dns dns;
+boolean followSslRedirects;
+boolean followRedirects;
+boolean retryOnConnectionFailure;
+int connectTimeout;
+int readTimeout;
+int writeTimeout;
+int pingInterval;
+</code></pre><p>&#x5176;&#x4E2D;&#x5728;Builder&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x5185;&#xFF1A;</p>
+<pre class="language-"><code>public Builder() {
+  //&#x8BF7;&#x6C42;&#x5206;&#x53D1;&#x5668;&#xFF0C;&#x5185;&#x90E8;&#x662F;&#x6709;ThreadPoolExecutor    
+  dispatcher = new Dispatcher();
+  // &#x534F;&#x8BAE;&#x5217;&#x8868;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;http1.1&#x548C;http2.0    
+  protocols = DEFAULT_PROTOCOLS;
+  //&#x8FDE;&#x63A5;&#x89C4;&#x8303;&#x5217;&#x8868;&#xFF08;TLS&#x7B49;&#xFF09;    
+  connectionSpecs = DEFAULT_CONNECTION_SPECS;
+  //&#x7EBF;&#x8DEF;&#x9009;&#x62E9;&#x5668;    
+  proxySelector = ProxySelector.getDefault();
+  cookieJar = CookieJar.NO_COOKIES;
+  socketFactory = SocketFactory.getDefault();
+  hostnameVerifier = OkHostnameVerifier.INSTANCE;
+  certificatePinner = CertificatePinner.DEFAULT;
+  proxyAuthenticator = Authenticator.NONE;
+  authenticator = Authenticator.NONE;
+  connectionPool = new ConnectionPool();
+  //DNS&#x89E3;&#x6790;    
+  dns = Dns.SYSTEM;
+  followSslRedirects = true;
+  followRedirects = true;
+  retryOnConnectionFailure = true;
+  connectTimeout = 10_000;
+  readTimeout = 10_000;
+  writeTimeout = 10_000;
+  pingInterval = 0;
+}
+</code></pre><h1 id="request&#x7C7B;"><a name="request&#x7C7B;" class="anchor-navigation-ex-anchor" href="#request&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>Request&#x7C7B;</h1>
+<p> &#x4E5F;&#x662F;&#x91C7;&#x7528;Builder&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#xFF0C;&#x597D;&#x5904;&#x662F;&#x53EF;&#x4EE5;&#x628A;&#x590D;&#x6742;&#x5BF9;&#x8C61;&#x7684;&#x6784;&#x5EFA;&#x8FC7;&#x7A0B;&#x9690;&#x85CF;&#xFF0C;&#x89E3;&#x8026;&#x548C;&#x62D3;&#x5C55;&#x65B9;&#x4FBF;&#x3002;</p>
+<pre class="language-"><code>HttpUrl url;
+String method;
+Headers.Builder headers;
+RequestBody body;
+Object tag;
+
+public Builder() {
+  this.method = &quot;GET&quot;;
+  this.headers = new Headers.Builder();
+}
+</code></pre><p>&#x4E3B;&#x8981;&#x662F;&#x8BF7;&#x6C42;url&#xFF0C;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF0C;&#x8BF7;&#x6C42;&#x5934;&#xFF0C;&#x8BF7;&#x6C42;&#x4F53;&#x7684;&#x6784;&#x5EFA;</p>
+<h1 id="realcall"><a name="realcall" class="anchor-navigation-ex-anchor" href="#realcall"><i class="fa fa-link" aria-hidden="true"></i></a>RealCall</h1>
+<p>&#x5B9E;&#x9645;&#x8BBF;&#x95EE;&#x7C7B;&#x3002;&#x5B9E;&#x73B0;Call&#x63A5;&#x53E3;&#xFF0C;&#x800C;Call&#x63A5;&#x53E3;&#x4E3B;&#x8981;&#x65B9;&#x6CD5;&#x6709;</p>
+<ul>
+<li>request&#xFF08;&#xFF09;&#x8FD4;&#x56DE;Request&#x8BF7;&#x6C42;&#x5BF9;&#x8C61;</li>
+<li>execute&#x540C;&#x6B65;&#x6267;&#x884C;&#x65B9;&#x6CD5;</li>
+<li>enqueue&#x5F02;&#x6B65;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;</li>
+<li>cancel&#x7EC8;&#x6B62;&#x65B9;&#x6CD5;</li>
+<li>isExecute&#x5224;&#x65AD;&#x662F;&#x5426;&#x6267;&#x884C;</li>
+<li>isCanceled&#x5224;&#x65AD;&#x662F;&#x5426;&#x7EC8;&#x6B62;</li>
+<li>clone&#x514B;&#x9686;&#x65B9;&#x6CD5;</li>
+</ul>
+<p>&#x800C;&#x5176;&#x5B9E;&#x73B0;&#x7C7B;RealCall&#x4E2D;&#x91CD;&#x8981;&#x7684;&#x65B9;&#x6CD5;&#x5C31;&#x662F;execute&#x548C;enqueue&#xFF0C;&#x540C;&#x6B65;&#x3001;&#x5F02;&#x6B65;&#x83B7;&#x53D6;&#x54CD;&#x5E94;&#x3002;</p>
+<p>&#x540C;&#x6B65;&#x7684;&#x60C5;&#x51B5;&#x5728;&#x4E0A;&#x9762;&#x5206;&#x6790;&#x8FC7;&#xFF0C;&#x4E0B;&#x9762;&#x91CD;&#x70B9;&#x89E3;&#x6790;&#x5F02;&#x6B65;&#x60C5;&#x51B5;</p>
+<pre class="language-"><code>@Override public void enqueue(Callback responseCallback) {
+synchronized (this) {
+  if (executed) throw new IllegalStateException(&quot;Already Executed&quot;);
+  executed = true;
+}
+captureCallStackTrace();
+client.dispatcher().enqueue(new AsyncCall(responseCallback));
+}
+</code></pre><p>&#x7531;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x4E3B;&#x8981;&#x662F;&#x5224;&#x65AD;&#x8FD9;&#x4E2A;call&#x662F;&#x5426;&#x88AB;&#x6267;&#x884C;&#xFF0C;&#x5982;&#x679C;&#x88AB;&#x6267;&#x884C;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;&#x65B9;&#x6CD5;captureCallStackTrace()&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E3B;&#x8981;&#x8FFD;&#x8E2A;&#x8C03;&#x7528;&#x4FE1;&#x606F;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x628A;&#x56DE;&#x8C03;&#x5305;&#x88C5;&#x6210;AsyncCall&#x5BF9;&#x8C61;&#x4EA4;&#x7ED9;Dispatcher&#x6267;&#x884C;&#xFF0C;&#x800C;&#x5B9E;&#x9645;&#x4E0A;AsyncCall&#x662F;Runnable&#x5BF9;&#x8C61;&#xFF0C;&#x800C;dispatcher&#x91CC;&#x9762;&#x662F;&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;&#x6267;&#x884C;run&#x65B9;&#x6CD5;&#x65F6;&#x8C03;&#x7528;AsyncCall&#x91CC;&#x7684;execute&#x65B9;&#x6CD5;&#x3002;</p>
+<pre class="language-"><code>@Override protected void execute() {
+  boolean signalledCallback = false;
+  try {
+    Response response = getResponseWithInterceptorChain();
+    if (retryAndFollowUpInterceptor.isCanceled()) {
+      signalledCallback = true;
+      responseCallback.onFailure(RealCall.this, new IOException(&quot;Canceled&quot;));
+    } else {
+      signalledCallback = true;
+      responseCallback.onResponse(RealCall.this, response);
+    }
+  } catch (IOException e) {
+    if (signalledCallback) {
+      // Do not signal the callback twice!
+      Platform.get().log(INFO, &quot;Callback failure for &quot; + toLoggableString(), e);
+    } else {
+      responseCallback.onFailure(RealCall.this, e);
+    }
+  } finally {
+    client.dispatcher().finished(this);
+  }
+}
+</code></pre><p>&#x91CC;&#x9762;&#x903B;&#x8F91;&#x4E00;&#x6837;&#xFF0C;&#x8C03;&#x7528;getResponseWithInterceptorChain&#x83B7;&#x53D6;&#x54CD;&#x5E94;&#x7ED3;&#x679C;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x56DE;&#x8C03;</p>
+<h1 id="&#x62E6;&#x622A;&#x5668;&#x5206;&#x6790;"><a name="&#x62E6;&#x622A;&#x5668;&#x5206;&#x6790;" class="anchor-navigation-ex-anchor" href="#&#x62E6;&#x622A;&#x5668;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x62E6;&#x622A;&#x5668;&#x5206;&#x6790;</h1>
+<h2 id="retryandfollowupinterceptor"><a name="retryandfollowupinterceptor" class="anchor-navigation-ex-anchor" href="#retryandfollowupinterceptor"><i class="fa fa-link" aria-hidden="true"></i></a>RetryAndFollowUpInterceptor</h2>
+<p>&#x91CD;&#x8BD5;&#x53CA;&#x91CD;&#x5B9A;&#x5411;&#x62E6;&#x622A;&#x5668;&#x3002;&#x91CD;&#x70B9;&#x65B9;&#x6CD5;intercept&#xFF08;&#xFF09;</p>
+<p>&#xFF08;&#x6E90;&#x7801;&#x7565;&#xFF09;</p>
+<p>&#x4E3B;&#x8981;&#x903B;&#x8F91;&#x662F;</p>
+<ul>
+<li><p>&#x6784;&#x5EFA;StreamAllocation&#x5BF9;&#x8C61;&#xFF08;&#x4F20;&#x9012;&#x8FDE;&#x63A5;&#x6C60;connectionPool&#x4EE5;&#x53CA;&#x5730;&#x5740;createAddress&#xFF09;&#x3002;</p>
+<pre class="language-"><code>   streamAllocation = new StreamAllocation(
+  client.connectionPool(), createAddress(request.url()), callStackTrace);
+</code></pre></li>
+<li>&#x5F00;&#x542F;while &#x6B7B;&#x5FAA;&#x73AF;</li>
+<li><p>&#x8C03;&#x7528;&#x4E0B;&#x4E2A;&#x62E6;&#x622A;&#x5668;&#x83B7;&#x53D6;&#x54CD;&#x5E94;&#x7ED3;&#x679C;
+  <code>response = ((RealInterceptorChain) chain).proceed(request, streamAllocation, null, null);</code></p>
+</li>
+<li><p>&#x5F02;&#x5E38;&#x6355;&#x83B7;&#xFF0C;&#x5224;&#x65AD;&#x8BF7;&#x6C42;&#x662F;&#x5426;&#x8FDB;&#x884C;</p>
+</li>
+<li>&#x5224;&#x65AD;&#x662F;&#x5426;&#x8FDB;&#x884C;&#x91CD;&#x5B9A;&#x5411;
+  <code>Request followUp = followUpRequest(response);</code></li>
+<li>&#x5173;&#x95ED;&#x54CD;&#x5E94;
+  <code>closeQuietly(response.body());</code></li>
+</ul>
+<p>&#x800C;&#x4E3B;&#x8981;&#x91CD;&#x8BD5;&#x53CA;&#x91CD;&#x5B9A;&#x5411;&#x5728;followUpRequest&#x4E2D;&#x5B8C;&#x6210;&#xFF0C;&#x5904;&#x7406;&#x7684;&#x8FD4;&#x56DE;&#x7801;&#x4E3A;&#xFF1A;</p>
+<ul>
+<li>407&#xFF08;&#x9700;&#x8981;&#x4EE3;&#x7406;&#x6388;&#x6743;&#xFF09;</li>
+<li>401(&#x672A;&#x6388;&#x6743;)</li>
+<li>307&#xFF0C;308 &#x4E34;&#x65F6;&#x91CD;&#x5B9A;&#x5411;</li>
+<li>300(&#x591A;&#x79CD;&#x9009;&#x62E9;)&#xFF0C;301(&#x6C38;&#x4E45;&#x79FB;&#x52A8;)&#xFF0C;302(&#x4E34;&#x65F6;&#x79FB;&#x52A8;)&#xFF0C;303(&#x67E5;&#x770B;&#x5176;&#x4ED6;&#x4F4D;&#x7F6E;)</li>
+</ul>
+<h2 id="bridgeinterceptor"><a name="bridgeinterceptor" class="anchor-navigation-ex-anchor" href="#bridgeinterceptor"><i class="fa fa-link" aria-hidden="true"></i></a>BridgeInterceptor</h2>
+<p>&#x6865;&#x63A5;&#x62E6;&#x622A;&#x5668;&#xFF0C;&#x4E3B;&#x8981;&#x529F;&#x80FD;&#xFF1A;</p>
+<ul>
+<li>&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x5934;&#xFF0C;&#x82E5;&#x6CA1;&#x8BBE;&#x7F6E;&#x5219;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;</li>
+<li>&#x8C03;&#x7528;&#x4E0B;&#x4E2A;&#x62E6;&#x622A;&#x5668;</li>
+<li>&#x5BF9;&#x54CD;&#x5E94;&#x8FDB;&#x884C;gzip&#xFF0C;header&#xFF0C;cookie&#x5904;&#x7406;</li>
+</ul>
+<h2 id="connectinterceptor"><a name="connectinterceptor" class="anchor-navigation-ex-anchor" href="#connectinterceptor"><i class="fa fa-link" aria-hidden="true"></i></a>ConnectInterceptor</h2>
+<p>&#x8FDE;&#x63A5;&#x62E6;&#x622A;&#x5668;</p>
+<pre class="language-"><code>@Override public Response intercept(Chain chain) throws IOException {
+RealInterceptorChain realChain = (RealInterceptorChain) chain;
+Request request = realChain.request();
+StreamAllocation streamAllocation = realChain.streamAllocation();
+
+// We need the network to satisfy this request. Possibly for validating a conditional GET.
+boolean doExtensiveHealthChecks = !request.method().equals(&quot;GET&quot;);
+HttpCodec httpCodec = streamAllocation.newStream(client, doExtensiveHealthChecks);
+RealConnection connection = streamAllocation.connection();
+
+return realChain.proceed(request, streamAllocation, httpCodec, connection);
+  }
+</code></pre><p>&#x91CC;&#x9762;&#x4EE3;&#x7801;&#x5C11;&#xFF0C;&#x4F46;&#x903B;&#x8F91;&#x8F83;&#x4E3A;&#x590D;&#x6742;&#x3002;&#x4E3B;&#x8981;&#x662F;&#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;&#x62E6;&#x622A;&#x5668;&#xFF08;RetryAndFollowUpInterceptor&#xFF09;&#x521B;&#x5EFA;&#x7684;StreamAllocation&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;&#x5B83;&#x7684;newStream&#x65B9;&#x6CD5;&#xFF0C;&#x91CC;&#x9762;&#x8FDB;&#x884C;&#x521B;&#x5EFA;&#x8FDE;&#x63A5;&#x7B49;&#x64CD;&#x4F5C;&#xFF0C;&#x7136;&#x540E;&#x83B7;&#x53D6;&#x8FDE;&#x63A5;&#x5BF9;&#x8C61;&#xFF08;RealConnection&#xFF09;&#x4F20;&#x9012;&#x5230;&#x4E0B;&#x4E2A;&#x62E6;&#x622A;&#x5668;&#x3002;
+&#x5176;&#x4E2D;&#x4E3B;&#x8981;&#x65B9;&#x6CD5;<code>streamAllocation.newStream(client, doExtensiveHealthChecks);</code>&#x4E3B;&#x8981;&#x6D89;&#x53CA;&#x7684;&#x7C7B;&#x6709;&#xFF0C;StreamAllocation&#xFF08;allocation&#xFF1A;&#x5206;&#x914D;&#xFF09;&#x3001;ConnectionPool&#x3001;RealConnection</p>
+<p>1.<code>streamAllocation.newStream(client, doExtensiveHealthChecks);</code>&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;HttpCodec&#xFF0C;http&#x7F16;&#x89E3;&#x7801;&#x5668;&#xFF0C;&#x4E3B;&#x8981;&#x662F;RealConnection&#x4E2D;newCodec&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#xFF0C;&#x8FD4;&#x56DE;Http1Codec&#x6216;&#x8005;Http2Codec</p>
+<p>&#x91CC;&#x9762;&#x91CD;&#x8981;&#x903B;&#x8F91;&#x8C03;&#x7528;&#x83B7;&#x53D6;&#x5065;&#x5EB7;&#x7684;&#x8FDE;&#x63A5;&#x65B9;&#x6CD5;<code>RealConnection resultConnection = findHealthyConnection(connectTimeout, readTimeout,
+  writeTimeout, connectionRetryEnabled, doExtensiveHealthChecks);</code>
+&#x800C;findHealthyConnection&#x65B9;&#x6CD5;&#x4E3B;&#x8981;&#x662F;&#x8C03;&#x7528;findConnection&#x65B9;&#x6CD5;&#x3002;</p>
+<p>2.findConnection&#x65B9;&#x6CD5;
+  &#x8BE5;&#x65B9;&#x6CD5;&#x91CC;&#x9762;&#x903B;&#x8F91;&#x8F83;&#x4E3A;&#x590D;&#x6742;&#xFF0C;&#x68B3;&#x7406;&#x4E3A;&#xFF1A;&#x5F53;&#x524D;&#x662F;&#x5426;&#x6709;&#x8FDE;&#x63A5;&#xFF08;this.connection&#x5BF9;&#x8C61;&#xFF09;&#xFF0C;&#x6709;&#x8FD4;&#x56DE;&#xFF0C;&#x6CA1;&#x6709;&#x5219;&#x67E5;&#x770B;&#x8FDE;&#x63A5;&#x6C60;&#xFF08;this.connectionPool&#xFF09;&#x662F;&#x5426;&#x6709;&#x8FDE;&#x63A5;&#xFF08;<code>Internal.instance.get(connectionPool, address, this);</code>&#x91CC;&#x9762;&#x4ECE;&#x8FDE;&#x63A5;&#x6C60;&#x4E2D;&#x6839;&#x636E;address&#x83B7;&#x53D6;&#xFF09;&#xFF0C;&#x6709;&#x8FD4;&#x56DE;&#xFF0C;&#x6CA1;&#x6709;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&#xFF08;<code>result = new RealConnection(connectionPool, selectedRoute);</code>&#x5BF9;&#x8C61;&#xFF09;&#xFF0C;&#x8BA9;&#x5176;&#x4E0E;&#x5F53;&#x524D;&#x8FDE;&#x63A5;&#x5173;&#x8054;&#xFF08;&#x8C03;&#x7528;acquire&#x65B9;&#x6CD5;&#xFF09;&#xFF0C;&#x518D;&#x6DFB;&#x52A0;&#x6539;&#x8FDE;&#x63A5;&#x8FDB;&#x8FDE;&#x63A5;&#x6C60;&#x7B49;&#x64CD;&#x4F5C;</p>
+<p>  &#x800C;&#x771F;&#x6B63;&#x7684;&#x8FDE;&#x63A5;&#x65B9;&#x6CD5;&#x662F;&#x8C03;&#x7528;RealConnection&#x5BF9;&#x8C61;&#x7684;connect&#x65B9;&#x6CD5;</p>
+<pre class="language-"><code> // Do TCP + TLS handshakes. This is a blocking operation.
+result.connect(connectTimeout, readTimeout, writeTimeout, connectionRetryEnabled);
+routeDatabase().connected(result.route());`
+</code></pre><p>3.RealConnection&#x7684;connect&#x65B9;&#x6CD5;
+&#x7701;&#x7565;&#x90E8;&#x5206;&#x4EE3;&#x7801;&#xFF0C;&#x6838;&#x5FC3;&#x4EE3;&#x7801;&#x662F;</p>
+<pre class="language-"><code>    ...
+    if (route.requiresTunnel()) {
+      connectTunnel(connectTimeout, readTimeout, writeTimeout);
+    } else {
+      connectSocket(connectTimeout, readTimeout);
+    }
+    ...
+</code></pre><p>&#x5982;&#x679C;&#x662F;https&#x5219;&#x8C03;&#x7528;connectTunnel&#x8FDE;&#x63A5;&#x901A;&#x9053;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x662F;&#x5219;&#x8FDE;&#x63A5;socket</p>
+<p>3.1 connectSocket&#x65B9;&#x6CD5;</p>
+<pre class="language-"><code>private void connectSocket(int connectTimeout, int readTimeout) throws IOException {
+Proxy proxy = route.proxy();
+Address address = route.address();
+
+rawSocket = proxy.type() == Proxy.Type.DIRECT || proxy.type() == Proxy.Type.HTTP
+    ? address.socketFactory().createSocket()
+    : new Socket(proxy);
+
+rawSocket.setSoTimeout(readTimeout);
+try {
+  Platform.get().connectSocket(rawSocket, route.socketAddress(), connectTimeout);
+} catch (ConnectException e) {
+  ConnectException ce = new ConnectException(&quot;Failed to connect to &quot; + route.socketAddress());
+  ce.initCause(e);
+  throw ce;
+}
+source = Okio.buffer(Okio.source(rawSocket));
+sink = Okio.buffer(Okio.sink(rawSocket));
+  }
+
+&#x91CC;&#x9762;&#x83B7;&#x53D6;socket&#x5BF9;&#x8C61;&#x7528;OkIo&#x4FDD;&#x5B58;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x6D41;
+</code></pre><p>3.2 connectTunnel&#x65B9;&#x6CD5;
+&#x91CC;&#x9762;&#x4E5F;&#x55F2;&#x7528;connectSocket&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x591A;&#x4E86;&#x521B;&#x5EFA;&#x96A7;&#x9053;&#x65B9;&#x6CD5;&#xFF08;<code>createTunnel(readTimeout, writeTimeout, tunnelRequest, url);</code>&#xFF09;</p>
+<p>&#xFF08;todo &#x7406;&#x89E3;&#x96A7;&#x9053;&#xFF09;</p>
+<p>&#x56DE;&#x5230;&#x62E6;&#x622A;&#x5668;&#x4E2D;<code>streamAllocation.connection();</code>&#x5C31;&#x662F;&#x8FD4;&#x56DE;&#x4E0A;&#x9762;&#x63D0;&#x5230;&#x7684;RealConnection</p>
+<h2 id="&#x8865;&#x5145;&#x77E5;&#x8BC6;&#x70B9;okio"><a name="&#x8865;&#x5145;&#x77E5;&#x8BC6;&#x70B9;okio" class="anchor-navigation-ex-anchor" href="#&#x8865;&#x5145;&#x77E5;&#x8BC6;&#x70B9;okio"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8865;&#x5145;&#x77E5;&#x8BC6;&#x70B9;Okio</h2>
+<p><img src="http://img.blog.csdn.net/20160115144102367" alt="Okio"></p>
+<ul>
+<li>Okio &#x4E2D;&#x6709;&#x4E24;&#x4E2A;&#x5173;&#x952E;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;Sink&#xFF08;&#x53EF;&#x8BA4;&#x4E3A;&#x662F;OutputStream&#x7684;&#x5347;&#x7EA7;&#x7248;&#xFF09;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;Source&#xFF08;&#x53EF;&#x8BA4;&#x4E3A;&#x662F;InputStream&#x7684;&#x5347;&#x7EA7;&#x7248;&#xFF09;</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20160115144113403" alt="Okio&#x5B50;&#x7C7B;"></p>
+<ul>
+<li>Okio&#x5B50;&#x7C7B;&#x4ECB;&#x7ECD;&#x3002;BufferedXXX&#x4E3A;&#x5E26;&#x6709;&#x7F13;&#x51B2;&#x533A;&#x529F;&#x80FD;&#x7684;&#x5B50;&#x7C7B;&#xFF0C;&#x800C;&#x5176;&#x771F;&#x6B63;&#x5B9E;&#x73B0;&#x7C7B;&#x4E3A;RealBufferedXXX&#xFF1B;GzipXXX&#x662F;&#x652F;&#x6301;gzip&#x529F;&#x80FD;&#x7684;&#x5B9E;&#x73B0;&#x7C7B;</li>
+</ul>
+<h2 id="callserverinterceptor"><a name="callserverinterceptor" class="anchor-navigation-ex-anchor" href="#callserverinterceptor"><i class="fa fa-link" aria-hidden="true"></i></a>CallServerInterceptor</h2>
+<p>&#x8BF7;&#x6C42;&#x670D;&#x52A1;&#x62E6;&#x622A;&#x5668;,&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7F51;&#x7EDC;&#x62E6;&#x622A;&#x5668;&#x4E4B;&#x540E;&#x6267;&#x884C;,&#x662F;&#x6700;&#x91CC;&#x9762;&#x7684;&#x4E00;&#x4E2A;&#x62E6;&#x622A;&#x5668;&#x3002;&#x8FD9;&#x4E2A;&#x62E6;&#x622A;&#x5668;&#x4E3B;&#x8981;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x91CC;&#x9762;&#x4E3B;&#x8981;&#x8FDB;&#x884C;&#x5982;&#x4E0B;&#x64CD;&#x4F5C;</p>
+<ol>
+<li><p>&#x83B7;&#x53D6;&#x4E4B;&#x95F4;&#x4E4B;&#x524D;&#x521B;&#x5EFA;&#x7684;HttpCodec&#xFF0C;StreamAllocation&#xFF0C;request&#x7B49;&#x4FE1;&#x606F;&#x3002;</p>
+<p> RealInterceptorChain realChain = (RealInterceptorChain) chain;
+ HttpCodec httpCodec = realChain.httpStream();
+ StreamAllocation streamAllocation = realChain.streamAllocation();
+ RealConnection connection = (RealConnection) realChain.connection();
+ Request request = realChain.request();</p>
+</li>
+<li><p>&#x5199;&#x5165;&#x8BF7;&#x6C42;&#x5934;&#x4FE1;&#x606F;&#xFF08;sink&#x6D41;&#x4E2D;&#xFF09;</p>
+<p> realChain.eventListener().requestHeadersStart(realChain.call());
+ httpCodec.writeRequestHeaders(request);
+ realChain.eventListener().requestHeadersEnd(realChain.call(), request);</p>
+</li>
+</ol>
+<p>httpCodec&#x6709;&#x4E24;&#x4E2A;&#x5B9E;&#x73B0;&#x7C7B;&#x4E00;&#x4E2A;&#x662F;Http1Codec,&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x662F;Http2Codec&#xFF0C;&#x4E0B;&#x9762;&#x8D34;&#x51FA;Http1Codec&#x5177;&#x4F53;&#x5199;&#x5165;&#x8BF7;&#x6C42;&#x5934;</p>
+<pre class="language-"><code>@Override public void writeRequestHeaders(Request request) throws IOException {
+String requestLine = RequestLine.get(
+    request, streamAllocation.connection().route().proxy().type());
+writeRequest(request.headers(), requestLine);
+  }
+
+
+/** Returns bytes of a request header for sending on an HTTP transport. */
+public void writeRequest(Headers headers, String requestLine) throws IOException {
+if (state != STATE_IDLE) throw new IllegalStateException(&quot;state: &quot; + state);
+sink.writeUtf8(requestLine).writeUtf8(&quot;\r\n&quot;);
+for (int i = 0, size = headers.size(); i &lt; size; i++) {
+  sink.writeUtf8(headers.name(i))
+      .writeUtf8(&quot;: &quot;)
+      .writeUtf8(headers.value(i))
+      .writeUtf8(&quot;\r\n&quot;);
+}
+sink.writeUtf8(&quot;\r\n&quot;);
+state = STATE_OPEN_REQUEST_BODY;
+</code></pre><p>  }</p>
+<ol>
+<li><p>&#x5224;&#x65AD;&#x662F;&#x5426;&#x6709;&#x8BF7;&#x6C42;&#x4F53;&#xFF0C;&#x6709;&#x5219;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x903B;&#x8F91;</p>
+<p><code>if (HttpMethod.permitsRequestBody(request.method()) &amp;&amp; request.body() != null)</code></p>
+</li>
+</ol>
+<p>&#x5982;&#x679C;&#x8BF7;&#x6C42;&#x5934;&#x5305;&#x542B;100-continue&#xFF08;<a href="http://www.ituring.com.cn/article/130844" title="100-continue" target="_blank">http://www.ituring.com.cn/article/130844</a>&#xFF09;&#xFF0C;&#x8BE2;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x662F;&#x5426;&#x63A5;&#x53D7;&#x8FD9;&#x4E2A;&#x8BF7;&#x6C42;&#xFF08;&#x670D;&#x52A1;&#x5668;&#x63A5;&#x53D7;&#x56DE;&#x5E94;100 continue &#x62D2;&#x7EDD;&#x56DE;&#x5E94; 417 expectation failed &#xFF09;</p>
+<pre class="language-"><code>if (&quot;100-continue&quot;.equalsIgnoreCase(request.header(&quot;Expect&quot;))) {
+    httpCodec.flushRequest();
+    realChain.eventListener().responseHeadersStart(realChain.call());
+    responseBuilder = httpCodec.readResponseHeaders(true);
+  }
+</code></pre><p>&#x5F53;&#x670D;&#x52A1;&#x5668;100-continue&#x54CD;&#x5E94;&#x6210;&#x529F;&#x6216;&#x8005;&#x4E0D;&#x9700;&#x8981;&#x7B49;&#x5F85;&#x54CD;&#x5E94;&#x65F6;&#xFF08;&#x5BA2;&#x6237;&#x7AEF;&#x4E0D;&#x80FD;&#x65E0;&#x9650;&#x671F;&#x7B49;&#x5F85;&#x54CD;&#x5E94;&#xFF09;&#x5199;&#x5165;&#x8BF7;&#x6C42;&#x4F53;</p>
+<pre class="language-"><code> if (responseBuilder == null) {
+    // Write the request body if the &quot;Expect: 100-continue&quot; expectation was met.
+    realChain.eventListener().requestBodyStart(realChain.call());
+    long contentLength = request.body().contentLength();
+    CountingSink requestBodyOut =
+        new CountingSink(httpCodec.createRequestBody(request, contentLength));
+    BufferedSink bufferedRequestBody = Okio.buffer(requestBodyOut);
+
+    request.body().writeTo(bufferedRequestBody);
+    bufferedRequestBody.close();
+    realChain.eventListener()
+        .requestBodyEnd(realChain.call(), requestBodyOut.successfulCount);
+  } else if (!connection.isMultiplexed()) {
+    // If the &quot;Expect: 100-continue&quot; expectation wasn&apos;t met, prevent the HTTP/1 connection
+    // from being reused. Otherwise we&apos;re still obligated to transmit the request body to
+    // leave the connection in a consistent state.
+    streamAllocation.noNewStreams();
+  }
+</code></pre><p>&#xFF08;todo &#x7406;&#x89E3;&#x4EC0;&#x4E48;&#x662F;&#x591A;&#x8DEF;&#x590D;&#x7528;&#xFF09;</p>
+<ol>
+<li><p>&#x7ED3;&#x675F;&#x8BF7;&#x6C42;</p>
+<p> <code>httpCodec.finishRequest();</code></p>
+<p>&#x5185;&#x90E8;&#x8C03;&#x7528;</p>
+<p> @Override public void finishRequest() throws IOException {
+ sink.flush();
+   }</p>
+</li>
+<li><p>&#x8BFB;&#x53D6;&#x54CD;&#x5E94;&#x5934;&#x4FE1;&#x606F;</p>
+<p> if (responseBuilder == null) {
+   realChain.eventListener().responseHeadersStart(realChain.call());
+   responseBuilder = httpCodec.readResponseHeaders(false);
+ }</p>
+</li>
+</ol>
+<p>&#x5185;&#x90E8;&#x8C03;&#x7528;readHeaders()</p>
+<pre class="language-"><code>/** Reads headers or trailers. */
+  public Headers readHeaders() throws IOException {
+Headers.Builder headers = new Headers.Builder();
+// parse the result headers until the first blank line
+for (String line; (line = source.readUtf8LineStrict()).length() != 0; ) {
+  Internal.instance.addLenient(headers, line);
+}
+return headers.build();
+</code></pre><p>  }</p>
+<ol>
+<li>&#x6784;&#x5EFA;&#x54CD;&#x5E94;</li>
+</ol>
+<p>&#x5199;&#x5165;&#x8BF7;&#x6C42;&#xFF0C;&#x63E1;&#x624B;&#x60C5;&#x51B5;&#xFF0C;&#x8BF7;&#x6C42;&#x65F6;&#x95F4;&#xFF0C;&#x4EE5;&#x53CA;&#x6536;&#x5230;&#x54CD;&#x5E94;&#x65F6;&#x95F4;</p>
+<pre class="language-"><code>Response response = responseBuilder
+    .request(request)
+    .handshake(streamAllocation.connection().handshake())
+    .sentRequestAtMillis(sentRequestMillis)
+    .receivedResponseAtMillis(System.currentTimeMillis())
+    .build();
+</code></pre><ol>
+<li>&#x662F;&#x5426;&#x662F;webSock</li>
+</ol>
+<p>&#x6839;&#x636E;&#x72B6;&#x6001;&#x7801;&#x4E0D;&#x540C;&#x5199;&#x5165;&#x4E0D;&#x540C;body</p>
+<pre class="language-"><code>if (forWebSocket &amp;&amp; code == 101) {
+  // Connection is upgrading, but we need to ensure interceptors see a non-null response body.
+  response = response.newBuilder()
+      .body(Util.EMPTY_RESPONSE)
+      .build();
+} else {
+  response = response.newBuilder()
+      .body(httpCodec.openResponseBody(response))
+      .build();
+}
+</code></pre><ol>
+<li>&#x8FDB;&#x884C;&#x65AD;&#x5F00;&#x64CD;&#x4F5C;</li>
+</ol>
+<p>coloe</p>
+<pre class="language-"><code>if (&quot;close&quot;.equalsIgnoreCase(response.request().header(&quot;Connection&quot;))
+    || &quot;close&quot;.equalsIgnoreCase(response.header(&quot;Connection&quot;))) {
+  streamAllocation.noNewStreams();
+}
+</code></pre><ol>
+<li>&#x5BF9;204&#xFF0C;205&#x8FDB;&#x884C;&#x5904;&#x7406;</li>
+</ol>
+<p>&#x629B;&#x51FA;&#x5F02;&#x5E38;</p>
+<pre class="language-"><code>if ((code == 204 || code == 205) &amp;&amp; response.body().contentLength() &gt; 0) {
+  throw new ProtocolException(
+      &quot;HTTP &quot; + code + &quot; had non-zero Content-Length: &quot; + response.body().contentLength());
+} 
+</code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; david 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-04-28 15:11:27
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="LinkedList源码学习.html" class="navigation navigation-prev " aria-label="Previous page: LinkedList 学习笔记">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Retrofit 学习笔记.html" class="navigation navigation-next " aria-label="Next page: Retrofit 学习笔记">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Okhttp 学习笔记","level":"2.6","depth":1,"next":{"title":"Retrofit 学习笔记","level":"2.7","depth":1,"path":"Android-old/Retrofit 学习笔记.md","ref":"Android-old/Retrofit 学习笔记.md","articles":[]},"previous":{"title":"LinkedList 学习笔记","level":"2.5","depth":1,"path":"Android-old/LinkedList源码学习.md","ref":"Android-old/LinkedList源码学习.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","prism","-highlight","copy-code-button","search-pro","-search","-lunr","expandable-chapters","splitter","-sharing","github-buttons","tbfed-pagefooter","anchor-navigation-ex","summary"],"styles":{"website":"./public-repertory/css/gitbook-configure.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy david 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"summary":{},"splitter":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"github-buttons":{"buttons":[{"user":"DavidZhong003","width":"160","type":"follow","count":true,"size":"small"}]},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"zhongshan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"david zhong 的文档库","language":"zh-hans","gitbook":"*","description":"zhongshan 的文档库. 里面包含了个人撰写的文章"},"file":{"path":"Android-old/Okhttp源码学习.md","mtime":"2020-04-28T07:11:27.293Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-28T08:17:14.512Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,2273 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Flutter引擎启动 · david zhong 的文档库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zhongshan">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="8-Flutter Redux简单介绍.html" />
+    
+    
+    <link rel="prev" href="6-Flutter 引擎启动v1-9.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"DavidZhong003","width":"160","type":"follow","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">0-Flutter</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1-Flutter图片加载.html">
+            
+                <a href="1-Flutter图片加载.html">
+            
+                    
+                    Flutter 图片加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2-Flutter 应用启动分析.html">
+            
+                <a href="2-Flutter 应用启动分析.html">
+            
+                    
+                    Flutter 应用启动分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3-Flutter 混合工程.html">
+            
+                <a href="3-Flutter 混合工程.html">
+            
+                    
+                    Flutter 混合工程搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4-Flutter 混合工程踩坑记录.html">
+            
+                <a href="4-Flutter 混合工程踩坑记录.html">
+            
+                    
+                    Flutter混合工程踩坑记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="5-Flutter 混合工程上传AAR.html">
+            
+                <a href="5-Flutter 混合工程上传AAR.html">
+            
+                    
+                    Flutter 混合工程上传AAR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="6-Flutter 引擎启动v1-9.html">
+            
+                <a href="6-Flutter 引擎启动v1-9.html">
+            
+                    
+                    Flutter 引擎启动（1.9）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="7-Flutter 引擎启动v1-12.html">
+            
+                <a href="7-Flutter 引擎启动v1-12.html">
+            
+                    
+                    Flutter引擎启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="8-Flutter Redux简单介绍.html">
+            
+                <a href="8-Flutter Redux简单介绍.html">
+            
+                    
+                    Redux 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Android-old</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Android-old/ArrayList源码学习.html">
+            
+                <a href="../Android-old/ArrayList源码学习.html">
+            
+                    
+                    ArrayList 源码学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Android-old/Fragmentation 库学习笔记.html">
+            
+                <a href="../Android-old/Fragmentation 库学习笔记.html">
+            
+                    
+                    Fragmentation 库学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Android-old/HashMap源码学习.html">
+            
+                <a href="../Android-old/HashMap源码学习.html">
+            
+                    
+                    HashMap 源码学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../Android-old/JVM学习笔记.html">
+            
+                <a href="../Android-old/JVM学习笔记.html">
+            
+                    
+                    JVM 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../Android-old/LinkedList源码学习.html">
+            
+                <a href="../Android-old/LinkedList源码学习.html">
+            
+                    
+                    LinkedList 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../Android-old/Okhttp源码学习.html">
+            
+                <a href="../Android-old/Okhttp源码学习.html">
+            
+                    
+                    Okhttp 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../Android-old/Retrofit 学习笔记.html">
+            
+                <a href="../Android-old/Retrofit 学习笔记.html">
+            
+                    
+                    Retrofit 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../Android-old/Set集合源码学习.html">
+            
+                <a href="../Android-old/Set集合源码学习.html">
+            
+                    
+                    Set 集合源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../Android-old/沉浸式状态栏.html">
+            
+                <a href="../Android-old/沉浸式状态栏.html">
+            
+                    
+                    沉浸式状态栏
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">machine</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../machine/1-机器学习学习笔记--基础.html">
+            
+                <a href="../machine/1-机器学习学习笔记--基础.html">
+            
+                    
+                    机器学习笔记-基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../machine/2- 机器学习学习笔记--autograd自动求导.html">
+            
+                <a href="../machine/2- 机器学习学习笔记--autograd自动求导.html">
+            
+                    
+                    机器学习笔记-autograd自动求导
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../machine/3- 机器学习学习笔记--NDArray处理数据.html">
+            
+                <a href="../machine/3- 机器学习学习笔记--NDArray处理数据.html">
+            
+                    
+                    机器学习笔记-NDArray处理数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../machine/4-Numpy 教程.html">
+            
+                <a href="../machine/4-Numpy 教程.html">
+            
+                    
+                    机器学习笔记-Numpy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../machine/5-机器学习笔记--矩阵.html">
+            
+                <a href="../machine/5-机器学习笔记--矩阵.html">
+            
+                    
+                    机器学习笔记-矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../machine/6-机器学习笔记--线性回归.html">
+            
+                <a href="../machine/6-机器学习笔记--线性回归.html">
+            
+                    
+                    机器学习笔记-线性回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../其他/1-Conda常用命令.html">
+            
+                <a href="../其他/1-Conda常用命令.html">
+            
+                    
+                    管理conda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../其他/2-Git学习笔记.html">
+            
+                <a href="../其他/2-Git学习笔记.html">
+            
+                    
+                    Git 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../其他/3-UML类图.html">
+            
+                <a href="../其他/3-UML类图.html">
+            
+                    
+                    UML 类图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Flutter引擎启动</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#flutter&#x5F15;&#x64CE;&#x542F;&#x52A8;-112"><b></b>Flutter&#x5F15;&#x64CE;&#x542F;&#x52A8; (1.12)</a></li><li><span class="title-icon "></span><a href="#&#x524D;&#x8A00;"><b></b>&#x524D;&#x8A00;</a></li><li><span class="title-icon "></span><a href="#flutteractivityoncreate"><b></b>FlutterActivity.onCreate</a></li><ul><li><span class="title-icon "></span><a href="#flutteractivityandfragmentdelegateonattach"><b></b>FlutterActivityAndFragmentDelegate.onAttach</a></li><ul><li><span class="title-icon "></span><a href="#flutterengine-&#x521B;&#x5EFA;"><b></b>FlutterEngine &#x521B;&#x5EFA;</a></li></ul><li><span class="title-icon "></span><a href="#shell-&#x521B;&#x5EFA;"><b></b>Shell &#x521B;&#x5EFA;</a></li><ul><li><span class="title-icon "></span><a href="#dart-&#x865A;&#x62DF;&#x673A;&#x521B;&#x5EFA;"><b></b>Dart &#x865A;&#x62DF;&#x673A;&#x521B;&#x5EFA;</a></li><li><span class="title-icon "></span><a href="#shellcreate"><b></b>Shell::Create</a></li><li><span class="title-icon "></span><a href="#createshellonplatformthread"><b></b>CreateShellOnPlatformThread</a></li></ul><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;flutterview"><b></b>&#x521B;&#x5EFA;FlutterView</a></li><ul><li><span class="title-icon "></span><a href="#flutteractivitycreateflutterview"><b></b>FlutterActivity.createFlutterView</a></li><li><span class="title-icon "></span><a href="#flutterview-&#x521D;&#x59CB;&#x5316;"><b></b>FlutterView &#x521D;&#x59CB;&#x5316;</a></li><li><span class="title-icon "></span><a href="#fluttersurfaceview-&#x521D;&#x59CB;&#x5316;"><b></b>FlutterSurfaceView &#x521D;&#x59CB;&#x5316;</a></li></ul></ul><li><span class="title-icon "></span><a href="#flutteractivityonstart"><b></b>FlutterActivity.onStart</a></li><ul><li><span class="title-icon "></span><a href="#attachtoflutterengine"><b></b>attachToFlutterEngine</a></li><li><span class="title-icon "></span><a href="#doinitialflutterviewrun"><b></b>doInitialFlutterViewRun</a></li><ul><li><span class="title-icon "></span><a href="#dartentrypoint&#x6784;&#x5EFA;"><b></b>DartEntrypoint&#x6784;&#x5EFA;</a></li><li><span class="title-icon "></span><a href="#executedartentrypoint"><b></b>executeDartEntrypoint</a></li><li><span class="title-icon "></span><a href="#runbundleandsnapshotfromlibrary"><b></b>runBundleAndSnapshotFromLibrary</a></li></ul></ul><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b></b>&#x603B;&#x7ED3;</a></li></ul></div><a href="#flutter&#x5F15;&#x64CE;&#x542F;&#x52A8;-112" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="flutter&#x5F15;&#x64CE;&#x542F;&#x52A8;-112"><a name="flutter&#x5F15;&#x64CE;&#x542F;&#x52A8;-112" class="anchor-navigation-ex-anchor" href="#flutter&#x5F15;&#x64CE;&#x542F;&#x52A8;-112"><i class="fa fa-link" aria-hidden="true"></i></a>Flutter&#x5F15;&#x64CE;&#x542F;&#x52A8; (1.12)</h1>
+<h1 id="&#x524D;&#x8A00;"><a name="&#x524D;&#x8A00;" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x524D;&#x8A00;</h1>
+<h2 id=""> </h2>
+<p>&#x672C;&#x6587;&#x8BB0;&#x5F55;&#x5206;&#x6790;flutter &#x542F;&#x52A8;&#x518D;&#x5230;  Dart  main &#x65B9;&#x6CD5;&#x56DE;&#x8C03;&#x8FC7;&#x7A0B;&#xFF08;&#x57FA;&#x4E8E; v1.12.13-hotfixes &#x7248;&#x672C;&#xFF09;&#x3002;</p>
+<p>&#x5148;&#x770B;&#x4E0B;Android &#x7AEF;&#x5982;&#x4F55;&#x542F;&#x52A8;&#x4E00;&#x4E2A;Flutter &#x9875;&#x9762;&#x3002;&#x4EE5;&#x4F7F;&#x7528;FlutterActivity &#x4E3A;&#x4F8B;&#xFF1A;</p>
+<ol>
+<li>Android &#x7AEF;&#x8C03;&#x7528;&#x542F;&#x52A8;flutter &#x9875;&#x9762;&#x3002;</li>
+</ol>
+<p>&#x9ED8;&#x8BA4;&#x542F;&#x52A8;&#x65B9;&#x5F0F;:</p>
+<pre class="language-"><code class="lang-kotlin">myButton<span class="token punctuation">.</span><span class="token function">setOnClickListener</span> <span class="token punctuation">{</span>
+  <span class="token function">startActivity</span><span class="token punctuation">(</span>
+    FlutterActivity<span class="token punctuation">.</span><span class="token function">createDefaultIntent</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x800C;&#x5176;&#x4E2D;FlutterActivity.createDefaultIntent&#x65B9;&#x6CD5;&#x5176;&#x5B9E;&#x662F;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;intent &#x8FDB;&#x884C;&#x8DF3;&#x8F6C;&#x3002;</p>
+<pre class="language-"><code class="lang-java">    <span class="token keyword">public</span> <span class="token class-name">Intent</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token class-name">Context</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Intent</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> activityClass<span class="token punctuation">)</span>
+          <span class="token punctuation">.</span><span class="token function">putExtra</span><span class="token punctuation">(</span>EXTRA_INITIAL_ROUTE<span class="token punctuation">,</span> initialRoute<span class="token punctuation">)</span>
+          <span class="token punctuation">.</span><span class="token function">putExtra</span><span class="token punctuation">(</span>EXTRA_BACKGROUND_MODE<span class="token punctuation">,</span> backgroundMode<span class="token punctuation">)</span>
+          <span class="token punctuation">.</span><span class="token function">putExtra</span><span class="token punctuation">(</span>EXTRA_DESTROY_ENGINE_WITH_ACTIVITY<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E3B;&#x8981;&#x643A;&#x5E26;&#x4E09;&#x4E2A;&#x4FE1;&#x606F;&#xFF1A;</p>
+<ul>
+<li>&#x521D;&#x59CB;&#x8DEF;&#x7531;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&quot;/&quot;</li>
+<li>Backgroud_Mode&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;opaque&#xFF08;&#x4E0D;&#x900F;&#x660E;&#xFF09;</li>
+<li>&#x9000;&#x51FA;Activity&#x65F6;&#x5019;&#x662F;&#x5426;&#x9500;&#x6BC1;engine , &#x9ED8;&#x8BA4;&#x4E3A;true</li>
+</ul>
+<h1 id="flutteractivityoncreate"><a name="flutteractivityoncreate" class="anchor-navigation-ex-anchor" href="#flutteractivityoncreate"><i class="fa fa-link" aria-hidden="true"></i></a>FlutterActivity.onCreate</h1>
+<p>(io.flutter.embedding.android.FlutterActivity.java)</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token annotation punctuation">@Nullable</span> <span class="token class-name">Bundle</span> savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">switchLaunchThemeForNormalTheme</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// &#x5173;&#x8054;&#x751F;&#x547D;&#x5468;&#x671F;</span>
+  lifecycle<span class="token punctuation">.</span><span class="token function">handleLifecycleEvent</span><span class="token punctuation">(</span><span class="token class-name">Lifecycle</span><span class="token punctuation">.</span><span class="token class-name">Event</span><span class="token punctuation">.</span>ON_CREATE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// &#x521B;&#x5EFA;&#x4EE3;&#x7406;&#x7C7B;</span>
+  delegate <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FlutterActivityAndFragmentDelegate</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  delegate<span class="token punctuation">.</span><span class="token function">onAttach</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  delegate<span class="token punctuation">.</span><span class="token function">onActivityCreated</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">configureWindowForTransparency</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// &#x8BBE;&#x7F6E;contentview</span>
+  <span class="token function">setContentView</span><span class="token punctuation">(</span><span class="token function">createFlutterView</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">configureStatusBarForFullscreenFlutterExperience</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>   &#x4E3A;&#x4E86;&#x9002;&#x914D;Activity &#x4EE5;&#x53CA;Fragment&#xFF0C;&#x8FD9;&#x91CC;&#x5F88;&#x591A;&#x5DE5;&#x4F5C;&#x5176;&#x5B9E;&#x4EA4;&#x7ED9;&#x4EE3;&#x7406;&#x7C7B;&#x53BB;&#x5B9E;&#x73B0;&#xFF0C;&#x800C;Activity &#x7684;onCreate&#x65B9;&#x6CD5;&#x5185;&#x4E3B;&#x8981;&#x505A;&#x4E86;&#x4E24;&#x4EF6;&#x4E8B;&#xFF1A;</p>
+<ul>
+<li><p>&#x521B;&#x5EFA;FlutterActivityAndFragmentDelegate&#x7C7B;&#xFF0C;&#x8C03;&#x7528;&#x5176;onAttach &#x4EE5;&#x53CA;onActivityCreated &#x65B9;&#x6CD5;</p>
+</li>
+<li><p>&#x8C03;&#x7528;crateFlutterView&#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x5E76;&#x8BBE;&#x7F6E;contentview</p>
+</li>
+</ul>
+<h2 id="flutteractivityandfragmentdelegateonattach"><a name="flutteractivityandfragmentdelegateonattach" class="anchor-navigation-ex-anchor" href="#flutteractivityandfragmentdelegateonattach"><i class="fa fa-link" aria-hidden="true"></i></a>FlutterActivityAndFragmentDelegate.onAttach</h2>
+<p>&#xFF08;io.flutter.embedding.android.FlutterActivityAndFragmentDelegate.java&#xFF09;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">onAttach</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token class-name">Context</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">ensureAlive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>flutterEngine <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// &#x521B;&#x5EFA;&#x8BBE;&#x7F6E;flutter &#x5F15;&#x64CE;</span>
+    <span class="token function">setupFlutterEngine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  platformPlugin <span class="token operator">=</span> host<span class="token punctuation">.</span><span class="token function">providePlatformPlugin</span><span class="token punctuation">(</span>host<span class="token punctuation">.</span><span class="token function">getActivity</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> flutterEngine<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>host<span class="token punctuation">.</span><span class="token function">shouldAttachEngineToActivity</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Attaching FlutterEngine to the Activity that owns this Fragment.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    flutterEngine<span class="token punctuation">.</span><span class="token function">getActivityControlSurface</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attachToActivity</span><span class="token punctuation">(</span>
+        host<span class="token punctuation">.</span><span class="token function">getActivity</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        host<span class="token punctuation">.</span><span class="token function">getLifecycle</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<p> setupFlutterEngine() &#x4E3B;&#x8981;&#x662F;&#x521B;&#x5EFA;FlutterEngine</p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/* package */</span> <span class="token keyword">void</span> <span class="token function">setupFlutterEngine</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// &#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86;&#x7F13;&#x5B58;engine </span>
+  <span class="token class-name">String</span> cachedEngineId <span class="token operator">=</span> host<span class="token punctuation">.</span><span class="token function">getCachedEngineId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>cachedEngineId <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    flutterEngine <span class="token operator">=</span> <span class="token class-name">FlutterEngineCache</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>cachedEngineId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    isFlutterEngineFromHost <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>flutterEngine <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalStateException</span><span class="token punctuation">(</span><span class="token string">&quot;The requested cached FlutterEngine did not exist in the FlutterEngineCache: &apos;&quot;</span> <span class="token operator">+</span> cachedEngineId <span class="token operator">+</span> <span class="token string">&quot;&apos;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// &#x5982;&#x679C;host &#x63D0;&#x4F9B;&#x4E86;flutter engine</span>
+  flutterEngine <span class="token operator">=</span> host<span class="token punctuation">.</span><span class="token function">provideFlutterEngine</span><span class="token punctuation">(</span>host<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>flutterEngine <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    isFlutterEngineFromHost <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// &#x521B;&#x5EFA;flutter engine</span>
+  <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;No preferred FlutterEngine was provided. Creating a new FlutterEngine for&quot;</span>
+      <span class="token operator">+</span> <span class="token string">&quot; this FlutterFragment.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  flutterEngine <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FlutterEngine</span><span class="token punctuation">(</span>host<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> host<span class="token punctuation">.</span><span class="token function">getFlutterShellArgs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  isFlutterEngineFromHost <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p> &#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x4E3B;&#x8981;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x521B;&#x5EFA;FlutterEngine&#xFF0C;&#x9075;&#x5FAA;&#x4EE5;&#x4E0B;&#x7B56;&#x7565;<ul>
+<li>&#x82E5;&#x8BBE;&#x7F6E;&#x4E86;cache Engine &#x5219;&#x590D;&#x7528;</li>
+<li>&#x82E5;Host &#x63D0;&#x4F9B;&#x4E86;Engine &#x5219;&#x4F7F;&#x7528;</li>
+<li>&#x521B;&#x5EFA;&#x5168;&#x65B0;&#x7684;Flutter Engine</li>
+</ul>
+</li>
+<li>&#x521D;&#x59CB;&#x5316;PlatformPlugin</li>
+</ul>
+<h3 id="flutterengine-&#x521B;&#x5EFA;"><a name="flutterengine-&#x521B;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#flutterengine-&#x521B;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>FlutterEngine &#x521B;&#x5EFA;</h3>
+<p>&#x4E0D;&#x7BA1;&#x662F;&#x4F7F;&#x7528;cache Engine &#x8FD8;&#x662F;new Engine &#x65B9;&#x5F0F;&#x542F;&#x52A8;flutter &#x90FD;&#x6D89;&#x53CA;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;FlutterEngine &#x5BF9;&#x8C61;&#x3002;&#x800C;&#x521B;&#x5EFA;FlutterEngine &#x5BF9;&#x8C61;&#x5185;&#x90E8;&#x53C8;&#x505A;&#x4E86;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;</p>
+<p>&#xFF08;io.flutter.embedding.engine.FlutterEngine.java&#xFF09;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token class-name">FlutterEngine</span><span class="token punctuation">(</span>
+    <span class="token annotation punctuation">@NonNull</span> <span class="token class-name">Context</span> context<span class="token punctuation">,</span>
+    <span class="token annotation punctuation">@NonNull</span> <span class="token class-name">FlutterLoader</span> flutterLoader<span class="token punctuation">,</span>
+    <span class="token annotation punctuation">@NonNull</span> <span class="token class-name">FlutterJNI</span> flutterJNI<span class="token punctuation">,</span>
+    <span class="token annotation punctuation">@Nullable</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> dartVmArgs<span class="token punctuation">,</span>
+    <span class="token keyword">boolean</span> automaticallyRegisterPlugins
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>flutterJNI <span class="token operator">=</span> flutterJNI<span class="token punctuation">;</span>
+  <span class="token comment">// &#x542F;&#x52A8;Flutter &#xFF0C;&#x5F00;&#x59CB;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;</span>
+  flutterLoader<span class="token punctuation">.</span><span class="token function">startInitialization</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// &#x786E;&#x4FDD;&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;</span>
+  flutterLoader<span class="token punctuation">.</span><span class="token function">ensureInitializationComplete</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> dartVmArgs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  flutterJNI<span class="token punctuation">.</span><span class="token function">addEngineLifecycleListener</span><span class="token punctuation">(</span>engineLifecycleListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// &#x5173;&#x8054;native</span>
+  <span class="token function">attachToJni</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// &#x6CE8;&#x518C;platform message &#x901A;&#x9053;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>dartExecutor <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DartExecutor</span><span class="token punctuation">(</span>flutterJNI<span class="token punctuation">,</span> context<span class="token punctuation">.</span><span class="token function">getAssets</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>dartExecutor<span class="token punctuation">.</span><span class="token function">onAttachedToJNI</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">this</span><span class="token punctuation">.</span>renderer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FlutterRenderer</span><span class="token punctuation">(</span>flutterJNI<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// &#x5EFA;&#x7ACB;&#x5404;&#x79CD; method channel </span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+  <span class="token keyword">this</span><span class="token punctuation">.</span>pluginRegistry <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FlutterEnginePluginRegistry</span><span class="token punctuation">(</span>
+    context<span class="token punctuation">.</span><span class="token function">getApplicationContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword">this</span><span class="token punctuation">,</span>
+    flutterLoader
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// &#x5185;&#x90E8;&#x53CD;&#x5C04;&#x8C03;&#x7528;&#x7C7B;GeneratedPluginRegistrant&#x7684;registerWith&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x7B2C;&#x4E09;&#x65B9;&#x7684;&#x63D2;&#x4EF6;&#x6CE8;&#x518C;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>automaticallyRegisterPlugins<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">registerPlugins</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;FlutterEngine &#x6784;&#x9020;&#x65B9;&#x6CD5;&#x6240;&#x505A;&#x7684;&#x4E8B;&#x6709;&#xFF1A;</p>
+<ul>
+<li>&#x521B;&#x5EFA;FlutterJNI&#x4EE5;&#x53CA;FlutterLoader &#x5BF9;&#x8C61;</li>
+<li>&#x8C03;&#x7528;flutterLoader &#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;</li>
+<li>&#x786E;&#x4FDD;&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;</li>
+<li>attachJni &#x5173;&#x8054;native</li>
+<li>&#x6CE8;&#x518C;platform &#x5404;&#x79CD;&#x63D2;&#x4EF6;</li>
+<li>&#x53CD;&#x5C04;&#x6CE8;&#x518C;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;</li>
+</ul>
+<h4 id="startinitialization-&#x5F00;&#x59CB;&#x521D;&#x59CB;&#x5316;"><a name="startinitialization-&#x5F00;&#x59CB;&#x521D;&#x59CB;&#x5316;" class="anchor-navigation-ex-anchor" href="#startinitialization-&#x5F00;&#x59CB;&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>startInitialization &#x5F00;&#x59CB;&#x521D;&#x59CB;&#x5316;</h4>
+<p>flutterLoader &#x5F00;&#x59CB;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">startInitialization</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token class-name">Context</span> applicationContext<span class="token punctuation">,</span> <span class="token annotation punctuation">@NonNull</span> <span class="token class-name">Settings</span> settings<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// &#x786E;&#x4FDD;&#x4E0D;&#x91CD;&#x590D;&#x521D;&#x59CB;&#x5316;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>settings <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token comment">// &#x786E;&#x4FDD;&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Looper</span><span class="token punctuation">.</span><span class="token function">myLooper</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token class-name">Looper</span><span class="token punctuation">.</span><span class="token function">getMainLooper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalStateException</span><span class="token punctuation">(</span><span class="token string">&quot;startInitialization must be called on the main thread&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>settings <span class="token operator">=</span> settings<span class="token punctuation">;</span>
+
+    <span class="token keyword">long</span> initStartTimestampMillis <span class="token operator">=</span> <span class="token class-name">SystemClock</span><span class="token punctuation">.</span><span class="token function">uptimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x521D;&#x59CB;&#x5316;&#x6E05;&#x5355;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x914D;&#x7F6E;</span>
+    <span class="token function">initConfig</span><span class="token punctuation">(</span>applicationContext<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// &#x6E05;&#x7406;&#x3001;&#x63D0;&#x53D6;&#x8D44;&#x6E90;&#x7B49;&#x64CD;&#x4F5C;</span>
+    <span class="token function">initResources</span><span class="token punctuation">(</span>applicationContext<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// &#x52A0;&#x8F7D;flutter.so &#x5E93;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">loadLibrary</span><span class="token punctuation">(</span><span class="token string">&quot;flutter&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">VsyncWaiter</span>
+        <span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token class-name">WindowManager</span><span class="token punctuation">)</span> applicationContext<span class="token punctuation">.</span><span class="token function">getSystemService</span><span class="token punctuation">(</span><span class="token class-name">Context</span><span class="token punctuation">.</span>WINDOW_SERVICE<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">long</span> initTimeMillis <span class="token operator">=</span> <span class="token class-name">SystemClock</span><span class="token punctuation">.</span><span class="token function">uptimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> initStartTimestampMillis<span class="token punctuation">;</span>
+      <span class="token comment">// &#x8BB0;&#x5F55;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x95F4;</span>
+    <span class="token class-name">FlutterJNI</span><span class="token punctuation">.</span><span class="token function">nativeRecordStartTimestamp</span><span class="token punctuation">(</span>initTimeMillis<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Flutter&#x52A0;&#x8F7D;&#x5668;&#x521D;&#x59CB;&#x5316;&#x91CC;&#x9762;&#x4E3B;&#x8981;&#x505A;&#x7684;&#x5DE5;&#x4F5C;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x63D0;&#x53D6;&#x914D;&#x7F6E;&#x4FE1;&#x606F;</li>
+<li>&#x6E05;&#x7406;&#x3001;&#x63D0;&#x53D6;&#x8D44;&#x6E90;</li>
+<li><strong>&#x52A0;&#x8F7D;flutter.so &#x5E93;</strong></li>
+<li>&#x8BB0;&#x5F55;&#x521D;&#x59CB;&#x5316;&#x8017;&#x8D39;&#x65F6;&#x95F4;</li>
+</ul>
+<h5 id="flutterso-&#x5E93;&#x52A0;&#x8F7D;"><a name="flutterso-&#x5E93;&#x52A0;&#x8F7D;" class="anchor-navigation-ex-anchor" href="#flutterso-&#x5E93;&#x52A0;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a>flutter.so &#x5E93;&#x52A0;&#x8F7D;</h5>
+<p>&#x5728;FlutterLoader.startInitialization &#x4E2D;&#x6211;&#x4EEC;&#x770B;&#x89C1;&#x52A0;&#x8F7D;&#x4E86;flutter.so &#x52A8;&#x6001;&#x5E93;&#xFF0C;&#x800C;&#x52A8;&#x6001;&#x5E93;&#x52A0;&#x8F7D;&#x6700;&#x7EC8;&#x4F1A;&#x8C03;&#x7528;&#x5230;&#x5E93;&#x4E2D;&#x7684;JNI_OnLoad&#x65B9;&#x6CD5;&#x3002;</p>
+<p>(flutter/shell/platform/android/library_loader.cc)</p>
+<pre class="language-"><code class="lang-c++">JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved) {
+  // Initialize the Java VM.
+  fml::jni::InitJavaVM(vm);
+
+  JNIEnv* env = fml::jni::AttachCurrentThread();
+  bool result = false;
+
+  // Register FlutterMain.
+  result = flutter::FlutterMain::Register(env);
+  FML_CHECK(result);
+
+  // Register PlatformView
+  result = flutter::PlatformViewAndroid::Register(env);
+  FML_CHECK(result);
+
+  // Register VSyncWaiter.
+  result = flutter::VsyncWaiterAndroid::Register(env);
+  FML_CHECK(result);
+
+  return JNI_VERSION_1_4;
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x5B8C;&#x6210;&#x6CE8;&#x518C;&#x5DE5;&#x4F5C;&#x3002;</p>
+<ul>
+<li>&#x521D;&#x59CB;&#x5316;JVM &#x865A;&#x62DF;&#x673A;</li>
+<li>&#x6CE8;&#x518C;FlutterMain</li>
+<li>&#x6CE8;&#x518C;PlatformView</li>
+<li>&#x6CE8;&#x518C;VSyncWaiter</li>
+</ul>
+<h6 id="&#x5173;&#x8054;-jvm-&#x865A;&#x62DF;&#x673A;"><a name="&#x5173;&#x8054;-jvm-&#x865A;&#x62DF;&#x673A;" class="anchor-navigation-ex-anchor" href="#&#x5173;&#x8054;-jvm-&#x865A;&#x62DF;&#x673A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5173;&#x8054; JVM &#x865A;&#x62DF;&#x673A;</h6>
+<p>&#xFF08;flutter/fml/platform/android/jni_util.cc&#xFF09;</p>
+<pre class="language-"><code class="lang-c++">void InitJavaVM(JavaVM* vm) {
+  FML_DCHECK(g_jvm == nullptr);
+  g_jvm = vm;
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x662F;&#x5173;&#x8054;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x521B;&#x5EFA;&#x7684;JVM &#x5B9E;&#x4F8B;&#xFF0C;&#x5E76;&#x4E14;&#x4FDD;&#x5B58;&#x6210;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x3002;</p>
+<h6 id="&#x6CE8;&#x518C;fluttermain"><a name="&#x6CE8;&#x518C;fluttermain" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x518C;fluttermain"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6CE8;&#x518C;FlutterMain</h6>
+<p>&#xFF08;flutter/shell/platform/android/flutter_main.cc&#xFF09;</p>
+<pre class="language-"><code class="lang-c++">bool FlutterMain::Register(JNIEnv* env) {
+  static const JNINativeMethod methods[] = {
+      {
+          .name = &quot;nativeInit&quot;,
+          .signature = &quot;(Landroid/content/Context;[Ljava/lang/String;Ljava/&quot;
+                       &quot;lang/String;Ljava/lang/String;Ljava/lang/String;)V&quot;,
+          .fnPtr = reinterpret_cast<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>void*</span><span class="token punctuation">&gt;</span></span>(&amp;Init),
+      },
+      {
+          .name = &quot;nativeRecordStartTimestamp&quot;,
+          .signature = &quot;(J)V&quot;,
+          .fnPtr = reinterpret_cast<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>void*</span><span class="token punctuation">&gt;</span></span>(&amp;RecordStartTimestamp),
+      },
+  };
+
+  jclass clazz = env-&gt;FindClass(&quot;io/flutter/embedding/engine/FlutterJNI&quot;);
+
+  if (clazz == nullptr) {
+    return false;
+  }
+
+  return env-&gt;RegisterNatives(clazz, methods, fml::size(methods)) == 0;
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x662F;&#x6CE8;&#x518C;&#x4E86;FlutterJNI(&#x5728;1.9&#x4E2D;&#x662F;FlutterMain&#x7C7B;)&#x4E2D;&#x7684; nativeInit &#x4EE5;&#x53CA;nativeRecordStartTimestamp&#x65B9;&#x6CD5;&#x3002;</p>
+<h6 id="&#x6CE8;&#x518C;platformview"><a name="&#x6CE8;&#x518C;platformview" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x518C;platformview"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6CE8;&#x518C;PlatformView</h6>
+<p>&#xFF08;flutter/shell/platform/android/platform_view_android_jni.cc&#xFF09;</p>
+<pre class="language-"><code class="lang-c++">bool PlatformViewAndroid::Register(JNIEnv* env) {
+  if (env == nullptr) {
+    FML_LOG(ERROR) &lt;&lt; &quot;No JNIEnv provided&quot;;
+    return false;
+  }
+
+  g_flutter_callback_info_class = new fml::jni::ScopedJavaGlobalRef<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>jclass</span><span class="token punctuation">&gt;</span></span>(
+      env, env-&gt;FindClass(&quot;io/flutter/view/FlutterCallbackInformation&quot;));
+  if (g_flutter_callback_info_class-&gt;is_null()) {
+    FML_LOG(ERROR) &lt;&lt; &quot;Could not locate FlutterCallbackInformation class&quot;;
+    return false;
+  }
+  ...
+
+  return RegisterApi(env);
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x4E5F;&#x662F;&#x8FDB;&#x884C;&#x65B9;&#x6CD5;&#x6CE8;&#x518C;&#x8C03;&#x7528;&#x3002;</p>
+<h6 id="&#x6CE8;&#x518C;vsyncwaiter"><a name="&#x6CE8;&#x518C;vsyncwaiter" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x518C;vsyncwaiter"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6CE8;&#x518C;VSyncWaiter</h6>
+<p>(flutter/shell/platform/android/vsync_waiter_android.cc)</p>
+<pre class="language-"><code class="lang-c++">bool VsyncWaiterAndroid::Register(JNIEnv* env) {
+  static const JNINativeMethod methods[] = {{
+      .name = &quot;nativeOnVsync&quot;,
+      .signature = &quot;(JJJ)V&quot;,
+      .fnPtr = reinterpret_cast<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>void*</span><span class="token punctuation">&gt;</span></span>(&amp;OnNativeVsync),
+  }};
+
+  jclass clazz = env-&gt;FindClass(&quot;io/flutter/embedding/engine/FlutterJNI&quot;);
+
+  if (clazz == nullptr) {
+    return false;
+  }
+
+  g_vsync_waiter_class = new fml::jni::ScopedJavaGlobalRef<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>jclass</span><span class="token punctuation">&gt;</span></span>(env, clazz);
+
+  FML_CHECK(!g_vsync_waiter_class-&gt;is_null());
+
+  g_async_wait_for_vsync_method_ = env-&gt;GetStaticMethodID(
+      g_vsync_waiter_class-&gt;obj(), &quot;asyncWaitForVsync&quot;, &quot;(J)V&quot;);
+
+  FML_CHECK(g_async_wait_for_vsync_method_ != nullptr);
+
+  return env-&gt;RegisterNatives(clazz, methods, fml::size(methods)) == 0;
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x4E5F;&#x662F;&#x628A;FlutterJNI &#x7684;nativeOnVsync &#x65B9;&#x6CD5;&#x4E0E;C++ &#x5C42;&#x7684; OnNativeVsync &#x5173;&#x8054;&#xFF0C;&#x8BA9;java &#x53EF;&#x4EE5;&#x8C03;&#x7528;C++ &#x7684;&#x65B9;&#x6CD5;&#x3001;</p>
+<p>&#x628A;JAVA &#x5C42;&#x7684; asyncWaitForVsync&#x65B9;&#x6CD5;&#x4FDD;&#x5B58;&#x5230;C++ &#x7684; g<em>async_wait_for_vsync_method</em> &#x53D8;&#x91CF;&#xFF0C;&#x8BA9;C++ &#x53EF;&#x4EE5;&#x8C03;&#x7528;JAVA&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x4E0A;&#x9762;Flutter&#x52A0;&#x8F7D;&#x7684;&#x521D;&#x59CB;&#x5316;&#x5DE5;&#x4F5C;&#x4E3B;&#x8981;&#x662F;&#x8FDB;&#x884C;&#x8D44;&#x6E90;&#x6574;&#x5408;&#xFF0C;&#x52A0;&#x8F7D;so &#x5E93;&#xFF0C;&#x4EE5;&#x53CA;native &#x4E0E; java &#x5C42;&#x7684;&#x901A;&#x4FE1;&#x65B9;&#x6CD5;&#x6CE8;&#x518C;&#x3002;</p>
+<h4 id="ensureinitializationcomplete-&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;"><a name="ensureinitializationcomplete-&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;" class="anchor-navigation-ex-anchor" href="#ensureinitializationcomplete-&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;"><i class="fa fa-link" aria-hidden="true"></i></a>ensureInitializationComplete &#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;</h4>
+<p>&#x4E0A;&#x9762;&#x8C03;&#x7528;&#x53EA;&#x662F;&#x6CE8;&#x518C;&#x4E86;&#x4E00;&#x4E9B;&#x901A;&#x4FE1;&#x65B9;&#x6CD5;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x521D;&#x59CB;&#x5316;&#x5DE5;&#x4F5C;&#x8FD8;&#x672A;&#x5B8C;&#x6210;&#x3002;&#x8C03;&#x7528;ensureInitializationComplete&#x65B9;&#x6CD5;&#x786E;&#x4FDD;&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">ensureInitializationComplete</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token class-name">Context</span> applicationContext<span class="token punctuation">,</span> <span class="token annotation punctuation">@Nullable</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>resourceExtractor <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            resourceExtractor<span class="token punctuation">.</span><span class="token function">waitForCompletion</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> shellArgs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token comment">// &#x6784;&#x5EFA;&#x542F;&#x52A8;&#x53C2;&#x6570;  </span>
+                <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token class-name">String</span> appStoragePath <span class="token operator">=</span> <span class="token class-name">PathUtils</span><span class="token punctuation">.</span><span class="token function">getFilesDir</span><span class="token punctuation">(</span>applicationContext<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> engineCachesPath <span class="token operator">=</span> <span class="token class-name">PathUtils</span><span class="token punctuation">.</span><span class="token function">getCacheDirectory</span><span class="token punctuation">(</span>applicationContext<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// native &#x521D;&#x59CB;&#x5316;</span>
+        <span class="token class-name">FlutterJNI</span><span class="token punctuation">.</span><span class="token function">nativeInit</span><span class="token punctuation">(</span>applicationContext<span class="token punctuation">,</span> shellArgs<span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            kernelPath<span class="token punctuation">,</span> appStoragePath<span class="token punctuation">,</span> engineCachesPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        initialized <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Flutter initialization failed.&quot;</span><span class="token punctuation">,</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5176;&#x4E2D;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x6784;&#x5EFA;&#x542F;&#x52A8;shell &#x53C2;&#x6570;&#x5217;&#x8868;</li>
+<li>&#x8C03;&#x7528;FlutterJNI.nativeInit &#x8FDB;&#x884C;native &#x521D;&#x59CB;&#x5316;&#x5DE5;&#x4F5C;&#x3002;</li>
+</ul>
+<h5 id="nativeinit"><a name="nativeinit" class="anchor-navigation-ex-anchor" href="#nativeinit"><i class="fa fa-link" aria-hidden="true"></i></a>nativeInit</h5>
+<h6 id="flutterjninativeinit"><a name="flutterjninativeinit" class="anchor-navigation-ex-anchor" href="#flutterjninativeinit"><i class="fa fa-link" aria-hidden="true"></i></a>FlutterJNI.nativeInit</h6>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">native</span> <span class="token keyword">void</span> <span class="token function">nativeInit</span><span class="token punctuation">(</span>
+    <span class="token annotation punctuation">@NonNull</span> <span class="token class-name">Context</span> context<span class="token punctuation">,</span>
+    <span class="token annotation punctuation">@NonNull</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">,</span>
+    <span class="token annotation punctuation">@Nullable</span> <span class="token class-name">String</span> bundlePath<span class="token punctuation">,</span>
+    <span class="token annotation punctuation">@NonNull</span> <span class="token class-name">String</span> appStoragePath<span class="token punctuation">,</span>
+    <span class="token annotation punctuation">@NonNull</span> <span class="token class-name">String</span> engineCachesPath
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4ECE;&#x4E0A;&#x9762;&#x7684;so &#x5E93;&#x52A0;&#x8F7D;&#x53EF;&#x4EE5;&#x770B;&#x5230;nativeInit &#x65B9;&#x6CD5;&#x6620;&#x5C04;&#x5230;c++ &#x4E2D;&#x662F; FlutterMain::Init &#x65B9;&#x6CD5;</p>
+<h6 id="fluttermaininit"><a name="fluttermaininit" class="anchor-navigation-ex-anchor" href="#fluttermaininit"><i class="fa fa-link" aria-hidden="true"></i></a>FlutterMain::Init</h6>
+<p>(flutter/shell/platform/android/flutter_main.cc)</p>
+<pre class="language-"><code class="lang-c++">void FlutterMain::Init(JNIEnv* env,
+                       jclass clazz,
+                       jobject context,
+                       jobjectArray jargs,
+                       jstring kernelPath,
+                       jstring appStoragePath,
+                       jstring engineCachesPath) {
+  std::vector<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">std:</span>:string</span><span class="token punctuation">&gt;</span></span> args;
+  args.push_back(&quot;flutter&quot;);
+  for (auto&amp; arg : fml::jni::StringArrayToVector(env, jargs)) {
+    args.push_back(std::move(arg));
+  }
+  auto command_line = fml::CommandLineFromIterators(args.begin(), args.end());
+  // &#x8BB0;&#x5F55;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;
+  auto settings = SettingsFromCommandLine(command_line);
+
+
+  flutter::DartCallbackCache::SetCachePath(
+      fml::jni::JavaStringToString(env, appStoragePath));
+
+  fml::paths::InitializeAndroidCachesPath(
+      fml::jni::JavaStringToString(env, engineCachesPath));
+  // &#x78C1;&#x76D8;&#x4E2D;&#x8F7D;&#x5165;&#x7F13;&#x5B58;
+  flutter::DartCallbackCache::LoadCacheFromDisk();
+
+  ...
+  g_flutter_main.reset(new FlutterMain(std::move(settings)));
+
+  g_flutter_main-&gt;SetupObservatoryUriCallback(env);
+}
+</code></pre>
+<p>&#x8BE5;&#x65B9;&#x6CD5;&#x4E3B;&#x8981;&#x662F;&#x628A;&#x4F20;&#x5165;&#x7684;args &#x4EE5;&#x53CA;&#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x7B49;&#x4FE1;&#x606F;&#x4FDD;&#x5B58;&#x5728;Setting &#x7C7B;&#x4E2D;&#x3002;</p>
+<h4 id="attachtojni"><a name="attachtojni" class="anchor-navigation-ex-anchor" href="#attachtojni"><i class="fa fa-link" aria-hidden="true"></i></a>attachToJni</h4>
+<p>&#x5728;&#x5B8C;&#x6210;&#x521D;&#x59CB;&#x5316;&#x540E;&#xFF0C;flutter engine &#x8FD8;&#x8C03;&#x7528;&#x4E86;attachToJni &#x65B9;&#x6CD5; &#xFF0C;&#x800C;&#x5185;&#x90E8;&#x662F;&#x8C03;&#x7528;FlutterJNI&#x7684;attachToNative&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@UiThread</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">attachToNative</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> isBackgroundView<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// isBackgroundView = false</span>
+  <span class="token function">ensureRunningOnMainThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">ensureNotAttachedToNative</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  nativePlatformViewId <span class="token operator">=</span> <span class="token function">nativeAttach</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> isBackgroundView<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x800C;nativeAttach &#x662F;&#x4E2A;native &#x65B9;&#x6CD5;</p>
+<p>&#x5728;platform_view_android_jni.cc &#x4E2D; </p>
+<pre class="language-"><code class="lang-c++">{
+    .name = &quot;nativeAttach&quot;,
+    .signature = &quot;(Lio/flutter/embedding/engine/FlutterJNI;Z)J&quot;,
+    .fnPtr = reinterpret_cast<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>void*</span><span class="token punctuation">&gt;</span></span>(&amp;AttachJNI),
+}
+</code></pre>
+<p>&#x5173;&#x8054;&#x4E86;AttachJNI &#x65B9;&#x6CD5;</p>
+<h5 id="attachjni"><a name="attachjni" class="anchor-navigation-ex-anchor" href="#attachjni"><i class="fa fa-link" aria-hidden="true"></i></a>AttachJNI</h5>
+<p>&#xFF08;flutter/shell/platform/android/platform_view_android_jni.cc&#xFF09;</p>
+<pre class="language-"><code class="lang-c++">// Called By Java
+
+static jlong AttachJNI(JNIEnv* env,
+                       jclass clazz,
+                       jobject flutterJNI,
+                       jboolean is_background_view) {
+  fml::jni::JavaObjectWeakGlobalRef java_object(env, flutterJNI);
+  auto shell_holder = std::make_unique<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AndroidShellHolder</span><span class="token punctuation">&gt;</span></span>(
+      FlutterMain::Get().GetSettings(), java_object, is_background_view);
+  if (shell_holder-&gt;IsValid()) {
+    return reinterpret_cast<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>jlong</span><span class="token punctuation">&gt;</span></span>(shell_holder.release());
+  } else {
+    return 0;
+  }
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x662F;&#x521D;&#x59CB;&#x5316;AndroidShellHolder&#x5BF9;&#x8C61;&#x3002;&#x800C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x5185;&#x90E8;&#x53C8;&#x505A;&#x4E86;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;</p>
+<h5 id="androidshellholder-&#x521D;&#x59CB;&#x5316;"><a name="androidshellholder-&#x521D;&#x59CB;&#x5316;" class="anchor-navigation-ex-anchor" href="#androidshellholder-&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>AndroidShellHolder &#x521D;&#x59CB;&#x5316;</h5>
+<p>&#xFF08;flutter/shell/platform/android/android_shell_holder.cc&#xFF09;</p>
+<pre class="language-"><code class="lang-c++">AndroidShellHolder::AndroidShellHolder(
+    flutter::Settings settings,
+    fml::jni::JavaObjectWeakGlobalRef java_object,
+    bool is_background_view)
+    : settings_(std::move(settings)), java_object_(java_object) {
+  static size_t shell_count = 1;
+  auto thread_label = std::to_string(shell_count++);
+
+  FML_CHECK(pthread_key_create(&amp;thread_destruct_key_, ThreadDestructCallback) ==
+            0);
+
+  if (is_background_view) {
+    ...
+  } else {
+    // &#x521B;&#x5EFA;UI&#xFF0C;GPU&#xFF0C;IO &#x7EBF;&#x7A0B;
+    thread_host_ = {thread_label, ThreadHost::Type::UI | ThreadHost::Type::GPU |
+                                      ThreadHost::Type::IO};
+  }
+
+  // &#x5F53;ui &#xFF0C;gpu &#x7EBF;&#x7A0B;&#x505C;&#x6B62;&#x65F6;&#x5019;&#x5206;&#x79BB;jni
+  auto jni_exit_task([key = thread_destruct_key_]() {
+    FML_CHECK(pthread_setspecific(key, reinterpret_cast<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>void*</span><span class="token punctuation">&gt;</span></span>(1)) == 0);
+  });
+  thread_host_.ui_thread-&gt;GetTaskRunner()-&gt;PostTask(jni_exit_task);
+  if (!is_background_view) {
+    thread_host_.gpu_thread-&gt;GetTaskRunner()-&gt;PostTask(jni_exit_task);
+  }
+
+  fml::WeakPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PlatformViewAndroid</span><span class="token punctuation">&gt;</span></span> weak_platform_view;
+  // &#x521B;&#x5EFA;PlatformView    
+  Shell::CreateCallback<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PlatformView</span><span class="token punctuation">&gt;</span></span> on_create_platform_view =
+      [is_background_view, java_object, &amp;weak_platform_view](Shell&amp; shell) {
+        std::unique_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PlatformViewAndroid</span><span class="token punctuation">&gt;</span></span> platform_view_android;
+        if (is_background_view) {
+         ...
+        } else {
+          // &#x521B;&#x5EFA; PlatformViewAndroid
+          platform_view_android = std::make_unique<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PlatformViewAndroid</span><span class="token punctuation">&gt;</span></span>(
+              shell,                   // delegate
+              shell.GetTaskRunners(),  // task runners
+              java_object,             // java object handle for JNI interop
+              shell.GetSettings()
+                  .enable_software_rendering  // use software rendering
+          );
+        }
+        weak_platform_view = platform_view_android-&gt;GetWeakPtr();
+        return platform_view_android;
+      };
+
+  Shell::CreateCallback<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Rasterizer</span><span class="token punctuation">&gt;</span></span> on_create_rasterizer = [](Shell&amp; shell) {
+    return std::make_unique<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Rasterizer</span><span class="token punctuation">&gt;</span></span>(shell, shell.GetTaskRunners());
+  };
+
+  // &#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x4F5C;&#x4E3A;platform &#x7EBF;&#x7A0B;&#xFF0C;&#x521D;&#x59CB;&#x5316;MessageLoop    
+  fml::MessageLoop::EnsureInitializedForCurrentThread();
+  fml::RefPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">fml:</span>:TaskRunner</span><span class="token punctuation">&gt;</span></span> gpu_runner;
+  fml::RefPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">fml:</span>:TaskRunner</span><span class="token punctuation">&gt;</span></span> ui_runner;
+  fml::RefPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">fml:</span>:TaskRunner</span><span class="token punctuation">&gt;</span></span> io_runner;
+  fml::RefPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">fml:</span>:TaskRunner</span><span class="token punctuation">&gt;</span></span> platform_runner =
+      fml::MessageLoop::GetCurrent().GetTaskRunner();
+  if (is_background_view) {
+    ...
+  } else {
+    gpu_runner = thread_host_.gpu_thread-&gt;GetTaskRunner();
+    ui_runner = thread_host_.ui_thread-&gt;GetTaskRunner();
+    io_runner = thread_host_.io_thread-&gt;GetTaskRunner();
+  }
+  // &#x521B;&#x5EFA; task_runners     
+  flutter::TaskRunners task_runners(thread_label,     // label
+                                    platform_runner,  // platform
+                                    gpu_runner,       // gpu
+                                    ui_runner,        // ui
+                                    io_runner         // io
+  );
+  // &#x521B;&#x5EFA; shell 
+  shell_ =
+      Shell::Create(task_runners,             // task runners
+                    settings_,                // settings
+                    on_create_platform_view,  // platform view create callback
+                    on_create_rasterizer      // rasterizer create callback
+      );
+
+  platform_view_ = weak_platform_view;
+  FML_DCHECK(platform_view_);
+
+  is_valid_ = shell_ != nullptr;
+
+  if (is_valid_) {
+    //&#x63D0;&#x5347;GPU &#x7EBF;&#x7A0B;&#x4F18;&#x5148;&#x7EA7;
+    task_runners.GetGPUTaskRunner()-&gt;PostTask([]() {
+
+      if (::setpriority(PRIO_PROCESS, gettid(), -5) != 0) {
+        if (::setpriority(PRIO_PROCESS, gettid(), -2) != 0) {
+          FML_LOG(ERROR) &lt;&lt; &quot;Failed to set GPU task runner priority&quot;;
+        }
+      }
+    });
+    // &#x63D0;&#x5347;UI &#x7EBF;&#x7A0B;&#x4F18;&#x5148;&#x7EA7;
+    task_runners.GetUITaskRunner()-&gt;PostTask([]() {
+      if (::setpriority(PRIO_PROCESS, gettid(), -1) != 0) {
+        FML_LOG(ERROR) &lt;&lt; &quot;Failed to set UI task runner priority&quot;;
+      }
+    });
+  }
+}
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5F88;&#x957F;&#xFF0C;&#x68B3;&#x7406;&#x4E0B;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x521D;&#x59CB;&#x5316;ui&#x3001;gpu&#x3001;io &#x7EBF;&#x7A0B;</li>
+<li>&#x521B;&#x5EFA;PlatformView</li>
+<li>&#x521B;&#x5EFA;Rasterizer</li>
+<li><strong>&#x521B;&#x5EFA;Shell</strong></li>
+</ul>
+<h6 id="threadhost&#x521B;&#x5EFA;"><a name="threadhost&#x521B;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#threadhost&#x521B;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>ThreadHost&#x521B;&#x5EFA;</h6>
+<p>&#xFF08;flutter/shell/common/thread_host.cc&#xFF09;</p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ThreadHost</span><span class="token operator">::</span><span class="token class-name">ThreadHost</span><span class="token punctuation">(</span>std<span class="token operator">::</span><span class="token function">string</span> name_prefix<span class="token punctuation">,</span> uint64_t mask<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>mask <span class="token operator">&amp;</span> <span class="token class-name">ThreadHost</span><span class="token operator">::</span><span class="token class-name">Type</span><span class="token operator">::</span><span class="token class-name">Platform</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    platform_thread <span class="token operator">=</span> std<span class="token operator">::</span><span class="token function">make_unique</span><span class="token operator">&lt;</span>fml<span class="token operator">::</span><span class="token class-name">Thread</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>name_prefix <span class="token operator">+</span> <span class="token string">&quot;.platform&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>mask <span class="token operator">&amp;</span> <span class="token class-name">ThreadHost</span><span class="token operator">::</span><span class="token class-name">Type</span><span class="token operator">::</span>UI<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ui_thread <span class="token operator">=</span> std<span class="token operator">::</span><span class="token function">make_unique</span><span class="token operator">&lt;</span>fml<span class="token operator">::</span><span class="token class-name">Thread</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>name_prefix <span class="token operator">+</span> <span class="token string">&quot;.ui&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>mask <span class="token operator">&amp;</span> <span class="token class-name">ThreadHost</span><span class="token operator">::</span><span class="token class-name">Type</span><span class="token operator">::</span>GPU<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    gpu_thread <span class="token operator">=</span> std<span class="token operator">::</span><span class="token function">make_unique</span><span class="token operator">&lt;</span>fml<span class="token operator">::</span><span class="token class-name">Thread</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>name_prefix <span class="token operator">+</span> <span class="token string">&quot;.gpu&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>mask <span class="token operator">&amp;</span> <span class="token class-name">ThreadHost</span><span class="token operator">::</span><span class="token class-name">Type</span><span class="token operator">::</span>IO<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    io_thread <span class="token operator">=</span> std<span class="token operator">::</span><span class="token function">make_unique</span><span class="token operator">&lt;</span>fml<span class="token operator">::</span><span class="token class-name">Thread</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>name_prefix <span class="token operator">+</span> <span class="token string">&quot;.io&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5728;flutter &#x7684;native &#x5C42;&#x6709;4&#x4E2A;&#x7EBF;&#x7A0B;&#xFF0C;&#x5206;&#x522B;&#x662F;platform&#xFF0C;ui&#xFF0C;gpu&#xFF0C;io &#x3002;&#x800C;&#x5728;&#x4E0A;&#x9762;&#x7684;AndroidShellHolder&#x521D;&#x59CB;&#x5316;&#x4E2D;&#xFF0C;&#x521B;&#x5EFA;&#x4E86;ui&#xFF0C;gpu&#xFF0C;ui &#x7EBF;&#x7A0B;&#xFF0C;&#x800C;&#x628A;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x4F5C;&#x4E3A;platform&#x7EBF;&#x7A0B;&#x3002;</p>
+<h6 id="platformview-&#x521B;&#x5EFA;"><a name="platformview-&#x521B;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#platformview-&#x521B;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>PlatformView &#x521B;&#x5EFA;</h6>
+<p>(flutter/shell/platform/android/platform_view_android.cc)</p>
+<pre class="language-"><code class="lang-c++">PlatformViewAndroid::PlatformViewAndroid(
+    PlatformView::Delegate&amp; delegate,
+    flutter::TaskRunners task_runners,
+    fml::jni::JavaObjectWeakGlobalRef java_object,
+    bool use_software_rendering)
+    : PlatformView(delegate, std::move(task_runners)),
+      java_object_(java_object),
+      android_surface_(AndroidSurface::Create(use_software_rendering)) {
+  FML_CHECK(android_surface_)
+      &lt;&lt; &quot;Could not create an OpenGL, Vulkan or Software surface to setup &quot;
+         &quot;rendering.&quot;;
+}
+</code></pre>
+<p>&#x770B;&#x4E00;&#x770B;&#x89C1;platformViewAndroid &#x7EE7;&#x627F;&#x81EA;PlatformView&#x3002;</p>
+<p>todo</p>
+<h2 id="shell-&#x521B;&#x5EFA;"><a name="shell-&#x521B;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#shell-&#x521B;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>Shell &#x521B;&#x5EFA;</h2>
+<p>&#x5728;AndroidShellHolder &#x521D;&#x59CB;&#x5316;&#x4E2D;&#xFF0C;&#x521B;&#x5EFA;&#x4E86;shell &#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x91CC;&#x770B;&#x4E0B;&#x91CC;&#x9762;&#x505A;&#x4E86;&#x4EC0;&#x4E48;&#x3002;</p>
+<p>(flutter/shell/common/shell.cc)</p>
+<pre class="language-"><code class="lang-c++">std::unique_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Shell</span><span class="token punctuation">&gt;</span></span> Shell::Create(
+    TaskRunners task_runners,
+    Settings settings,
+    const Shell::CreateCallback<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PlatformView</span><span class="token punctuation">&gt;</span></span>&amp; on_create_platform_view,
+    const Shell::CreateCallback<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Rasterizer</span><span class="token punctuation">&gt;</span></span>&amp; on_create_rasterizer) {
+  PerformInitializationTasks(settings);
+  PersistentCache::SetCacheSkSL(settings.cache_sksl);
+
+  TRACE_EVENT0(&quot;flutter&quot;, &quot;Shell::Create&quot;);
+  // &#x521B;&#x5EFA;DartVM 
+  auto vm = DartVMRef::Create(settings);
+  FML_CHECK(vm) &lt;&lt; &quot;Must be able to initialize the VM.&quot;;
+
+  auto vm_data = vm-&gt;GetVMData();
+  // 
+  return Shell::Create(std::move(task_runners),        //
+                       std::move(settings),            //
+                       vm_data-&gt;GetIsolateSnapshot(),  // isolate snapshot
+                       on_create_platform_view,        //
+                       on_create_rasterizer,           //
+                       std::move(vm)                   //
+  );
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x5E76;&#x6CA1;&#x6709;&#x76F4;&#x63A5;&#x521B;&#x5EFA;Shell &#xFF0C;&#x800C;&#x662F;&#x5148;&#x521B;&#x5EFA;&#x4E86;Dart&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;Shell::Create &#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="dart-&#x865A;&#x62DF;&#x673A;&#x521B;&#x5EFA;"><a name="dart-&#x865A;&#x62DF;&#x673A;&#x521B;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#dart-&#x865A;&#x62DF;&#x673A;&#x521B;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>Dart &#x865A;&#x62DF;&#x673A;&#x521B;&#x5EFA;</h3>
+<p>(flutter/runtime/dart_vm_lifecycle.cc)</p>
+<pre class="language-"><code class="lang-c++">DartVMRef DartVMRef::Create(Settings settings,
+                            fml::RefPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DartSnapshot</span><span class="token punctuation">&gt;</span></span> vm_snapshot,
+                            fml::RefPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DartSnapshot</span><span class="token punctuation">&gt;</span></span> isolate_snapshot) {
+  std::scoped_lock lifecycle_lock(gVMMutex);
+
+  if (!settings.leak_vm) {
+    FML_CHECK(!gVMLeak)
+        &lt;&lt; &quot;Launch settings indicated that the VM should shut down in the &quot;
+           &quot;process when done but a previous launch asked the VM to leak in &quot;
+           &quot;the same process. For proper VM shutdown, all VM launches must &quot;
+           &quot;indicate that they should shut down when done.&quot;;
+  }
+
+  // If there is already a running VM in the process, grab a strong reference to
+  // it.
+  if (auto vm = gVM.lock()) {
+    FML_DLOG(WARNING) &lt;&lt; &quot;Attempted to create a VM in a process where one was &quot;
+                         &quot;already running. Ignoring arguments for current VM &quot;
+                         &quot;create call and reusing the old VM.&quot;;
+    // There was already a running VM in the process,
+    return DartVMRef{std::move(vm)};
+  }
+
+  std::scoped_lock dependents_lock(gVMDependentsMutex);
+
+  gVMData.reset();
+  gVMServiceProtocol.reset();
+  gVMIsolateNameServer.reset();
+  gVM.reset();
+
+  // If there is no VM in the process. Initialize one, hold the weak reference
+  // and pass a strong reference to the caller.
+  auto isolate_name_server = std::make_shared<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>IsolateNameServer</span><span class="token punctuation">&gt;</span></span>();
+  auto vm = DartVM::Create(std::move(settings),          //
+                           std::move(vm_snapshot),       //
+                           std::move(isolate_snapshot),  //
+                           isolate_name_server           //
+  );
+
+  if (!vm) {
+    FML_LOG(ERROR) &lt;&lt; &quot;Could not create Dart VM instance.&quot;;
+    return {nullptr};
+  }
+
+  gVMData = vm-&gt;GetVMData();
+  gVMServiceProtocol = vm-&gt;GetServiceProtocol();
+  gVMIsolateNameServer = isolate_name_server;
+  gVM = vm;
+
+  if (settings.leak_vm) {
+    gVMLeak = new std::shared_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DartVM</span><span class="token punctuation">&gt;</span></span>(vm);
+  }
+
+  return DartVMRef{std::move(vm)};
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x662F;&#x521B;&#x5EFA;Dart &#x865A;&#x62DF;&#x673A;&#xFF0C;&#x5F53;&#x8FDB;&#x7A0B;&#x5B58;&#x5728;&#x65F6;&#x5019;&#x590D;&#x7528;&#x3002;</p>
+<p>Todo</p>
+<h3 id="shellcreate"><a name="shellcreate" class="anchor-navigation-ex-anchor" href="#shellcreate"><i class="fa fa-link" aria-hidden="true"></i></a>Shell::Create</h3>
+<p>&#xFF08;flutter/shell/common/shell.cc&#xFF09;</p>
+<pre class="language-"><code class="lang-c++">std::unique_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Shell</span><span class="token punctuation">&gt;</span></span> Shell::Create(
+    TaskRunners task_runners,
+    Settings settings,
+    fml::RefPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>const</span> <span class="token attr-name">DartSnapshot</span><span class="token punctuation">&gt;</span></span> isolate_snapshot,
+    const Shell::CreateCallback<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PlatformView</span><span class="token punctuation">&gt;</span></span>&amp; on_create_platform_view,
+    const Shell::CreateCallback<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Rasterizer</span><span class="token punctuation">&gt;</span></span>&amp; on_create_rasterizer,
+    DartVMRef vm) {
+  ....
+  fml::TaskRunner::RunNowOrPostTask(
+      task_runners.GetPlatformTaskRunner(),
+      fml::MakeCopyable([&amp;latch,                                          //
+                         vm = std::move(vm),                              //
+                         &amp;shell,                                          //
+                         task_runners = std::move(task_runners),          //
+                         settings,                                        //
+                         isolate_snapshot = std::move(isolate_snapshot),  //
+                         on_create_platform_view,                         //
+                         on_create_rasterizer                             //
+  ]() mutable {
+        // &#x771F;&#x6B63;shell &#x521B;&#x5EFA;
+        shell = CreateShellOnPlatformThread(std::move(vm),
+                                            std::move(task_runners),      //
+                                            settings,                     //
+                                            std::move(isolate_snapshot),  //
+                                            on_create_platform_view,      //
+                                            on_create_rasterizer          //
+        );
+
+        latch.Signal();
+      }));
+  // &#x7B49;&#x5F85;shell &#x521B;&#x5EFA;&#x5B8C;&#x6210;
+  latch.Wait();
+  return shell;
+}
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x91CD;&#x8F7D;&#x65B9;&#x6CD5;&#x91CC;&#x9762;&#x4E5F;&#x6CA1;&#x6709;&#x771F;&#x6B63;&#x521B;&#x5EFA;shell&#xFF0C;&#x5B9E;&#x9645;&#x521B;&#x5EFA;&#x4EA4;&#x7ED9;CreateShellOnPlatformThread&#x5B8C;&#x6210;.</p>
+<h3 id="createshellonplatformthread"><a name="createshellonplatformthread" class="anchor-navigation-ex-anchor" href="#createshellonplatformthread"><i class="fa fa-link" aria-hidden="true"></i></a>CreateShellOnPlatformThread</h3>
+<p>&#xFF08;flutter/shell/common/shell.cc&#xFF09;</p>
+<pre class="language-"><code class="lang-c++">std::unique_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Shell</span><span class="token punctuation">&gt;</span></span> Shell::CreateShellOnPlatformThread(
+    DartVMRef vm,
+    TaskRunners task_runners,
+    Settings settings,
+    fml::RefPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>const</span> <span class="token attr-name">DartSnapshot</span><span class="token punctuation">&gt;</span></span> isolate_snapshot,
+    const Shell::CreateCallback<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PlatformView</span><span class="token punctuation">&gt;</span></span>&amp; on_create_platform_view,
+    const Shell::CreateCallback<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Rasterizer</span><span class="token punctuation">&gt;</span></span>&amp; on_create_rasterizer) {
+  ...
+  // &#x521B;&#x5EFA;shell &#x5BF9;&#x8C61;  &#xFF08;&#x7EC8;&#x4E8E;&#x521B;&#x5EFA;&#x4E86;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&#xFF09;
+  auto shell =
+      std::unique_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Shell</span><span class="token punctuation">&gt;</span></span>(new Shell(std::move(vm), task_runners, settings));
+
+  // &#x5728;GPU &#x7EBF;&#x7A0B;&#x521B;&#x5EFA; rasterizer
+  std::promise&lt;std::unique_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Rasterizer</span><span class="token punctuation">&gt;</span></span>&gt; rasterizer_promise;
+  auto rasterizer_future = rasterizer_promise.get_future();
+  std::promise&lt;fml::WeakPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SnapshotDelegate</span><span class="token punctuation">&gt;</span></span>&gt; snapshot_delegate_promise;
+  auto snapshot_delegate_future = snapshot_delegate_promise.get_future();
+  fml::TaskRunner::RunNowOrPostTask(
+      task_runners.GetGPUTaskRunner(), [&amp;rasterizer_promise,  //
+                                        &amp;snapshot_delegate_promise,
+                                        on_create_rasterizer,  //
+                                        shell = shell.get()    //
+  ]() {
+        TRACE_EVENT0(&quot;flutter&quot;, &quot;ShellSetupGPUSubsystem&quot;);
+        std::unique_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Rasterizer</span><span class="token punctuation">&gt;</span></span> rasterizer(on_create_rasterizer(*shell));
+        snapshot_delegate_promise.set_value(rasterizer-&gt;GetSnapshotDelegate());
+        rasterizer_promise.set_value(std::move(rasterizer));
+      });
+
+  // &#x5728;platform &#x7EBF;&#x7A0B;&#xFF08;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#xFF09;&#x521B;&#x5EFA; platformView&#xFF0C;&#x5176;&#x5B9E;&#x5728;&#x521B;&#x5EFA;AndroidShellHolder&#x65F6;&#x5019;&#x521B;&#x5EFA;
+  auto platform_view = on_create_platform_view(*shell.get());
+  if (!platform_view || !platform_view-&gt;GetWeakPtr()) {
+    return nullptr;
+  }
+
+  // &#x521B;&#x5EFA;vsync_waiter.
+  auto vsync_waiter = platform_view-&gt;CreateVSyncWaiter();
+  if (!vsync_waiter) {
+    return nullptr;
+  }
+
+  // &#x5728;IO &#x7EBF;&#x7A0B;&#x521B;&#x5EFA; ShellIOManager &#x5BF9;&#x8C61;
+  std::promise&lt;std::unique_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ShellIOManager</span><span class="token punctuation">&gt;</span></span>&gt; io_manager_promise;
+  auto io_manager_future = io_manager_promise.get_future();
+  std::promise&lt;fml::WeakPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ShellIOManager</span><span class="token punctuation">&gt;</span></span>&gt; weak_io_manager_promise;
+  auto weak_io_manager_future = weak_io_manager_promise.get_future();
+  std::promise&lt;fml::RefPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SkiaUnrefQueue</span><span class="token punctuation">&gt;</span></span>&gt; unref_queue_promise;
+  auto unref_queue_future = unref_queue_promise.get_future();
+  auto io_task_runner = shell-&gt;GetTaskRunners().GetIOTaskRunner();
+
+  fml::TaskRunner::RunNowOrPostTask(
+      io_task_runner,
+      [&amp;io_manager_promise,                                               //
+       &amp;weak_io_manager_promise,                                          //
+       &amp;unref_queue_promise,                                              //
+       platform_view = platform_view-&gt;GetWeakPtr(),                       //
+       io_task_runner,                                                    //
+       is_backgrounded_sync_switch = shell-&gt;GetIsGpuDisabledSyncSwitch()  //
+  ]() {
+        TRACE_EVENT0(&quot;flutter&quot;, &quot;ShellSetupIOSubsystem&quot;);
+        auto io_manager = std::make_unique<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ShellIOManager</span><span class="token punctuation">&gt;</span></span>(
+            platform_view.getUnsafe()-&gt;CreateResourceContext(),
+            is_backgrounded_sync_switch, io_task_runner);
+        weak_io_manager_promise.set_value(io_manager-&gt;GetWeakPtr());
+        unref_queue_promise.set_value(io_manager-&gt;GetSkiaUnrefQueue());
+        io_manager_promise.set_value(std::move(io_manager));
+      });
+
+  auto dispatcher_maker = platform_view-&gt;GetDispatcherMaker();
+
+  // UI &#x7EBF;&#x7A0B;&#x521B;&#x5EFA; Engine &#x5BF9;&#x8C61;
+  std::promise&lt;std::unique_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Engine</span><span class="token punctuation">&gt;</span></span>&gt; engine_promise;
+  auto engine_future = engine_promise.get_future();
+  fml::TaskRunner::RunNowOrPostTask(
+      shell-&gt;GetTaskRunners().GetUITaskRunner(),
+      fml::MakeCopyable([&amp;engine_promise,                                 //
+                         shell = shell.get(),                             //
+                         &amp;dispatcher_maker,                               //
+                         isolate_snapshot = std::move(isolate_snapshot),  //
+                         vsync_waiter = std::move(vsync_waiter),          //
+                         &amp;weak_io_manager_future,                         //
+                         &amp;snapshot_delegate_future,                       //
+                         &amp;unref_queue_future                              //
+  ]() mutable {
+        TRACE_EVENT0(&quot;flutter&quot;, &quot;ShellSetupUISubsystem&quot;);
+        const auto&amp; task_runners = shell-&gt;GetTaskRunners();
+
+        //  UI &#x7EBF;&#x7A0B;&#x521B;&#x5EFA; animator &#x5BF9;&#x8C61;
+        auto animator = std::make_unique<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Animator</span><span class="token punctuation">&gt;</span></span>(*shell, task_runners,
+                                                   std::move(vsync_waiter));
+
+        engine_promise.set_value(std::make_unique<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Engine</span><span class="token punctuation">&gt;</span></span>(
+            *shell,                         //
+            dispatcher_maker,               //
+            *shell-&gt;GetDartVM(),            //
+            std::move(isolate_snapshot),    //
+            task_runners,                   //
+            shell-&gt;GetSettings(),           //
+            std::move(animator),            //
+            weak_io_manager_future.get(),   //
+            unref_queue_future.get(),       //
+            snapshot_delegate_future.get()  //
+            ));
+      }));
+
+  if (!shell-&gt;Setup(std::move(platform_view),  //
+                    engine_future.get(),       //
+                    rasterizer_future.get(),   //
+                    io_manager_future.get())   //
+  ) {
+    return nullptr;
+  }
+
+  return shell;
+}
+</code></pre>
+<p>&#x8FD9;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;&#x8F83;&#x591A;&#xFF0C;&#x4F46;&#x91CC;&#x9762;&#x57FA;&#x672C;&#x4E0A;&#x662F;&#x5BF9;&#x8C61;&#x7684;&#x521B;&#x5EFA;&#x3002;</p>
+<ul>
+<li><strong>&#x521B;&#x5EFA;shell &#x5BF9;&#x8C61;</strong></li>
+<li>GPU &#x7EBF;&#x7A0B;&#x4E2D;&#x521B;&#x5EFA;Rasterizer</li>
+<li>&#x83B7;&#x53D6;&#x4E4B;&#x524D;&#x521B;&#x5EFA;&#x7684;platformView</li>
+<li>&#x521B;&#x5EFA;vsync_waiter</li>
+<li>IO&#x7EBF;&#x7A0B;&#x4E2D;&#x521B;&#x5EFA;ShellIOManager</li>
+<li><strong>UI &#x7EBF;&#x7A0B;&#x521B;&#x5EFA; Engine &#x5BF9;&#x8C61;</strong></li>
+<li>UI &#x7EBF;&#x7A0B;&#x4E2D;&#x521B;&#x5EFA;Animator</li>
+</ul>
+<h4 id="shell-&#x6784;&#x5EFA;"><a name="shell-&#x6784;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#shell-&#x6784;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>Shell &#x6784;&#x5EFA;</h4>
+<p>(flutter/shell/common/shell.cc)</p>
+<pre class="language-"><code class="lang-c++">Shell::Shell(DartVMRef vm, TaskRunners task_runners, Settings settings)
+    : task_runners_(std::move(task_runners)),
+      settings_(std::move(settings)),
+      vm_(std::move(vm)),
+      is_gpu_disabled_sync_switch_(new fml::SyncSwitch()),
+      weak_factory_(this),
+      weak_factory_gpu_(nullptr) {
+  FML_CHECK(vm_) &lt;&lt; &quot;Must have access to VM to create a shell.&quot;;
+  FML_DCHECK(task_runners_.IsValid());
+  FML_DCHECK(task_runners_.GetPlatformTaskRunner()-&gt;RunsTasksOnCurrentThread());
+
+  fml::TaskRunner::RunNowOrPostTask(
+      task_runners_.GetGPUTaskRunner(), fml::MakeCopyable([this]() mutable {
+        this-&gt;weak_factory_gpu_ =
+            std::make_unique&lt;fml::WeakPtrFactory<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Shell</span><span class="token punctuation">&gt;</span></span>&gt;(this);
+      }));
+
+  service_protocol_handlers_[ServiceProtocol::kScreenshotExtensionName] = {
+      task_runners_.GetGPUTaskRunner(),
+      std::bind(&amp;Shell::OnServiceProtocolScreenshot, this,
+                std::placeholders::_1, std::placeholders::_2)};
+  service_protocol_handlers_[ServiceProtocol::kScreenshotSkpExtensionName] = {
+      task_runners_.GetGPUTaskRunner(),
+      std::bind(&amp;Shell::OnServiceProtocolScreenshotSKP, this,
+                std::placeholders::_1, std::placeholders::_2)};
+  service_protocol_handlers_[ServiceProtocol::kRunInViewExtensionName] = {
+      task_runners_.GetUITaskRunner(),
+      std::bind(&amp;Shell::OnServiceProtocolRunInView, this, std::placeholders::_1,
+                std::placeholders::_2)};
+  service_protocol_handlers_
+      [ServiceProtocol::kFlushUIThreadTasksExtensionName] = {
+          task_runners_.GetUITaskRunner(),
+          std::bind(&amp;Shell::OnServiceProtocolFlushUIThreadTasks, this,
+                    std::placeholders::_1, std::placeholders::_2)};
+  service_protocol_handlers_
+      [ServiceProtocol::kSetAssetBundlePathExtensionName] = {
+          task_runners_.GetUITaskRunner(),
+          std::bind(&amp;Shell::OnServiceProtocolSetAssetBundlePath, this,
+                    std::placeholders::_1, std::placeholders::_2)};
+  service_protocol_handlers_
+      [ServiceProtocol::kGetDisplayRefreshRateExtensionName] = {
+          task_runners_.GetUITaskRunner(),
+          std::bind(&amp;Shell::OnServiceProtocolGetDisplayRefreshRate, this,
+                    std::placeholders::_1, std::placeholders::_2)};
+}
+</code></pre>
+<p>&#x5B9E;&#x9645;&#x521B;&#x5EFA;Shell &#x5BF9;&#x8C61;&#xFF0C;&#x5173;&#x8054;&#x4E4B;&#x524D;&#x521B;&#x5EFA;&#x7684;task_runners&#xFF0C;settings&#xFF0C;vm&#x3002;</p>
+<h4 id="engine-&#x521B;&#x5EFA;"><a name="engine-&#x521B;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#engine-&#x521B;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>Engine &#x521B;&#x5EFA;</h4>
+<p>&#xFF08;flutter/shell/common/engine.cc&#xFF09;</p>
+<pre class="language-"><code class="lang-c++">Engine::Engine(Delegate&amp; delegate,
+               const PointerDataDispatcherMaker&amp; dispatcher_maker,
+               DartVM&amp; vm,
+               fml::RefPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>const</span> <span class="token attr-name">DartSnapshot</span><span class="token punctuation">&gt;</span></span> isolate_snapshot,
+               TaskRunners task_runners,
+               Settings settings,
+               std::unique_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Animator</span><span class="token punctuation">&gt;</span></span> animator,
+               fml::WeakPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>IOManager</span><span class="token punctuation">&gt;</span></span> io_manager,
+               fml::RefPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SkiaUnrefQueue</span><span class="token punctuation">&gt;</span></span> unref_queue,
+               fml::WeakPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SnapshotDelegate</span><span class="token punctuation">&gt;</span></span> snapshot_delegate)
+    : delegate_(delegate),
+      settings_(std::move(settings)),
+      animator_(std::move(animator)),
+      activity_running_(true),
+      have_surface_(false),
+      image_decoder_(task_runners,
+                     vm.GetConcurrentWorkerTaskRunner(),
+                     io_manager),
+      task_runners_(std::move(task_runners)),
+      weak_factory_(this) {
+  // &#x521B;&#x5EFA;RuntimeController &#x5BF9;&#x8C61;
+  runtime_controller_ = std::make_unique<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>RuntimeController</span><span class="token punctuation">&gt;</span></span>(
+      *this,                        // runtime delegate
+      &amp;vm,                          // VM
+      std::move(isolate_snapshot),  // isolate snapshot
+      task_runners_,                // task runners
+      std::move(snapshot_delegate),
+      std::move(io_manager),                 // io manager
+      std::move(unref_queue),                // Skia unref queue
+      image_decoder_.GetWeakPtr(),           // image decoder
+      settings_.advisory_script_uri,         // advisory script uri
+      settings_.advisory_script_entrypoint,  // advisory script entrypoint
+      settings_.idle_notification_callback,  // idle notification callback
+      settings_.isolate_create_callback,     // isolate create callback
+      settings_.isolate_shutdown_callback,   // isolate shutdown callback
+      settings_.persistent_isolate_data      // persistent isolate data
+  );
+
+  pointer_data_dispatcher_ = dispatcher_maker(*this);
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;RuntimeController &#x5BF9;&#x8C61;&#x3002;</p>
+<h5 id="runtimecontroller-&#x521B;&#x5EFA;"><a name="runtimecontroller-&#x521B;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#runtimecontroller-&#x521B;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>RuntimeController &#x521B;&#x5EFA;</h5>
+<p>&#xFF08;flutter/runtime/runtime_controller.cc&#xFF09;</p>
+<pre class="language-"><code class="lang-c++">RuntimeController::RuntimeController(
+    RuntimeDelegate&amp; p_client,
+    DartVM* p_vm,
+    fml::RefPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>const</span> <span class="token attr-name">DartSnapshot</span><span class="token punctuation">&gt;</span></span> p_isolate_snapshot,
+    TaskRunners p_task_runners,
+    fml::WeakPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SnapshotDelegate</span><span class="token punctuation">&gt;</span></span> p_snapshot_delegate,
+    fml::WeakPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>IOManager</span><span class="token punctuation">&gt;</span></span> p_io_manager,
+    fml::RefPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SkiaUnrefQueue</span><span class="token punctuation">&gt;</span></span> p_unref_queue,
+    fml::WeakPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ImageDecoder</span><span class="token punctuation">&gt;</span></span> p_image_decoder,
+    std::string p_advisory_script_uri,
+    std::string p_advisory_script_entrypoint,
+    const std::function<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>void(int64_t)</span><span class="token punctuation">&gt;</span></span>&amp; idle_notification_callback,
+    WindowData p_window_data,
+    const fml::closure&amp; p_isolate_create_callback,
+    const fml::closure&amp; p_isolate_shutdown_callback,
+    std::shared_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>const</span> <span class="token attr-name"><span class="token namespace">fml:</span>:Mapping</span><span class="token punctuation">&gt;</span></span> p_persistent_isolate_data)
+    : client_(p_client),
+      vm_(p_vm),
+      isolate_snapshot_(std::move(p_isolate_snapshot)),
+      task_runners_(p_task_runners),
+      snapshot_delegate_(p_snapshot_delegate),
+      io_manager_(p_io_manager),
+      unref_queue_(p_unref_queue),
+      image_decoder_(p_image_decoder),
+      advisory_script_uri_(p_advisory_script_uri),
+      advisory_script_entrypoint_(p_advisory_script_entrypoint),
+      idle_notification_callback_(idle_notification_callback),
+      window_data_(std::move(p_window_data)),
+      isolate_create_callback_(p_isolate_create_callback),
+      isolate_shutdown_callback_(p_isolate_shutdown_callback),
+      persistent_isolate_data_(std::move(p_persistent_isolate_data)) {
+  //&#x521B;&#x5EFA; root isolate
+  auto strong_root_isolate =
+      DartIsolate::CreateRootIsolate(vm_-&gt;GetVMData()-&gt;GetSettings(),  //
+                                     isolate_snapshot_,                //
+                                     task_runners_,                    //
+                                     std::make_unique<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Window</span><span class="token punctuation">&gt;</span></span>(this),   // &#x521B;&#x5EFA;windows
+                                     snapshot_delegate_,               //
+                                     io_manager_,                      //
+                                     unref_queue_,                     //
+                                     image_decoder_,                   //
+                                     p_advisory_script_uri,            //
+                                     p_advisory_script_entrypoint,     //
+                                     nullptr,                          //
+                                     isolate_create_callback_,         //
+                                     isolate_shutdown_callback_        //
+                                     )
+          .lock();
+
+  FML_CHECK(strong_root_isolate) &lt;&lt; &quot;Could not create root isolate.&quot;;
+
+  // The root isolate ivar is weak.
+  root_isolate_ = strong_root_isolate;
+
+  strong_root_isolate-&gt;SetReturnCodeCallback([this](uint32_t code) {
+    root_isolate_return_code_ = {true, code};
+  });
+
+  if (auto* window = GetWindowIfAvailable()) {
+    tonic::DartState::Scope scope(strong_root_isolate);
+    window-&gt;DidCreateIsolate();
+    if (!FlushRuntimeStateToIsolate()) {
+      FML_DLOG(ERROR) &lt;&lt; &quot;Could not setup initial isolate state.&quot;;
+    }
+  } else {
+    FML_DCHECK(false) &lt;&lt; &quot;RuntimeController created without window binding.&quot;;
+  }
+
+  FML_DCHECK(Dart_CurrentIsolate() == nullptr);
+}
+</code></pre>
+<h6 id="root-isolate-&#x521B;&#x5EFA;"><a name="root-isolate-&#x521B;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#root-isolate-&#x521B;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>root isolate &#x521B;&#x5EFA;</h6>
+<p>&#xFF08;flutter/runtime/dart_isolate.cc&#xFF09;</p>
+<pre class="language-"><code class="lang-c++">std::weak_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DartIsolate</span><span class="token punctuation">&gt;</span></span> DartIsolate::CreateRootIsolate(
+    const Settings&amp; settings,
+    fml::RefPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>const</span> <span class="token attr-name">DartSnapshot</span><span class="token punctuation">&gt;</span></span> isolate_snapshot,
+    TaskRunners task_runners,
+    std::unique_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Window</span><span class="token punctuation">&gt;</span></span> window,
+    fml::WeakPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SnapshotDelegate</span><span class="token punctuation">&gt;</span></span> snapshot_delegate,
+    fml::WeakPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>IOManager</span><span class="token punctuation">&gt;</span></span> io_manager,
+    fml::RefPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SkiaUnrefQueue</span><span class="token punctuation">&gt;</span></span> unref_queue,
+    fml::WeakPtr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ImageDecoder</span><span class="token punctuation">&gt;</span></span> image_decoder,
+    std::string advisory_script_uri,
+    std::string advisory_script_entrypoint,
+    Dart_IsolateFlags* flags,
+    const fml::closure&amp; isolate_create_callback,
+    const fml::closure&amp; isolate_shutdown_callback) {
+  TRACE_EVENT0(&quot;flutter&quot;, &quot;DartIsolate::CreateRootIsolate&quot;);
+  Dart_Isolate vm_isolate = nullptr;
+  std::weak_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DartIsolate</span><span class="token punctuation">&gt;</span></span> embedder_isolate;
+
+  char* error = nullptr;
+
+  // &#x521B;&#x5EFA;DartIsolate 
+  auto root_embedder_data = std::make_unique&lt;std::shared_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DartIsolate</span><span class="token punctuation">&gt;</span></span>&gt;(
+      std::shared_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DartIsolate</span><span class="token punctuation">&gt;</span></span>(new DartIsolate(
+          settings,                      // settings
+          std::move(isolate_snapshot),   // isolate snapshot
+          task_runners,                  // task runners
+          std::move(snapshot_delegate),  // snapshot delegate
+          std::move(io_manager),         // IO manager
+          std::move(unref_queue),        // Skia unref queue
+          std::move(image_decoder),      // Image Decoder
+          advisory_script_uri,           // advisory URI
+          advisory_script_entrypoint,    // advisory entrypoint
+          nullptr,                       // child isolate preparer
+          isolate_create_callback,       // isolate create callback
+          isolate_shutdown_callback,     // isolate shutdown callback
+          true,                          // is_root_isolate
+          true                           // is_group_root_isolate
+          )));
+  // &#x521B;&#x5EFA; isolate
+  std::tie(vm_isolate, embedder_isolate) = CreateDartVMAndEmbedderObjectPair(
+      advisory_script_uri.c_str(),         // advisory script URI
+      advisory_script_entrypoint.c_str(),  // advisory script entrypoint
+      nullptr,                             // package root
+      nullptr,                             // package config
+      flags,                               // flags
+      root_embedder_data.get(),            // parent embedder data
+      true,                                // is root isolate
+      &amp;error                               // error (out)
+  );
+
+  if (error != nullptr) {
+    free(error);
+  }
+
+  if (vm_isolate == nullptr) {
+    return {};
+  }
+
+  std::shared_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DartIsolate</span><span class="token punctuation">&gt;</span></span> shared_embedder_isolate =
+      embedder_isolate.lock();
+  if (shared_embedder_isolate) {
+    // Only root isolates can interact with windows.
+    shared_embedder_isolate-&gt;SetWindow(std::move(window));
+  }
+
+  root_embedder_data.release();
+
+  return embedder_isolate;
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x521B;&#x5EFA;&#x4E86;Isolate &#x3002;</p>
+<p>Todo</p>
+<h6 id="windows-&#x521B;&#x5EFA;"><a name="windows-&#x521B;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#windows-&#x521B;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>windows &#x521B;&#x5EFA;</h6>
+<p>&#xFF08;flutter/lib/ui/window/window.cc&#xFF09;</p>
+<pre class="language-"><code class="lang-c++">Window::Window(WindowClient* client) : client_(client) {}
+</code></pre>
+<p>Todo</p>
+<h2 id="&#x521B;&#x5EFA;flutterview"><a name="&#x521B;&#x5EFA;flutterview" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;flutterview"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;FlutterView</h2>
+<h3 id="flutteractivitycreateflutterview"><a name="flutteractivitycreateflutterview" class="anchor-navigation-ex-anchor" href="#flutteractivitycreateflutterview"><i class="fa fa-link" aria-hidden="true"></i></a>FlutterActivity.createFlutterView</h3>
+<p>&#x5728;FlutterActivity &#x4E2D;&#x901A;&#x8FC7;&#x8C03;&#x7528;createFlutterView &#x65B9;&#x6CD5;&#x6765;&#x8BBE;&#x7F6E;contentView</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">private</span> <span class="token class-name">View</span> <span class="token function">createFlutterView</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> delegate<span class="token punctuation">.</span><span class="token function">onCreateView</span><span class="token punctuation">(</span>
+      <span class="token keyword">null</span> <span class="token comment">/* inflater */</span><span class="token punctuation">,</span>
+      <span class="token keyword">null</span> <span class="token comment">/* container */</span><span class="token punctuation">,</span>
+      <span class="token keyword">null</span> <span class="token comment">/* savedInstanceState */</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E3B;&#x8981;&#x628A;&#x521B;&#x5EFA;&#x5DE5;&#x4F5C;&#x4EA4;&#x7ED9;&#x4EE3;&#x7406;&#x7C7B;FlutterActivityAndFragmentDelegate</p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">View</span> <span class="token function">onCreateView</span><span class="token punctuation">(</span><span class="token class-name">LayoutInflater</span> inflater<span class="token punctuation">,</span> <span class="token annotation punctuation">@Nullable</span> <span class="token class-name">ViewGroup</span> container<span class="token punctuation">,</span> <span class="token annotation punctuation">@Nullable</span> <span class="token class-name">Bundle</span> savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">v</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Creating FlutterView.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">ensureAlive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">//&#x521B;&#x5EFA;flutter View</span>
+  flutterView <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FlutterView</span><span class="token punctuation">(</span>host<span class="token punctuation">.</span><span class="token function">getActivity</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> host<span class="token punctuation">.</span><span class="token function">getRenderMode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> host<span class="token punctuation">.</span><span class="token function">getTransparencyMode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// &#x6DFB;&#x52A0;&#x663E;&#x793A;&#x76D1;&#x542C;</span>
+  flutterView<span class="token punctuation">.</span><span class="token function">addOnFirstFrameRenderedListener</span><span class="token punctuation">(</span>flutterUiDisplayListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">//&#x521B;&#x5EFA;flutterSplashView</span>
+  flutterSplashView <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FlutterSplashView</span><span class="token punctuation">(</span>host<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// &#x8BBE;&#x7F6E;id</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Build</span><span class="token punctuation">.</span>VERSION<span class="token punctuation">.</span>SDK_INT <span class="token operator">&gt;=</span> <span class="token class-name">Build</span><span class="token punctuation">.</span>VERSION_CODES<span class="token punctuation">.</span>JELLY_BEAN_MR1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    flutterSplashView<span class="token punctuation">.</span><span class="token function">setId</span><span class="token punctuation">(</span><span class="token class-name">View</span><span class="token punctuation">.</span><span class="token function">generateViewId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+
+    flutterSplashView<span class="token punctuation">.</span><span class="token function">setId</span><span class="token punctuation">(</span><span class="token number">486947586</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// &#x5173;&#x8054;flutter view</span>
+  flutterSplashView<span class="token punctuation">.</span><span class="token function">displayFlutterViewWithSplash</span><span class="token punctuation">(</span>flutterView<span class="token punctuation">,</span> host<span class="token punctuation">.</span><span class="token function">provideSplashScreen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> flutterSplashView<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x505A;&#x4E86;&#x4EE5;&#x4E0B;&#x5DE5;&#x4F5C;&#xFF1A;</p>
+<ul>
+<li>&#x521B;&#x5EFA;flutter view</li>
+<li>&#x521B;&#x5EFA;flutterSplashView</li>
+<li>&#x8C03;&#x7528;FlutterSplashView &#x7684; displayFlutterViewWithSplash &#x65B9;&#x6CD5;&#x5173;&#x8054;flutterView</li>
+<li>&#x8FD4;&#x56DE;flutterSplashView</li>
+</ul>
+<p>&#x6240;&#x4EE5;&#x8BBE;&#x7F6E;&#x5230;Activity &#x7684;view &#x5176;&#x5B9E;&#x662F;flutterSplashView&#x3002;&#x800C;FlutterSplashView &#x4E3B;&#x8981;&#x662F;&#x63A7;&#x5236;FlutterView &#x672A;&#x663E;&#x793A;&#x65F6;&#x5019;&#x6DFB;&#x52A0;SplashView&#x3002;</p>
+<h3 id="flutterview-&#x521D;&#x59CB;&#x5316;"><a name="flutterview-&#x521D;&#x59CB;&#x5316;" class="anchor-navigation-ex-anchor" href="#flutterview-&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>FlutterView &#x521D;&#x59CB;&#x5316;</h3>
+<p>&#x6784;&#x9020;&#x5185;&#x90E8;&#x8C03;&#x7528;init &#x65B9;&#x6CD5;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">v</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Initializing FlutterView&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">switch</span> <span class="token punctuation">(</span>renderMode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> surface<span class="token operator">:</span>
+      <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">v</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Internally using a FlutterSurfaceView.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token class-name">FlutterSurfaceView</span> flutterSurfaceView <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FlutterSurfaceView</span><span class="token punctuation">(</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> transparencyMode <span class="token operator">==</span> <span class="token class-name">TransparencyMode</span><span class="token punctuation">.</span>transparent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      renderSurface <span class="token operator">=</span> flutterSurfaceView<span class="token punctuation">;</span>
+      <span class="token function">addView</span><span class="token punctuation">(</span>flutterSurfaceView<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> texture<span class="token operator">:</span>
+      <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">v</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Internally using a FlutterTextureView.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token class-name">FlutterTextureView</span> flutterTextureView <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FlutterTextureView</span><span class="token punctuation">(</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      renderSurface <span class="token operator">=</span> flutterTextureView<span class="token punctuation">;</span>
+      <span class="token function">addView</span><span class="token punctuation">(</span>flutterTextureView<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// FlutterView needs to be focusable so that the InputMethodManager can interact with it.</span>
+  <span class="token function">setFocusable</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">setFocusableInTouchMode</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6839;&#x636E;&#x6E32;&#x67D3;&#x6A21;&#x5F0F;&#x521B;&#x5EFA;FlutterSurfaceView &#x6216;&#x8005;FlutterTextureView&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;surface &#x6A21;&#x5F0F;&#x3002;</p>
+<h3 id="fluttersurfaceview-&#x521D;&#x59CB;&#x5316;"><a name="fluttersurfaceview-&#x521D;&#x59CB;&#x5316;" class="anchor-navigation-ex-anchor" href="#fluttersurfaceview-&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>FlutterSurfaceView &#x521D;&#x59CB;&#x5316;</h3>
+<p>FlutterSurface &#x6784;&#x9020;&#x5185;&#x4E5F;&#x8C03;&#x7528;&#x4E86;init &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// If transparency is desired then we&apos;ll enable a transparent pixel format and place</span>
+  <span class="token comment">// our Window above everything else to get transparent background rendering.</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>renderTransparently<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">getHolder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setFormat</span><span class="token punctuation">(</span><span class="token class-name">PixelFormat</span><span class="token punctuation">.</span>TRANSPARENT<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">setZOrderOnTop</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// &#x6DFB;&#x52A0;surface callback</span>
+  <span class="token function">getHolder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addCallback</span><span class="token punctuation">(</span>surfaceCallback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// &#x907F;&#x514D;&#x9ED1;&#x5C4F;&#x5148;&#x8BBE;&#x7F6E;&#x900F;&#x660E;</span>
+  <span class="token function">setAlpha</span><span class="token punctuation">(</span><span class="token number">0.0f</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x800C;surfaceCallback &#x91CC;&#x9762; &#x8C03;&#x7528;&#x4E86;connectSurfaceToRenderer &#x65B9;&#x6CD5;&#xFF0C;&#x800C;&#x6700;&#x7EC8;&#x4F1A;&#x8C03;&#x7528;flutterJNI &#x7684; onSurfaceCreated &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@UiThread</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSurfaceCreated</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token class-name">Surface</span> surface<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">ensureRunningOnMainThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">ensureAttachedToNative</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">nativeSurfaceCreated</span><span class="token punctuation">(</span>nativePlatformViewId<span class="token punctuation">,</span> surface<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x800C;nativeSurfaceCreated  &#x65B9;&#x6CD5;&#x6CE8;&#x518C;&#xFF1A;</p>
+<p>(flutter/shell/platform/android/platform_view_android_jni.cc RegisterApi &#x65B9;&#x6CD5;&#x5185;)</p>
+<pre class="language-"><code class="lang-c++">{
+    .name = &quot;nativeSurfaceCreated&quot;,
+    .signature = &quot;(JLandroid/view/Surface;)V&quot;,
+    .fnPtr = reinterpret_cast<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>void*</span><span class="token punctuation">&gt;</span></span>(&amp;SurfaceCreated),
+},
+</code></pre>
+<p> &#x6700;&#x7EC8;&#x6620;&#x5C04;&#x5230;SurfaceCreated &#x65B9;&#x6CD5;&#x5185;&#x3002;</p>
+<pre class="language-"><code class="lang-c++">static void SurfaceCreated(JNIEnv* env,
+                           jobject jcaller,
+                           jlong shell_holder,
+                           jobject jsurface) {
+  fml::jni::ScopedJavaLocalFrame scoped_local_reference_frame(env);
+  // &#x521B;&#x5EFA;AndroidNativeWindow &#x5BF9;&#x8C61;
+  auto window = fml::MakeRefCounted<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AndroidNativeWindow</span><span class="token punctuation">&gt;</span></span>(
+      ANativeWindow_fromSurface(env, jsurface));
+  ANDROID_SHELL_HOLDER-&gt;GetPlatformView()-&gt;NotifyCreated(std::move(window));
+}
+</code></pre>
+<h1 id="flutteractivityonstart"><a name="flutteractivityonstart" class="anchor-navigation-ex-anchor" href="#flutteractivityonstart"><i class="fa fa-link" aria-hidden="true"></i></a>FlutterActivity.onStart</h1>
+<p>&#x524D;&#x9762;&#x53EF;&#x4EE5;&#x770B;&#x89C1;&#x5728;FlutterActivity &#x7684;onCreate &#x65B9;&#x6CD5;&#x5185;&#x4E3B;&#x8981;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x521D;&#x59CB;&#x5316;&#x5DE5;&#x4F5C;&#xFF0C;&#x8FD8;&#x672A;&#x52A0;&#x8F7D;dart &#x5165;&#x53E3;&#x51FD;&#x6570;&#x90E8;&#x5206;&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x770B;&#x4E0B;FlutterActivity &#x7684;onStart &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java">  <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    lifecycle<span class="token punctuation">.</span><span class="token function">handleLifecycleEvent</span><span class="token punctuation">(</span><span class="token class-name">Lifecycle</span><span class="token punctuation">.</span><span class="token class-name">Event</span><span class="token punctuation">.</span>ON_START<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    delegate<span class="token punctuation">.</span><span class="token function">onStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x91CC;&#x9762;&#x4E3B;&#x8981;&#x8C03;&#x7528;&#x7684;&#x662F;&#x4EE3;&#x7406;&#x7C7B;&#x7684;onStart&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java">  <span class="token keyword">void</span> <span class="token function">onStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">v</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;onStart()&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">ensureAlive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">new</span> <span class="token class-name">Handler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token annotation punctuation">@Override</span>
+      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">v</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Attaching FlutterEngine to FlutterView.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        flutterView<span class="token punctuation">.</span><span class="token function">attachToFlutterEngine</span><span class="token punctuation">(</span>flutterEngine<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">doInitialFlutterViewRun</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<h2 id="attachtoflutterengine"><a name="attachtoflutterengine" class="anchor-navigation-ex-anchor" href="#attachtoflutterengine"><i class="fa fa-link" aria-hidden="true"></i></a>attachToFlutterEngine</h2>
+<p>flutterview &#x4E0E; Engine &#x5173;&#x8054;</p>
+<pre class="language-"><code class="lang-java">  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">attachToFlutterEngine</span><span class="token punctuation">(</span>
+      <span class="token annotation punctuation">@NonNull</span> <span class="token class-name">FlutterEngine</span> flutterEngine
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>flutterEngine <span class="token operator">=</span> flutterEngine<span class="token punctuation">;</span>
+
+    <span class="token comment">// Instruct our FlutterRenderer that we are now its designated RenderSurface.</span>
+    <span class="token class-name">FlutterRenderer</span> flutterRenderer <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>flutterEngine<span class="token punctuation">.</span><span class="token function">getRenderer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    isFlutterUiDisplayed <span class="token operator">=</span> flutterRenderer<span class="token punctuation">.</span><span class="token function">isDisplayingFlutterUi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    renderSurface<span class="token punctuation">.</span><span class="token function">attachToRenderer</span><span class="token punctuation">(</span>flutterRenderer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    flutterRenderer<span class="token punctuation">.</span><span class="token function">addIsDisplayingFlutterUiListener</span><span class="token punctuation">(</span>flutterUiDisplayListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// &#x5173;&#x8054;&#x539F;&#x751F;&#x8F93;&#x5165;&#xFF0C;&#x89E6;&#x6478;&#x7B49;</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+    flutterEngine<span class="token punctuation">.</span><span class="token function">getPlatformViewsController</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attachToView</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Notify engine attachment listeners of the attachment.</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">FlutterEngineAttachmentListener</span> listener <span class="token operator">:</span> flutterEngineAttachmentListeners<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      listener<span class="token punctuation">.</span><span class="token function">onFlutterEngineAttachedToFlutterView</span><span class="token punctuation">(</span>flutterEngine<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// &#x5982;&#x679C;FlutterUi&#x7B2C;&#x4E00;&#x5E27;&#x663E;&#x793A;&#xFF0C;&#x901A;&#x77E5;&#x76D1;&#x542C;&#x5668;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>isFlutterUiDisplayed<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      flutterUiDisplayListener<span class="token punctuation">.</span><span class="token function">onFlutterUiDisplayed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x662F;&#x5173;&#x8054;&#x4E00;&#x4E9B;&#x539F;&#x751F;&#x7684;&#x8F93;&#x5165;&#x6CD5;&#x8F93;&#x5165;&#xFF0C;&#x89E6;&#x6478;&#x7B49;&#x4E8B;&#x4EF6;&#xFF0C;&#x4EE5;&#x53CA;&#x5904;&#x7406;&#x4E00;&#x4E9B;&#x76D1;&#x542C;&#x56DE;&#x8C03;&#x3002;</p>
+<h2 id="doinitialflutterviewrun"><a name="doinitialflutterviewrun" class="anchor-navigation-ex-anchor" href="#doinitialflutterviewrun"><i class="fa fa-link" aria-hidden="true"></i></a>doInitialFlutterViewRun</h2>
+<p>(FlutterActivityAndFragmentDelegate)</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">doInitialFlutterViewRun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// &#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86;&#x7F13;&#x5B58;&#x7684;Engine &#xFF0C;return &#x4E0D;&#x518D;&#x542F;&#x52A8;Engine</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>host<span class="token punctuation">.</span><span class="token function">getCachedEngineId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>flutterEngine<span class="token punctuation">.</span><span class="token function">getDartExecutor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isExecutingDart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// No warning is logged because this situation will happen on every config</span>
+    <span class="token comment">// change if the developer does not choose to retain the Fragment instance.</span>
+    <span class="token comment">// So this is expected behavior in many cases.</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Executing Dart entrypoint: &quot;</span> <span class="token operator">+</span> host<span class="token punctuation">.</span><span class="token function">getDartEntrypointFunctionName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token operator">+</span> <span class="token string">&quot;, and sending initial route: &quot;</span> <span class="token operator">+</span> host<span class="token punctuation">.</span><span class="token function">getInitialRoute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// &#x5982;&#x679C;&#x914D;&#x7F6E;&#x4E86;&#x521D;&#x59CB;&#x8DEF;&#x7531;&#xFF0C;&#x901A;&#x8FC7;natigationChannel &#x53D1;&#x9001;&#x521D;&#x59CB;&#x8DEF;&#x7531;&#x4FE1;&#x606F;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>host<span class="token punctuation">.</span><span class="token function">getInitialRoute</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    flutterEngine<span class="token punctuation">.</span><span class="token function">getNavigationChannel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setInitialRoute</span><span class="token punctuation">(</span>host<span class="token punctuation">.</span><span class="token function">getInitialRoute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// &#x914D;&#x7F6E;dart &#x5165;&#x53E3;&#x51FD;&#x6570;</span>
+  <span class="token comment">// flutter_assets , </span>
+  <span class="token class-name">DartExecutor</span><span class="token punctuation">.</span><span class="token class-name">DartEntrypoint</span> entrypoint <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DartExecutor</span><span class="token punctuation">.</span><span class="token class-name">DartEntrypoint</span><span class="token punctuation">(</span>
+      host<span class="token punctuation">.</span><span class="token function">getAppBundlePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      host<span class="token punctuation">.</span><span class="token function">getDartEntrypointFunctionName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// &#x6267;&#x884C;&#x5165;&#x53E3;&#x51FD;&#x6570;</span>
+  flutterEngine<span class="token punctuation">.</span><span class="token function">getDartExecutor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">executeDartEntrypoint</span><span class="token punctuation">(</span>entrypoint<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x903B;&#x8F91;&#x8F83;&#x4E3A;&#x7B80;&#x5355;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;cache Engine &#x5219;&#x4E0D;&#x6267;&#x884C;&#x542F;&#x52A8;engine&#xFF0C;&#x5982;&#x679C;&#x914D;&#x7F6E;&#x4E86;&#x521D;&#x59CB;&#x8DEF;&#x7531;&#xFF0C;&#x901A;&#x8FC7;method channel &#x53D1;&#x9001;&#x3002;&#x8FD9;&#x4E5F;&#x662F;&#x901A;&#x8FC7;cache engine &#x542F;&#x52A8; flutterActivity &#x65F6;&#x5019;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x521D;&#x59CB;&#x8DEF;&#x7531;&#x7684;&#x9009;&#x9879;&#x3002;</p>
+<p>&#x7136;&#x540E;&#x540E;&#x9762;&#x662F;&#x6784;&#x5EFA;DartEntrypoint&#xFF0C;&#x901A;&#x8FC7;flutterengine &#x542F;&#x52A8;&#x3002;</p>
+<h3 id="dartentrypoint&#x6784;&#x5EFA;"><a name="dartentrypoint&#x6784;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#dartentrypoint&#x6784;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>DartEntrypoint&#x6784;&#x5EFA;</h3>
+<pre class="language-"><code class="lang-java"><span class="token class-name">DartExecutor</span><span class="token punctuation">.</span><span class="token class-name">DartEntrypoint</span> entrypoint <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DartExecutor</span><span class="token punctuation">.</span><span class="token class-name">DartEntrypoint</span><span class="token punctuation">(</span>
+    host<span class="token punctuation">.</span><span class="token function">getAppBundlePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    host<span class="token punctuation">.</span><span class="token function">getDartEntrypointFunctionName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x5176;&#x4E2D;host.getAppBundlePath() &#x9ED8;&#x8BA4;&#x4E3A; <strong>flutter_assets</strong>&#xFF0C;&#x800C;host.getDartEntrypointFunctionName() &#x9ED8;&#x8BA4;&#x4E3A;<strong>&#x201C;main&#x201D;</strong></p>
+<h3 id="executedartentrypoint"><a name="executedartentrypoint" class="anchor-navigation-ex-anchor" href="#executedartentrypoint"><i class="fa fa-link" aria-hidden="true"></i></a>executeDartEntrypoint</h3>
+<p>&#xFF08;DartExecutor.java&#xFF09;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">executeDartEntrypoint</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token class-name">DartEntrypoint</span> dartEntrypoint<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>isApplicationRunning<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">w</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Attempted to run a DartExecutor that is already running.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">v</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Executing Dart entrypoint: &quot;</span> <span class="token operator">+</span> dartEntrypoint<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  flutterJNI<span class="token punctuation">.</span><span class="token function">runBundleAndSnapshotFromLibrary</span><span class="token punctuation">(</span>
+      dartEntrypoint<span class="token punctuation">.</span>pathToBundle<span class="token punctuation">,</span>
+      dartEntrypoint<span class="token punctuation">.</span>dartEntrypointFunctionName<span class="token punctuation">,</span>
+      <span class="token keyword">null</span><span class="token punctuation">,</span>
+      assetManager
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  isApplicationRunning <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="runbundleandsnapshotfromlibrary"><a name="runbundleandsnapshotfromlibrary" class="anchor-navigation-ex-anchor" href="#runbundleandsnapshotfromlibrary"><i class="fa fa-link" aria-hidden="true"></i></a>runBundleAndSnapshotFromLibrary</h3>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">runBundleAndSnapshotFromLibrary</span><span class="token punctuation">(</span>
+    <span class="token annotation punctuation">@NonNull</span> <span class="token class-name">String</span> bundlePath<span class="token punctuation">,</span>
+    <span class="token annotation punctuation">@Nullable</span> <span class="token class-name">String</span> entrypointFunctionName<span class="token punctuation">,</span>
+    <span class="token annotation punctuation">@Nullable</span> <span class="token class-name">String</span> pathToEntrypointFunction<span class="token punctuation">,</span>
+    <span class="token annotation punctuation">@NonNull</span> <span class="token class-name">AssetManager</span> assetManager
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">ensureRunningOnMainThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">ensureAttachedToNative</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">nativeRunBundleAndSnapshotFromLibrary</span><span class="token punctuation">(</span>
+      nativePlatformViewId<span class="token punctuation">,</span>
+      bundlePath<span class="token punctuation">,</span>
+      entrypointFunctionName<span class="token punctuation">,</span>
+      pathToEntrypointFunction<span class="token punctuation">,</span>
+      assetManager
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="runbundleandsnapshotfromlibrary_1"><a name="runbundleandsnapshotfromlibrary_1" class="anchor-navigation-ex-anchor" href="#runbundleandsnapshotfromlibrary_1"><i class="fa fa-link" aria-hidden="true"></i></a>RunBundleAndSnapshotFromLibrary</h4>
+<p>&#x5728;native&#x4E2D;nativeRunBundleAndSnapshotFromLibrary &#x6620;&#x5C04;&#x6210;RunBundleAndSnapshotFromLibrary&#x65B9;&#x6CD5;&#x3002;</p>
+<p>(flutter/shell/platform/android/platform_view_android_jni.cc)</p>
+<pre class="language-"><code class="lang-c++">static void RunBundleAndSnapshotFromLibrary(JNIEnv* env,
+                                            jobject jcaller,
+                                            jlong shell_holder,
+                                            jstring jBundlePath,
+                                            jstring jEntrypoint,
+                                            jstring jLibraryUrl,
+                                            jobject jAssetManager) {
+  //&#x521B;&#x5EFA;AssetManager&#x5BF9;&#x8C61;
+  auto asset_manager = std::make_shared<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">flutter:</span>:AssetManager</span><span class="token punctuation">&gt;</span></span>();
+
+  asset_manager-&gt;PushBack(std::make_unique<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">flutter:</span>:APKAssetProvider</span><span class="token punctuation">&gt;</span></span>(
+      env,                                             // jni environment
+      jAssetManager,                                   // asset manager
+      fml::jni::JavaStringToString(env, jBundlePath))  // apk asset dir
+  );
+
+  std::unique_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>IsolateConfiguration</span><span class="token punctuation">&gt;</span></span> isolate_configuration;
+  if (flutter::DartVM::IsRunningPrecompiledCode()) {
+    isolate_configuration = IsolateConfiguration::CreateForAppSnapshot();
+  } else {
+    std::unique_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">fml:</span>:Mapping</span><span class="token punctuation">&gt;</span></span> kernel_blob =
+        fml::FileMapping::CreateReadOnly(
+            ANDROID_SHELL_HOLDER-&gt;GetSettings().application_kernel_asset);
+    if (!kernel_blob) {
+      FML_DLOG(ERROR) &lt;&lt; &quot;Unable to load the kernel blob asset.&quot;;
+      return;
+    }
+    isolate_configuration =
+        IsolateConfiguration::CreateForKernel(std::move(kernel_blob));
+  }
+
+  RunConfiguration config(std::move(isolate_configuration),
+                          std::move(asset_manager));
+
+  {
+    // &#x83B7;&#x53D6;&#x5165;&#x53E3;&#x51FD;&#x6570;&#x4EE5;&#x53CA;&#x5E93;&#x5730;&#x5740;
+    auto entrypoint = fml::jni::JavaStringToString(env, jEntrypoint);
+    auto libraryUrl = fml::jni::JavaStringToString(env, jLibraryUrl);
+
+    if ((entrypoint.size() &gt; 0) &amp;&amp; (libraryUrl.size() &gt; 0)) {
+      config.SetEntrypointAndLibrary(std::move(entrypoint),
+                                     std::move(libraryUrl));
+    } else if (entrypoint.size() &gt; 0) {
+      config.SetEntrypoint(std::move(entrypoint));
+    }
+  }
+  // &#x542F;&#x52A8;
+  ANDROID_SHELL_HOLDER-&gt;Launch(std::move(config));
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x662F;&#x83B7;&#x53D6;java &#x4F20;&#x5165;&#x7684;&#x5165;&#x53E3;&#x51FD;&#x6570;&#x540D;&#x79F0;&#x4EE5;&#x53CA;&#x83B7;&#x53D6;&#x5E93;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;AndroidShellHolder &#x7684;Launch &#x51FD;&#x6570;&#x3002;</p>
+<h4 id="launch"><a name="launch" class="anchor-navigation-ex-anchor" href="#launch"><i class="fa fa-link" aria-hidden="true"></i></a>Launch</h4>
+<p>&#xFF08;flutter/shell/platform/android/android_shell_holder.cc&#xFF09;</p>
+<pre class="language-"><code class="lang-c++">void AndroidShellHolder::Launch(RunConfiguration config) {
+  if (!IsValid()) {
+    return;
+  }
+
+  shell_-&gt;RunEngine(std::move(config));
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x8C03;&#x7528;RunEngine &#x51FD;&#x6570;&#x3002;</p>
+<h4 id="runengine"><a name="runengine" class="anchor-navigation-ex-anchor" href="#runengine"><i class="fa fa-link" aria-hidden="true"></i></a>RunEngine</h4>
+<p>&#xFF08;flutter/shell/common/shell.cc&#xFF09;</p>
+<pre class="language-"><code class="lang-c++">void Shell::RunEngine(RunConfiguration run_configuration) {
+  RunEngine(std::move(run_configuration), nullptr);
+}
+void Shell::RunEngine(
+    RunConfiguration run_configuration,
+    const std::function<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">void(Engine:</span>:RunStatus)</span><span class="token punctuation">&gt;</span></span>&amp; result_callback) {
+  auto result = [platform_runner = task_runners_.GetPlatformTaskRunner(),
+                 result_callback](Engine::RunStatus run_result) {
+    if (!result_callback) {
+      return;
+    }
+    platform_runner-&gt;PostTask(
+        [result_callback, run_result]() { result_callback(run_result); });
+  };
+  FML_DCHECK(is_setup_);
+  FML_DCHECK(task_runners_.GetPlatformTaskRunner()-&gt;RunsTasksOnCurrentThread());
+
+  fml::TaskRunner::RunNowOrPostTask(
+      task_runners_.GetUITaskRunner(),
+      fml::MakeCopyable(
+          [run_configuration = std::move(run_configuration),
+           weak_engine = weak_engine_, result]() mutable {
+            if (!weak_engine) {
+              FML_LOG(ERROR)
+                  &lt;&lt; &quot;Could not launch engine with configuration - no engine.&quot;;
+              result(Engine::RunStatus::Failure);
+              return;
+            }
+            // &#x8C03;&#x7528;engine &#x7684; run &#x65B9;&#x6CD5;
+            auto run_result = weak_engine-&gt;Run(std::move(run_configuration));
+            if (run_result == flutter::Engine::RunStatus::Failure) {
+              FML_LOG(ERROR) &lt;&lt; &quot;Could not launch engine with configuration.&quot;;
+            }
+            result(run_result);
+          }));
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x662F;&#x8C03;&#x7528;Engine &#x7684;run &#x65B9;&#x6CD5;</p>
+<h4 id="engine-run-&#x8FD0;&#x884C;"><a name="engine-run-&#x8FD0;&#x884C;" class="anchor-navigation-ex-anchor" href="#engine-run-&#x8FD0;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>Engine Run &#x8FD0;&#x884C;</h4>
+<p>&#xFF08;flutter/shell/common/engine.cc&#xFF09;</p>
+<pre class="language-"><code class="lang-c++">Engine::RunStatus Engine::Run(RunConfiguration configuration) {
+  ...
+  // &#x83B7;&#x53D6;&#x5165;&#x53E3;&#x51FD;&#x6570;&#x4EE5;&#x53CA;library &#x8DEF;&#x5F84;  
+  last_entry_point_ = configuration.GetEntrypoint();
+  last_entry_point_library_ = configuration.GetEntrypointLibrary();
+  // &#x8FD0;&#x884C;isolate
+  auto isolate_launch_status =
+      PrepareAndLaunchIsolate(std::move(configuration));
+  if (isolate_launch_status == Engine::RunStatus::Failure) {
+    FML_LOG(ERROR) &lt;&lt; &quot;Engine not prepare and launch isolate.&quot;;
+    return isolate_launch_status;
+  } else if (isolate_launch_status ==
+             Engine::RunStatus::FailureAlreadyRunning) {
+    return isolate_launch_status;
+  }
+  .....
+
+  return isolate_running ? Engine::RunStatus::Success
+                         : Engine::RunStatus::Failure;
+}
+</code></pre>
+<h4 id="prepareandlaunchisolate"><a name="prepareandlaunchisolate" class="anchor-navigation-ex-anchor" href="#prepareandlaunchisolate"><i class="fa fa-link" aria-hidden="true"></i></a>PrepareAndLaunchIsolate</h4>
+<p>&#xFF08;flutter/shell/common/engine.cc&#xFF09;</p>
+<pre class="language-"><code class="lang-c++">Engine::RunStatus Engine::PrepareAndLaunchIsolate(
+    RunConfiguration configuration) {
+  TRACE_EVENT0(&quot;flutter&quot;, &quot;Engine::PrepareAndLaunchIsolate&quot;);
+  // &#x66F4;&#x65B0; asset 
+  UpdateAssetManager(configuration.GetAssetManager());
+  // &#x83B7;&#x53D6;isolate &#x914D;&#x7F6E;                           
+  auto isolate_configuration = configuration.TakeIsolateConfiguration();
+  // &#x83B7;&#x53D6;root isolate
+  std::shared_ptr<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DartIsolate</span><span class="token punctuation">&gt;</span></span> isolate =
+      runtime_controller_-&gt;GetRootIsolate().lock();
+
+  ..........  
+  if (configuration.GetEntrypointLibrary().empty()) {
+    if (!isolate-&gt;Run(configuration.GetEntrypoint(),
+                      settings_.dart_entrypoint_args)) {
+      FML_LOG(ERROR) &lt;&lt; &quot;Could not run the isolate.&quot;;
+      return RunStatus::Failure;
+    }
+  } else {
+    // &#x6267;&#x884C;
+    if (!isolate-&gt;RunFromLibrary(configuration.GetEntrypointLibrary(),
+                                 configuration.GetEntrypoint(),
+                                 settings_.dart_entrypoint_args)) {
+      FML_LOG(ERROR) &lt;&lt; &quot;Could not run the isolate.&quot;;
+      return RunStatus::Failure;
+    }
+  }
+
+  return RunStatus::Success;
+}
+</code></pre>
+<h4 id="runfromlibrary"><a name="runfromlibrary" class="anchor-navigation-ex-anchor" href="#runfromlibrary"><i class="fa fa-link" aria-hidden="true"></i></a>RunFromLibrary</h4>
+<p>&#xFF08;flutter/runtime/dart_isolate.cc&#xFF09;</p>
+<pre class="language-"><code class="lang-c++">bool DartIsolate::RunFromLibrary(const std::string&amp; library_name,
+                                 const std::string&amp; entrypoint_name,
+                                 const std::vector<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">std:</span>:string</span><span class="token punctuation">&gt;</span></span>&amp; args,
+                                 const fml::closure&amp; on_run) {
+  TRACE_EVENT0(&quot;flutter&quot;, &quot;DartIsolate::RunFromLibrary&quot;);
+  if (phase_ != Phase::Ready) {
+    return false;
+  }
+
+  tonic::DartState::Scope scope(this);
+  // &#x83B7;&#x53D6;&#x5165;&#x53E3;&#x51FD;&#x6570;
+  auto user_entrypoint_function =
+      Dart_GetField(Dart_LookupLibrary(tonic::ToDart(library_name.c_str())),
+                    tonic::ToDart(entrypoint_name.c_str()));
+  // &#x83B7;&#x53D6;&#x5165;&#x53E3;&#x51FD;&#x6570;&#x53C2;&#x6570;
+  auto entrypoint_args = tonic::ToDart(args);
+  // &#x8FD0;&#x884C;&#x5165;&#x53E3;&#x51FD;&#x6570;
+  if (!InvokeMainEntrypoint(user_entrypoint_function, entrypoint_args)) {
+    return false;
+  }
+
+  phase_ = Phase::Running;
+  FML_DLOG(INFO) &lt;&lt; &quot;New isolate is in the running state.&quot;;
+
+  if (on_run) {
+    on_run();
+  }
+  return true;
+}
+</code></pre>
+<h4 id="invokemainentrypoint-&#x8FD0;&#x884C;&#x5165;&#x53E3;&#x51FD;&#x6570;"><a name="invokemainentrypoint-&#x8FD0;&#x884C;&#x5165;&#x53E3;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#invokemainentrypoint-&#x8FD0;&#x884C;&#x5165;&#x53E3;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>InvokeMainEntrypoint &#x8FD0;&#x884C;&#x5165;&#x53E3;&#x51FD;&#x6570;</h4>
+<p>&#xFF08;flutter/runtime/dart_isolate.cc&#xFF09;</p>
+<pre class="language-"><code class="lang-c++">static bool InvokeMainEntrypoint(Dart_Handle user_entrypoint_function,
+                                 Dart_Handle args) {
+  if (tonic::LogIfError(user_entrypoint_function)) {
+    FML_LOG(ERROR) &lt;&lt; &quot;Could not resolve main entrypoint function.&quot;;
+    return false;
+  }
+
+  Dart_Handle start_main_isolate_function =
+      tonic::DartInvokeField(Dart_LookupLibrary(tonic::ToDart(&quot;dart:isolate&quot;)),
+                             &quot;_getStartMainIsolateFunction&quot;, {});
+
+  if (tonic::LogIfError(start_main_isolate_function)) {
+    FML_LOG(ERROR) &lt;&lt; &quot;Could not resolve main entrypoint trampoline.&quot;;
+    return false;
+  }
+
+  if (tonic::LogIfError(tonic::DartInvokeField(
+          Dart_LookupLibrary(tonic::ToDart(&quot;dart:ui&quot;)), &quot;_runMainZoned&quot;,
+          {start_main_isolate_function, user_entrypoint_function, args}))) {
+    FML_LOG(ERROR) &lt;&lt; &quot;Could not invoke the main entrypoint.&quot;;
+    return false;
+  }
+
+  return true;
+}
+</code></pre>
+<p>&#x8C03;&#x7528;Dart &#x5C42;_runMainZoned&#x65B9;&#x6CD5; &#xFF0C;&#x4F20;&#x5165;start_main_isolate_function &#xFF0C;&#x7528;&#x6237;&#x5165;&#x53E3;&#x51FD;&#x6570;user_entrypoint_function &#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x53C2;&#x6570;&#x3002;</p>
+<h5 id="getstartmainisolatefunction"><a name="getstartmainisolatefunction" class="anchor-navigation-ex-anchor" href="#getstartmainisolatefunction"><i class="fa fa-link" aria-hidden="true"></i></a>_getStartMainIsolateFunction</h5>
+<p>&#x800C;_getStartMainIsolateFunction&#x5B9A;&#x4E49;&#x5728;dart &#x7684;SDK &#x4E2D;&#x3002;</p>
+<p>&#xFF08;dart/sdk/lib/_internal/vm/lib/isolate_patch.dart&#xFF09;</p>
+<pre class="language-"><code class="lang-dart"><span class="token metadata symbol">@pragma</span><span class="token punctuation">(</span><span class="token string">&quot;vm:entry-point&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;call&quot;</span><span class="token punctuation">)</span>
+Function <span class="token function">_getStartMainIsolateFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> _startMainIsolate<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token metadata symbol">@pragma</span><span class="token punctuation">(</span><span class="token string">&quot;vm:entry-point&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;call&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">void</span> <span class="token function">_startMainIsolate</span><span class="token punctuation">(</span>Function entryPoint<span class="token punctuation">,</span> List<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">_startIsolate</span><span class="token punctuation">(</span>
+      <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token comment">// no parent port</span>
+      entryPoint<span class="token punctuation">,</span>
+      args<span class="token punctuation">,</span>
+      <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token comment">// no message</span>
+      <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// isSpawnUri</span>
+      <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token comment">// no control port</span>
+      <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// no capabilities</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>_getStartMainIsolateFunction&#x51FD;&#x6570;&#x5176;&#x5B9E;&#x662F; _startMainIsolate&#x3002;&#x800C;&#x5185;&#x90E8;&#x662F;&#x8C03;&#x7528; _startIsolate&#x3002;</p>
+<h4 id="runmainzoned-&#x51FD;&#x6570;"><a name="runmainzoned-&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#runmainzoned-&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>_runMainZoned &#x51FD;&#x6570;</h4>
+<p>&#xFF08;flutter/lib/ui/hooks.dart&#xFF09;</p>
+<pre class="language-"><code class="lang-dart"><span class="token metadata symbol">@pragma</span><span class="token punctuation">(</span><span class="token string">&apos;vm:entry-point&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">void</span> <span class="token function">_runMainZoned</span><span class="token punctuation">(</span>Function startMainIsolateFunction<span class="token punctuation">,</span>
+                   Function userMainFunction<span class="token punctuation">,</span>
+                   List<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">startMainIsolateFunction</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    runZoned<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>userMainFunction <span class="token operator">is</span> _BinaryFunction<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">(</span>userMainFunction <span class="token operator">as</span> <span class="token keyword">dynamic</span><span class="token punctuation">)</span><span class="token punctuation">(</span>args<span class="token punctuation">,</span> <span class="token string">&apos;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>userMainFunction <span class="token operator">is</span> _UnaryFunction<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">(</span>userMainFunction <span class="token operator">as</span> <span class="token keyword">dynamic</span><span class="token punctuation">)</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">// main &#x65B9;&#x6CD5;</span>
+        <span class="token function">userMainFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> onError<span class="token punctuation">:</span> <span class="token punctuation">(</span>Object error<span class="token punctuation">,</span> StackTrace stackTrace<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">_reportUnhandledException</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> stackTrace<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x7ED9;startMainIsolateFunction &#x4F20;&#x5165;&#x95ED;&#x5305;&#x51FD;&#x6570;&#x4EE5;&#x53CA;null&#x3002;&#x800C;startMainIsolateFunction&#x5C31;&#x662F; &#x4E0A;&#x9762;&#x7684; _startMainIsolate&#x3002;&#x800C;&#x5185;&#x90E8;&#x662F;&#x8C03;&#x7528; _startIsolate &#x3002;</p>
+<h4 id="startisolate&#x51FD;&#x6570;"><a name="startisolate&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#startisolate&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>_startIsolate&#x51FD;&#x6570;</h4>
+<p>&#xFF08;dart/sdk/lib/_internal/vm/lib/isolate_patch.dart&#xFF09;</p>
+<pre class="language-"><code class="lang-dart"><span class="token metadata symbol">@pragma</span><span class="token punctuation">(</span><span class="token string">&quot;vm:entry-point&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;call&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">void</span> <span class="token function">_startIsolate</span><span class="token punctuation">(</span>
+    SendPort parentPort<span class="token punctuation">,</span>
+    Function entryPoint<span class="token punctuation">,</span>
+    List<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> args<span class="token punctuation">,</span>
+    <span class="token keyword">var</span> message<span class="token punctuation">,</span>
+    bool isSpawnUri<span class="token punctuation">,</span>
+    RawReceivePort controlPort<span class="token punctuation">,</span>
+    List capabilities<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// &#x63A7;&#x5236;&#x7AEF;&#x53E3;&#x4E0D;&#x5904;&#x7406;&#x6D88;&#x606F;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>controlPort <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    controlPort<span class="token punctuation">.</span>handler <span class="token operator">=</span> <span class="token punctuation">(</span>_<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">// Nobody home on the control port.</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>parentPort <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> readyMessage <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">List</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    readyMessage<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> controlPort<span class="token punctuation">.</span>sendPort<span class="token punctuation">;</span>
+    readyMessage<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> capabilities<span class="token punctuation">;</span>
+    capabilities <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    parentPort<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>readyMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">assert</span><span class="token punctuation">(</span>capabilities <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// &#x5EF6;&#x8FDF;&#x6240;&#x6709;&#x7528;&#x6237;&#x4EE3;&#x7801;&#xFF0C;&#x4E0B;&#x6B21;&#x6D88;&#x606F;&#x5FAA;&#x73AF;&#x65F6;&#x5019;&#x5904;&#x7406;&#x3002;</span>
+  RawReceivePort port <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RawReceivePort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  port<span class="token punctuation">.</span>handler <span class="token operator">=</span> <span class="token punctuation">(</span>_<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    port<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>isSpawnUri<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>entryPoint <span class="token operator">is</span> _BinaryFunction<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">(</span>entryPoint <span class="token operator">as</span> <span class="token keyword">dynamic</span><span class="token punctuation">)</span><span class="token punctuation">(</span>args<span class="token punctuation">,</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>entryPoint <span class="token operator">is</span> _UnaryFunction<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">(</span>entryPoint <span class="token operator">as</span> <span class="token keyword">dynamic</span><span class="token punctuation">)</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">// &#x6267;&#x884C;&#x5165;&#x53E3;&#x51FD;&#x6570;</span>
+        <span class="token function">entryPoint</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token function">entryPoint</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token comment">// &#x89E6;&#x53D1;&#x6D88;&#x606F;handler</span>
+  port<span class="token punctuation">.</span>sendPort<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5176;&#x4E2D; entryPoint &#x662F; _runMainZoned &#x4E2D;&#x7684;&#x95ED;&#x5305;&#x3002;&#x4E5F;&#x5C31;&#x662F;runZone &#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x3002; </p>
+<p>&#x800C; runZone &#x5B9A;&#x4E49;&#x662F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart">R runZoned<span class="token operator">&lt;</span>R<span class="token operator">&gt;</span><span class="token punctuation">(</span>R <span class="token function">body</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    Map zoneValues<span class="token punctuation">,</span> 
+    ZoneSpecification zoneSpecification<span class="token punctuation">,</span>
+    Function onError<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x7B49;&#x540C;&#x4E8E;&#x6C99;&#x7BB1;&#x6267;&#x884C;body()&#x4EE3;&#x7801;&#xFF0C;&#x5176;&#x4E2D;zoneValue &#x662F;&#x6C99;&#x7BB1;&#x79C1;&#x6709;&#x6570;&#x636E;&#xFF0C;zoneSpecification &#x4E3A;&#x62E6;&#x622A;&#x5668;&#xFF0C;onError &#x4E3A;&#x9519;&#x8BEF;&#x5F02;&#x5E38;&#x56DE;&#x8C03;&#x3002;</p>
+<p>&#x6700;&#x7EC8;&#x4F1A;&#x6267;&#x884C;<strong>userMainFunction</strong>,&#x4E5F;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x7684;main &#x65B9;&#x6CD5;&#x3002;</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token function">MyApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h1 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x603B;&#x7ED3;</h1>
+<p>&#x6574;&#x4E2A;Flutter &#x5F15;&#x64CE;&#x52A0;&#x8F7D;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x9636;&#x6BB5;&#xFF0C;&#x5206;&#x522B;&#x662F;&#x51C6;&#x5907;&#x9636;&#x6BB5;&#x548C;&#x542F;&#x52A8;&#x9636;&#x6BB5;&#x3002;&#x51C6;&#x5907;&#x9636;&#x6BB5;&#x4E3B;&#x8981;&#x662F;&#x6307;FlutterActivity&#x7684;onCreate&#x65B9;&#x6CD5;&#x5185;&#xFF0C;&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x662F;&#x8FDB;&#x884C;&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x4EE5;&#x53CA;&#x521D;&#x59CB;&#x5316;&#x5DE5;&#x4F5C;&#xFF0C;&#x5728;java &#x5C42;&#x8FDB;&#x884C;&#x4E86;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x7684;&#x6574;&#x5408;&#xFF0C;so&#x5E93;&#x7684;&#x52A0;&#x8F7D;&#xFF0C;FlutterEngine&#x7B49;&#x7C7B;&#x7684;&#x521B;&#x5EFA;&#x3002;&#x5728;native&#x5C42;&#xFF0C;&#x4E3B;&#x8981;&#x8FDB;&#x884C;&#x4E86;&#x76F8;&#x5173;java &#x65B9;&#x6CD5;&#x7684;&#x6CE8;&#x518C;&#x5173;&#x8054;&#xFF0C;&#x800C;&#x6700;&#x91CD;&#x8981;&#x7684;&#x662F;&#x521B;&#x5EFA;&#x4E86;AndroidShellHolder&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x5185;&#x90E8;&#x4E5F;&#x521B;&#x5EFA;&#x4E86;4&#x5927;&#x7EBF;&#x7A0B;&#xFF0C;&#x4EE5;&#x53CA;Shell &#xFF0C;Engine &#xFF0C;DartVM &#x7B49;&#x91CD;&#x8981;&#x5BF9;&#x8C61;&#x3002;&#x5728;&#x51C6;&#x5907;&#x9636;&#x6BB5;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x6267;&#x884C;Activity&#x7684;onStart &#x65B9;&#x6CD5;&#xFF0C;&#x8FDB;&#x5165;&#x542F;&#x52A8;&#x9636;&#x6BB5;&#x3002;&#x8FD9;&#x91CC;java &#x628A;&#x5165;&#x53E3;&#x51FD;&#x6570;&#x7B49;&#x4FE1;&#x606F;&#x5C01;&#x88C5;&#x6210;DartEntrypoint &#x5BF9;&#x8C61;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; david 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-04-28 16:03:24
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="6-Flutter 引擎启动v1-9.html" class="navigation navigation-prev " aria-label="Previous page: Flutter 引擎启动（1.9）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="8-Flutter Redux简单介绍.html" class="navigation navigation-next " aria-label="Next page: Redux 介绍">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Flutter引擎启动","level":"1.8","depth":1,"next":{"title":"Redux 介绍","level":"1.9","depth":1,"path":"0-Flutter/8-Flutter Redux简单介绍.md","ref":"0-Flutter/8-Flutter Redux简单介绍.md","articles":[]},"previous":{"title":"Flutter 引擎启动（1.9）","level":"1.7","depth":1,"path":"0-Flutter/6-Flutter 引擎启动v1-9.md","ref":"0-Flutter/6-Flutter 引擎启动v1-9.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","prism","-highlight","copy-code-button","search-pro","-search","-lunr","expandable-chapters","splitter","-sharing","github-buttons","tbfed-pagefooter","anchor-navigation-ex","summary"],"styles":{"website":"./public-repertory/css/gitbook-configure.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy david 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"summary":{},"splitter":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"github-buttons":{"buttons":[{"user":"DavidZhong003","width":"160","type":"follow","count":true,"size":"small"}]},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"zhongshan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"david zhong 的文档库","language":"zh-hans","gitbook":"*","description":"zhongshan 的文档库. 里面包含了个人撰写的文章"},"file":{"path":"0-Flutter/7-Flutter 引擎启动v1-12.md","mtime":"2020-04-28T08:03:24.655Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-28T08:17:14.512Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

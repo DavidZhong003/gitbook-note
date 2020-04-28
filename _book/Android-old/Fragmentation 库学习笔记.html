@@ -1,0 +1,1006 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Fragmentation 库学习笔记 · david zhong 的文档库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zhongshan">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="HashMap源码学习.html" />
+    
+    
+    <link rel="prev" href="ArrayList源码学习.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"DavidZhong003","width":"160","type":"follow","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">0-Flutter</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../0-Flutter/1-Flutter图片加载.html">
+            
+                <a href="../0-Flutter/1-Flutter图片加载.html">
+            
+                    
+                    Flutter 图片加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0-Flutter/2-Flutter 应用启动分析.html">
+            
+                <a href="../0-Flutter/2-Flutter 应用启动分析.html">
+            
+                    
+                    Flutter 应用启动分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0-Flutter/3-Flutter 混合工程.html">
+            
+                <a href="../0-Flutter/3-Flutter 混合工程.html">
+            
+                    
+                    Flutter 混合工程搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../0-Flutter/4-Flutter 混合工程踩坑记录.html">
+            
+                <a href="../0-Flutter/4-Flutter 混合工程踩坑记录.html">
+            
+                    
+                    Flutter混合工程踩坑记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../0-Flutter/5-Flutter 混合工程上传AAR.html">
+            
+                <a href="../0-Flutter/5-Flutter 混合工程上传AAR.html">
+            
+                    
+                    Flutter 混合工程上传AAR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../0-Flutter/6-Flutter 引擎启动v1-9.html">
+            
+                <a href="../0-Flutter/6-Flutter 引擎启动v1-9.html">
+            
+                    
+                    Flutter 引擎启动（1.9）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../0-Flutter/7-Flutter 引擎启动v1-12.html">
+            
+                <a href="../0-Flutter/7-Flutter 引擎启动v1-12.html">
+            
+                    
+                    Flutter引擎启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../0-Flutter/8-Flutter Redux简单介绍.html">
+            
+                <a href="../0-Flutter/8-Flutter Redux简单介绍.html">
+            
+                    
+                    Redux 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Android-old</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="ArrayList源码学习.html">
+            
+                <a href="ArrayList源码学习.html">
+            
+                    
+                    ArrayList 源码学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="Fragmentation 库学习笔记.html">
+            
+                <a href="Fragmentation 库学习笔记.html">
+            
+                    
+                    Fragmentation 库学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="HashMap源码学习.html">
+            
+                <a href="HashMap源码学习.html">
+            
+                    
+                    HashMap 源码学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="JVM学习笔记.html">
+            
+                <a href="JVM学习笔记.html">
+            
+                    
+                    JVM 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="LinkedList源码学习.html">
+            
+                <a href="LinkedList源码学习.html">
+            
+                    
+                    LinkedList 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="Okhttp源码学习.html">
+            
+                <a href="Okhttp源码学习.html">
+            
+                    
+                    Okhttp 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="Retrofit 学习笔记.html">
+            
+                <a href="Retrofit 学习笔记.html">
+            
+                    
+                    Retrofit 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="Set集合源码学习.html">
+            
+                <a href="Set集合源码学习.html">
+            
+                    
+                    Set 集合源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="沉浸式状态栏.html">
+            
+                <a href="沉浸式状态栏.html">
+            
+                    
+                    沉浸式状态栏
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">machine</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../machine/1-机器学习学习笔记--基础.html">
+            
+                <a href="../machine/1-机器学习学习笔记--基础.html">
+            
+                    
+                    机器学习笔记-基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../machine/2- 机器学习学习笔记--autograd自动求导.html">
+            
+                <a href="../machine/2- 机器学习学习笔记--autograd自动求导.html">
+            
+                    
+                    机器学习笔记-autograd自动求导
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../machine/3- 机器学习学习笔记--NDArray处理数据.html">
+            
+                <a href="../machine/3- 机器学习学习笔记--NDArray处理数据.html">
+            
+                    
+                    机器学习笔记-NDArray处理数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../machine/4-Numpy 教程.html">
+            
+                <a href="../machine/4-Numpy 教程.html">
+            
+                    
+                    机器学习笔记-Numpy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../machine/5-机器学习笔记--矩阵.html">
+            
+                <a href="../machine/5-机器学习笔记--矩阵.html">
+            
+                    
+                    机器学习笔记-矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../machine/6-机器学习笔记--线性回归.html">
+            
+                <a href="../machine/6-机器学习笔记--线性回归.html">
+            
+                    
+                    机器学习笔记-线性回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../其他/1-Conda常用命令.html">
+            
+                <a href="../其他/1-Conda常用命令.html">
+            
+                    
+                    管理conda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../其他/2-Git学习笔记.html">
+            
+                <a href="../其他/2-Git学习笔记.html">
+            
+                    
+                    Git 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../其他/3-UML类图.html">
+            
+                <a href="../其他/3-UML类图.html">
+            
+                    
+                    UML 类图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Fragmentation 库学习笔记</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#fragmentation-&#x5E93;&#x5B66;&#x4E60;&#x7B14;&#x8BB0;"><b></b>Fragmentation &#x5E93;&#x5B66;&#x4E60;&#x7B14;&#x8BB0;</a></li><li><span class="title-icon "></span><a href="#&#x7B80;&#x4ECB;"><b></b>&#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#&#x6E90;&#x7801;&#x5206;&#x6790;"><b></b>&#x6E90;&#x7801;&#x5206;&#x6790;</a></li><ul><li><span class="title-icon "></span><a href="#loadrootfragment"><b></b>loadRootFragment</a></li><li><span class="title-icon "></span><a href="#start-fragment"><b></b>start Fragment</a></li><li><span class="title-icon "></span><a href="#pop&#x64CD;&#x4F5C;"><b></b>pop&#x64CD;&#x4F5C;</a></li></ul><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b></b>&#x603B;&#x7ED3;</a></li></ul></div><a href="#fragmentation-&#x5E93;&#x5B66;&#x4E60;&#x7B14;&#x8BB0;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="fragmentation-&#x5E93;&#x5B66;&#x4E60;&#x7B14;&#x8BB0;"><a name="fragmentation-&#x5E93;&#x5B66;&#x4E60;&#x7B14;&#x8BB0;" class="anchor-navigation-ex-anchor" href="#fragmentation-&#x5E93;&#x5B66;&#x4E60;&#x7B14;&#x8BB0;"><i class="fa fa-link" aria-hidden="true"></i></a>Fragmentation &#x5E93;&#x5B66;&#x4E60;&#x7B14;&#x8BB0;</h1>
+<h1 id="&#x7B80;&#x4ECB;"><a name="&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x4ECB;</h1>
+<p>&#x524D;&#x6BB5;&#x65F6;&#x95F4;&#x9879;&#x76EE;&#x4E0A;&#x8981;&#x4F7F;&#x7528;&#x5355;Activity+&#x591A;Fragment&#x7ED3;&#x6784;&#x3002;<a href="https://github.com/YoKeyword/Fragmentation" target="_blank">Fragmentation</a>&#x8FD9;&#x4E2A;&#x5E93;&#x6781;&#x5927;&#x7684;&#x65B9;&#x4FBF;&#x6211;&#x4EEC;&#x5BF9;Fragment&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#xFF0C;&#x53EF;&#x8F7B;&#x677E;&#x8FDB;&#x884C;start&#xFF0C;pop&#xFF0C;hide&#xFF0C;show&#x7B49;&#x64CD;&#x4F5C;&#xFF0C;&#x800C;&#x4E14;&#x63D0;&#x4F9B;&#x8C03;&#x8BD5;&#x5DE5;&#x5177;&#x53EF;&#x8F7B;&#x677E;&#x67E5;&#x770B;Fragment&#x6808;&#x89C6;&#x56FE;&#xFF0C;&#x964D;&#x4F4E;&#x5F00;&#x53D1;&#x96BE;&#x5EA6;&#x3002;&#x5177;&#x4F53;&#x5F15;&#x5165;&#x4F7F;&#x7528;&#x53EF;&#x53C2;&#x770B;&#x4E0A;&#x9762;github&#x94FE;&#x63A5;&#x3002;&#x4E0B;&#x9762;&#x5BF9;&#x8FD9;&#x4E2A;&#x5E93;&#x8FDB;&#x884C;&#x7B80;&#x5355;&#x7684;&#x6E90;&#x7801;&#x5206;&#x6790;&#x3002;</p>
+<h1 id="&#x6E90;&#x7801;&#x5206;&#x6790;"><a name="&#x6E90;&#x7801;&#x5206;&#x6790;" class="anchor-navigation-ex-anchor" href="#&#x6E90;&#x7801;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6E90;&#x7801;&#x5206;&#x6790;</h1>
+<p>&#x5728;&#x4F7F;&#x7528;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x5E38;&#x5E38;&#x9700;&#x8981;&#x7EE7;&#x627F;SupportActivity&#x6216;&#x8005;&#x5B9E;&#x73B0;ISupportActivity&#x63A5;&#x53E3;&#xFF0C;&#x7136;&#x540E;&#x5728;onCreate&#x65B9;&#x6CD5;&#x5185;&#x8C03;&#x7528;loadRootFragment&#x65B9;&#x6CD5;&#x3002;</p>
+<pre class="language-"><code class="lang-kotlin"><span class="token keyword">if</span> <span class="token punctuation">(</span>homeFragment <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">loadRootFragment</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>id<span class="token punctuation">.</span>fl_bottom<span class="token punctuation">,</span> <span class="token function">getMainFragment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> ISupportFragment<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5C31;&#x4ECE;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5F00;&#x59CB;&#x5165;&#x624B;&#x3002;</p>
+<h2 id="loadrootfragment"><a name="loadrootfragment" class="anchor-navigation-ex-anchor" href="#loadrootfragment"><i class="fa fa-link" aria-hidden="true"></i></a>loadRootFragment</h2>
+<p><strong>1. SupportActivity &#x4E2D;&#x7684; loadRootFragment</strong></p>
+<p>loadRootFragment&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x505A;&#x4E86;&#x4EC0;&#x4E48;&#x5DE5;&#x4F5C;&#x5462;&#xFF0C;&#x770B;&#x4E0B;&#x5B83;&#x7684;&#x6E90;&#x7801;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">loadRootFragment</span><span class="token punctuation">(</span><span class="token keyword">int</span> containerId<span class="token punctuation">,</span> <span class="token annotation punctuation">@NonNull</span> <span class="token class-name">ISupportFragment</span> toFragment<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    mDelegate<span class="token punctuation">.</span><span class="token function">loadRootFragment</span><span class="token punctuation">(</span>containerId<span class="token punctuation">,</span> toFragment<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x5B9E;&#x9645;load&#x5DE5;&#x4F5C;&#x4EA4;&#x7ED9;mDelegate&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x505A;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;mDelegate&#x5BF9;&#x8C61;&#x53C8;&#x662F;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;</p>
+<p>&#x6211;&#x4EEC;&#x7EE7;&#x7EED;&#x67E5;&#x770B;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">final</span> <span class="token class-name">SupportActivityDelegate</span> mDelegate <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SupportActivityDelegate</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x539F;&#x6765;mDelegate &#x662F; SupportActivityDelegate &#xFF0C;supportActivity&#x4E2D;&#x7684;ISupportActivity&#x63A5;&#x53E3;&#x7684;&#x5927;&#x90E8;&#x5206;&#x5B9E;&#x73B0;&#x5DE5;&#x4F5C;&#x90FD;&#x4EA4;&#x7ED9;&#x8FD9;&#x4E2A;&#x4EE3;&#x7406;&#x7C7B;&#x53BB;&#x505A;&#x3002;&#x800C;&#x8FD9;&#x4E2A;&#x4EE3;&#x7406;&#x7C7B;&#x4E5F;&#x662F;&#x8FD9;&#x4E2A;&#x6846;&#x67B6;&#x7684;&#x6838;&#x5FC3;&#xFF0C;&#x540E;&#x9762;&#x5F88;&#x591A;&#x5206;&#x6790;&#x90FD;&#x4F1A;&#x63A5;&#x89E6;&#x5230;&#x5B83;&#x3002;</p>
+<p><strong>2. SupportActivityDelegate&#x4E2D;&#x7684;loadRootFragment</strong></p>
+<p>&#x6765;&#x770B;&#x4E0B;&#x4EE3;&#x7406;&#x7C7B;&#x4E2D;&#x7684;loadRootFragment &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">loadRootFragment</span><span class="token punctuation">(</span><span class="token keyword">int</span> containerId<span class="token punctuation">,</span> <span class="token class-name">ISupportFragment</span> toFragment<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">loadRootFragment</span><span class="token punctuation">(</span>containerId<span class="token punctuation">,</span> toFragment<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">loadRootFragment</span><span class="token punctuation">(</span><span class="token keyword">int</span> containerId<span class="token punctuation">,</span> <span class="token class-name">ISupportFragment</span> toFragment<span class="token punctuation">,</span> <span class="token keyword">boolean</span>        addToBackStack<span class="token punctuation">,</span> <span class="token keyword">boolean</span> allowAnimation<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    mTransactionDelegate<span class="token punctuation">.</span><span class="token function">loadRootTransaction</span><span class="token punctuation">(</span><span class="token function">getSupportFragmentManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> containerId<span class="token punctuation">,</span> toFragment<span class="token punctuation">,</span> addToBackStack<span class="token punctuation">,</span> allowAnimation<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>emmmmm,&#x679C;&#x7136;&#x4F18;&#x79C0;&#x7684;&#x6846;&#x67B6;&#x90FD;&#x662F;&#x8DF3;&#x6765;&#x8DF3;&#x53BB;&#x7684;&#x3002;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x53C8;&#x53C8;&#x53C8;&#x53C8;&#x4EA4;&#x7ED9;&#x4E00;&#x4E2A;&#x4EE3;&#x7406;&#x53BB;&#x5B9E;&#x73B0;&#x5177;&#x4F53;&#x903B;&#x8F91;&#x3002;&#x800C;&#x8FD9;&#x4E2A;mTransactionDelegate&#x6210;&#x5458;&#x53D8;&#x91CF;&#x5B9E;&#x9645;&#x4E0A;&#x662F;TransactionDelegate&#x3002;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x5728;<strong>onCreate()</strong>&#x65F6;&#x5019;&#x88AB;&#x521D;&#x59CB;&#x5316;&#x3002;</p>
+<pre class="language-"><code class="lang-java">    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token annotation punctuation">@Nullable</span> <span class="token class-name">Bundle</span> savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        mTransactionDelegate <span class="token operator">=</span> <span class="token function">getTransactionDelegate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        mDebugStackDelegate <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DebugStackDelegate</span><span class="token punctuation">(</span>mActivity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        mFragmentAnimator <span class="token operator">=</span> mSupport<span class="token punctuation">.</span><span class="token function">onCreateFragmentAnimator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        mDebugStackDelegate<span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token class-name">Fragmentation</span><span class="token punctuation">.</span><span class="token function">getDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getMode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x89C1;onCreate&#x65B9;&#x6CD5;&#x5185;&#x521D;&#x59CB;&#x5316;&#x4E86;&#x5F88;&#x591A;&#x4EE3;&#x7406;&#x3002;</p>
+<p><strong>3. TransactionDelegate &#x7684;loadRootTranslation&#x65B9;&#x6CD5;</strong>
+&#x6309;&#x7167;&#x60EF;&#x4F8B;&#xFF0C;&#x5148;&#x8D34;&#x4E2A;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java">    <span class="token keyword">void</span> <span class="token function">loadRootTransaction</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">FragmentManager</span> fm<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token keyword">int</span> containerId<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ISupportFragment</span> <span class="token keyword">to</span><span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token keyword">boolean</span> addToBackStack<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token keyword">boolean</span> allowAnimation<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">enqueue</span><span class="token punctuation">(</span>fm<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">Action</span><span class="token punctuation">(</span><span class="token class-name">Action</span><span class="token punctuation">.</span>ACTION_LOAD<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">bindContainerId</span><span class="token punctuation">(</span>containerId<span class="token punctuation">,</span> <span class="token keyword">to</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                <span class="token class-name">String</span> toFragmentTag <span class="token operator">=</span> <span class="token keyword">to</span><span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token class-name">TransactionRecord</span> transactionRecord <span class="token operator">=</span> <span class="token keyword">to</span><span class="token punctuation">.</span><span class="token function">getSupportDelegate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>mTransactionRecord<span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>transactionRecord <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>transactionRecord<span class="token punctuation">.</span>tag <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        toFragmentTag <span class="token operator">=</span> transactionRecord<span class="token punctuation">.</span>tag<span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+
+                <span class="token function">start</span><span class="token punctuation">(</span>fm<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token keyword">to</span><span class="token punctuation">,</span> toFragmentTag<span class="token punctuation">,</span> <span class="token operator">!</span>addToBackStack<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> allowAnimation<span class="token punctuation">,</span> TYPE_REPLACE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x628A;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x653E;&#x5165;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x3002;</p>
+<p><strong>3.1 enqueue &#x65B9;&#x6CD5;</strong>
+&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x4E0B;enqueue&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java">    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">enqueue</span><span class="token punctuation">(</span><span class="token class-name">FragmentManager</span> fm<span class="token punctuation">,</span> <span class="token class-name">Action</span> action<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>fm <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">w</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;FragmentManager is null, skip the action!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        mActionQueue<span class="token punctuation">.</span><span class="token function">enqueue</span><span class="token punctuation">(</span>action<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x91CC;&#x9762;&#x7684;&#x64CD;&#x4F5C;&#x4E5F;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x68C0;&#x67E5;fragmentManager &#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x7136;&#x540E;&#x628A;action&#x5BF9;&#x8C61;&#x5165;&#x5217;ActionQueue&#x5BF9;&#x8C61;&#x4E2D;&#x3002;
+&#x800C;&#x7ECF;&#x67E5;&#x770B;Action&#x7C7B;&#x662F;&#x4E2A;&#x62BD;&#x8C61;&#x7C7B;&#xFF0C;&#x91CC;&#x9762;&#x5B9A;&#x4E49;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#xFF08;pop&#xFF0C;load&#xFF0C;back&#x7B49;&#xFF09;&#x6807;&#x8BC6;&#x5E38;&#x91CF;&#xFF0C;&#x4EE5;&#x53CA;&#x5728;&#x4E0A;&#x9762;&#x770B;&#x4E0B;&#x7684;run&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x800C;ActionQueue&#x7C7B;&#x4E5F;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x91CC;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x4EE5;&#x53CA;&#x4E3B;&#x7EBF;&#x7A0B;&#x7684;handler&#x3002;</p>
+<p><strong>3.1.1 ActionQueue &#x7684; enqueue&#x65B9;&#x6CD5;</strong></p>
+<p>&#x4E3B;&#x8981;&#x770B;&#x4E0B;ActionQueue&#x4E2D;&#x7684;&#x5165;&#x5217;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre class="language-"><code class="lang-java">    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">enqueue</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">Action</span> action<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isThrottleBACK</span><span class="token punctuation">(</span>action<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>action<span class="token punctuation">.</span>action <span class="token operator">==</span> <span class="token class-name">Action</span><span class="token punctuation">.</span>ACTION_LOAD <span class="token operator">&amp;&amp;</span> mQueue<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token operator">&amp;&amp;</span> <span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token class-name">Looper</span><span class="token punctuation">.</span><span class="token function">getMainLooper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            action<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        mMainHandler<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">enqueueAction</span><span class="token punctuation">(</span>action<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x6211;&#x4EEC;&#x63D0;&#x4EA4;&#x8FC7;&#x6765;&#x7684;Action&#xFF08;&#x5B9E;&#x9645;pop&#xFF0C;start&#x7B49;&#x5BF9;fragment&#x64CD;&#x4F5C;&#xFF09;&#x4F1A;&#x5148;&#x68C0;&#x6D4B;&#x4E0B;action&#x7C7B;&#x578B;&#x548C;&#x5217;&#x961F;&#x4E2D;action&#x4E2D;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x800C;&#x521D;&#x59CB;&#x65F6;&#x5019;&#x8FD9;&#x79CD;load&#x7684;action &#x662F;&#x76F4;&#x63A5;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x6240;&#x4EE5;load&#x8FD9;&#x4E2A;&#x52A8;&#x4F5C;&#x5177;&#x4F53;&#x52A8;&#x4F5C;&#x8FD8;&#x662F;&#x5728;loadRootTransaction&#x65B9;&#x6CD5;&#x4E2D;&#x3002;&#x91CC;&#x9762;&#x5C31;&#x8FDB;&#x884C;&#x4E86;&#x4E24;&#x4E2A;&#x64CD;&#x4F5C;&#x7ED1;&#x5B9A;contentId&#x548C;&#x8FDB;&#x884C;&#x4E00;&#x4E2A;start&#x65B9;&#x6CD5;&#x3002;</p>
+<p><strong>3.2 bindContainerId&#x65B9;&#x6CD5;</strong>
+&#x6765;&#x770B;&#x600E;&#x4E48;&#x7ED1;&#x5B9A;&#x6211;&#x4EEC;&#x8981;&#x66FF;&#x6362;&#x7684;id&#xFF1A;</p>
+<pre class="language-"><code class="lang-java">    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">bindContainerId</span><span class="token punctuation">(</span><span class="token keyword">int</span> containerId<span class="token punctuation">,</span> <span class="token class-name">ISupportFragment</span> <span class="token keyword">to</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Bundle</span> args <span class="token operator">=</span> <span class="token function">getArguments</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token class-name">Fragment</span><span class="token punctuation">)</span> <span class="token keyword">to</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        args<span class="token punctuation">.</span><span class="token function">putInt</span><span class="token punctuation">(</span>FRAGMENTATION_ARG_CONTAINER<span class="token punctuation">,</span> containerId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x91CC;&#x9762;&#x628A;&#x8981;&#x66FF;&#x6362;&#x7684;view id &#x901A;&#x8FC7;fragment&#x7684; arguments &#x4F20;&#x9012;&#x7ED9; &#x76EE;&#x6807;rootfragment&#x3002;
+<strong>3.3 start&#x65B9;&#x6CD5;</strong>
+start&#x662F;&#x4E2A;&#x5341;&#x5206;&#x91CD;&#x8981;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4E4B;&#x540E;&#x5206;&#x6790;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x52A8;&#x4F5C;&#x6211;&#x4EEC;&#x4E5F;&#x4F1A;&#x770B;&#x89C1;,&#x4E0B;&#x9762;&#x662F;&#x5B83;&#x7684;&#x90E8;&#x5206;&#x6E90;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java">    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">start</span><span class="token punctuation">(</span><span class="token class-name">FragmentManager</span> fm<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ISupportFragment</span> from<span class="token punctuation">,</span> <span class="token class-name">ISupportFragment</span> <span class="token keyword">to</span><span class="token punctuation">,</span> <span class="token class-name">String</span> toFragmentTag<span class="token punctuation">,</span>
+                       <span class="token keyword">boolean</span> dontAddToBackStack<span class="token punctuation">,</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TransactionRecord</span><span class="token punctuation">.</span><span class="token class-name">SharedElement</span><span class="token punctuation">&gt;</span></span> sharedElementList<span class="token punctuation">,</span> <span class="token keyword">boolean</span> allowRootFragmentAnim<span class="token punctuation">,</span> <span class="token keyword">int</span> type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">FragmentTransaction</span> ft <span class="token operator">=</span> fm<span class="token punctuation">.</span><span class="token function">beginTransaction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">boolean</span> addMode <span class="token operator">=</span> <span class="token punctuation">(</span>type <span class="token operator">==</span> TYPE_ADD <span class="token operator">||</span> type <span class="token operator">==</span> TYPE_ADD_RESULT <span class="token operator">||</span> type <span class="token operator">==</span> TYPE_ADD_WITHOUT_HIDE <span class="token operator">||</span> type <span class="token operator">==</span> TYPE_ADD_RESULT_WITHOUT_HIDE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Fragment</span> fromF <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Fragment</span><span class="token punctuation">)</span> from<span class="token punctuation">;</span>
+        <span class="token class-name">Fragment</span> toF <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Fragment</span><span class="token punctuation">)</span> <span class="token keyword">to</span><span class="token punctuation">;</span>
+        <span class="token class-name">Bundle</span> args <span class="token operator">=</span> <span class="token function">getArguments</span><span class="token punctuation">(</span>toF<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        args<span class="token punctuation">.</span><span class="token function">putBoolean</span><span class="token punctuation">(</span>FRAGMENTATION_ARG_REPLACE<span class="token punctuation">,</span> <span class="token operator">!</span>addMode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// &#x8FD9;&#x91CC;&#x5904;&#x7406;sharedElement &#x52A8;&#x753B;</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>from <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            ft<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>args<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span>FRAGMENTATION_ARG_CONTAINER<span class="token punctuation">)</span><span class="token punctuation">,</span> toF<span class="token punctuation">,</span> toFragmentTag<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>addMode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+                <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+
+            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>dontAddToBackStack <span class="token operator">&amp;&amp;</span> type <span class="token operator">!=</span> TYPE_REPLACE_DONT_BACK<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            ft<span class="token punctuation">.</span><span class="token function">addToBackStack</span><span class="token punctuation">(</span>toFragmentTag<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">supportCommit</span><span class="token punctuation">(</span>fm<span class="token punctuation">,</span> ft<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x76F8;&#x6BD4;&#x4E4B;&#x524D;&#x7684;&#x6709;&#x70B9;&#x957F;&#xFF0C;&#x53C2;&#x6570;&#x4E5F;&#x6709;&#x70B9;&#x591A;&#x3002;&#x4F46;&#x5176;&#x5B9E;&#x91CC;&#x9762;&#x6240;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x4E5F;&#x6BD4;&#x8F83;&#x5BB9;&#x6613;&#x80FD;&#x770B;&#x61C2;&#x3002;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;add&#x6A21;&#x5F0F;&#xFF0C;&#x8FDB;&#x884C;&#x52A8;&#x753B;transaction&#xFF0C;&#x8FDB;&#x884C;add&#x3001;hide &#x6216;&#x8005;replace &#x52A8;&#x4F5C;&#xFF0C;&#x6700;&#x540E;&#x6267;&#x884C;supportCommit&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x4E8B;&#x52A1;&#x63D0;&#x4EA4;&#x3002;&#x800C;&#x5BF9;&#x4E8E;set loot fragment &#x52A8;&#x4F5C;&#xFF0C;from Fragment &#x4E3A;&#x7A7A;&#xFF0C;&#x6240;&#x4EE5;&#x6267;&#x884C;&#x7684;&#x662F; <code>ft.replace(args.getInt(FRAGMENTATION_ARG_CONTAINER), toF, toFragmentTag);</code>&#x3002;</p>
+<p>loadRootFragment&#x8FD9;&#x91CC;&#x5206;&#x6790;&#x5C31;&#x7ED3;&#x675F;&#x4E86;&#x3002;&#x6211;&#x4EEC;&#x6B63;&#x5E38;&#x4F7F;&#x7528;Fragment&#x65F6;&#x5019;&#x5E38;&#x5E38;&#x5F00;&#x542F;translation &#x7136;&#x540E;&#x8FDB;&#x884C;replace&#x64CD;&#x4F5C;&#xFF0C;&#x518D;&#x63D0;&#x4EA4;&#xFF1A;</p>
+<pre class="language-"><code class="lang-kotlin">supportFragmentManager<span class="token punctuation">.</span><span class="token function">beginTransaction</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>id<span class="token punctuation">.</span>fl_top<span class="token punctuation">,</span> <span class="token function">getRootFragment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">getRootFragment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>javaClass<span class="token punctuation">.</span>simpleName<span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x800C;&#x6846;&#x67B6;&#x5185;&#x5B9E;&#x9645;&#x4E5F;&#x662F;&#x8FDB;&#x884C;&#x8FD9;&#x6837;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x53EA;&#x662F;&#x5B83;&#x628A;&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x4F1A;&#x5728;Activity&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x4EA4;&#x7ED9;SupportActivityDelegate&#x4EE3;&#x7406;&#x6267;&#x884C;&#xFF0C;&#x800C;SupportActivityDelegate&#x53C8;&#x628A;&#x8FD9;&#x4E2A;&#x52A8;&#x4F5C;&#x4EA4;&#x7ED9;TranslationDelegate&#x7C7B;&#x6267;&#x884C;&#x3002;</p>
+<h2 id="start-fragment"><a name="start-fragment" class="anchor-navigation-ex-anchor" href="#start-fragment"><i class="fa fa-link" aria-hidden="true"></i></a>start Fragment</h2>
+<p>&#x5206;&#x6790;&#x5B8C;loadRootFragment&#x65B9;&#x6CD5;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x518D;&#x6765;&#x5206;&#x6790;&#x4E0B;&#xFF0C;Fragment&#x4E2D;&#x5E38;&#x7528;&#x7684;start&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x5728; ISupportFragment &#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x4F7F;&#x7528;&#x542F;&#x52A8;&#x4E00;&#x4E2A;Fragment <code>start(DetailFragment.newInstance(HomeBean));</code>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;Kotlin&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x4EFF;&#x7167;Anko &#x8FDB;&#x884C;&#x4F18;&#x5316;&#x5C01;&#x88C5;&#xFF08;&#x4E0D;&#x4F7F;&#x7528;&#x53EF;&#x65E0;&#x89C6;&#xFF09;&#xFF1A;</p>
+<ol>
+<li>&#x521B;&#x5EFA;&#x5185;&#x8054;&#x6269;&#x5C55;&#x65B9;&#x6CD5;</li>
+</ol>
+<pre class="language-"><code class="lang-kotlin"><span class="token keyword">inline</span> <span class="token keyword">fun</span> <span class="token operator">&lt;</span><span class="token keyword">reified</span> T <span class="token operator">:</span> AbsSupportFragment<span class="token operator">&gt;</span> AbsSupportFragment<span class="token punctuation">.</span><span class="token function">startFragment</span><span class="token punctuation">(</span><span class="token keyword">vararg</span> param<span class="token operator">:</span> Pair<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Any<span class="token operator">?</span><span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span>instanceSupFrg<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token operator">*</span>param<span class="token punctuation">)</span><span class="token operator">!!</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x5176;&#x4E2D;AbsSupportFragment&#x662F;&#x5B9E;&#x73B0;ISupportFragment&#x63A5;&#x53E3;&#x7684;Fragment&#x57FA;&#x7C7B;</p>
+<ol>
+<li>&#x53CD;&#x5C04;&#x521B;&#x5EFA;Fragment&#x5BF9;&#x8C61;</li>
+</ol>
+<pre class="language-"><code class="lang-kotlin"><span class="token comment">/**
+ * &#x521B;&#x5EFA;fragment
+ */</span>
+<span class="token keyword">inline</span> <span class="token keyword">fun</span> <span class="token operator">&lt;</span><span class="token keyword">reified</span> T <span class="token operator">:</span> AbsSupportFragment<span class="token operator">&gt;</span> <span class="token function">instanceSupFrg</span><span class="token punctuation">(</span><span class="token keyword">vararg</span> param<span class="token operator">:</span> Pair<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Any<span class="token operator">?</span><span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token operator">=</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token keyword">val</span> instance <span class="token operator">=</span> T<span class="token operator">::</span><span class="token keyword">class</span><span class="token punctuation">.</span>java<span class="token punctuation">.</span><span class="token function">getConstructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>param<span class="token punctuation">.</span><span class="token function">isNotEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                instance<span class="token punctuation">.</span>arguments <span class="token operator">=</span> <span class="token function">Bundle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">filterArguments</span><span class="token punctuation">(</span>param<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+            instance
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token operator">:</span> Exception<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            LogUtils<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;instanceFragment&quot;</span><span class="token punctuation">,</span> e<span class="token punctuation">)</span>
+            <span class="token keyword">null</span>
+        <span class="token punctuation">}</span>
+</code></pre>
+<ol>
+<li>&#x83B7;&#x53D6;&#x89E3;&#x6790;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570; arguments</li>
+</ol>
+<pre class="language-"><code class="lang-kotlin"><span class="token annotation builtin">@Suppress</span><span class="token punctuation">(</span><span class="token string">&quot;UNCHECKED_CAST&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">fun</span> Bundle<span class="token punctuation">.</span><span class="token function">filterArguments</span><span class="token punctuation">(</span>params<span class="token operator">:</span> Array<span class="token operator">&lt;</span><span class="token keyword">out</span> Pair<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Any<span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator">:</span> Bundle <span class="token punctuation">{</span>
+    params<span class="token punctuation">.</span><span class="token function">forEach</span> <span class="token punctuation">{</span>
+        <span class="token keyword">val</span> value <span class="token operator">=</span> it<span class="token punctuation">.</span>second
+        <span class="token keyword">when</span> <span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">null</span> <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putSerializable</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> <span class="token keyword">null</span> <span class="token keyword">as</span> Serializable<span class="token operator">?</span><span class="token punctuation">)</span>
+            <span class="token keyword">is</span> Int <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putInt</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> Long <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putLong</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> CharSequence <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putCharSequence</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> String <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putString</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> Float <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putFloat</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> Double <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putDouble</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> Char <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putChar</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> Short <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putShort</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> Boolean <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putBoolean</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> Serializable <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putSerializable</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> Bundle <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putBundle</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> Parcelable <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putParcelable</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> Array<span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token operator">-&gt;</span> <span class="token keyword">when</span> <span class="token punctuation">{</span>
+                value<span class="token punctuation">.</span>isArrayOf<span class="token operator">&lt;</span>CharSequence<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putCharSequenceArray</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value <span class="token keyword">as</span> Array<span class="token operator">&lt;</span><span class="token keyword">out</span> CharSequence<span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">)</span>
+                value<span class="token punctuation">.</span>isArrayOf<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putStringArray</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value <span class="token keyword">as</span> Array<span class="token operator">&lt;</span><span class="token keyword">out</span> String<span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">)</span>
+                value<span class="token punctuation">.</span>isArrayOf<span class="token operator">&lt;</span>Parcelable<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token function">putParcelableArray</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value <span class="token keyword">as</span> Array<span class="token operator">&lt;</span>Parcelable<span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">)</span>
+                <span class="token keyword">else</span> <span class="token operator">-&gt;</span> <span class="token keyword">throw</span> <span class="token function">AnkoException</span><span class="token punctuation">(</span><span class="token string">&quot;Intent extra <span class="token interpolation"><span class="token delimiter variable">${</span>it<span class="token punctuation">.</span>first<span class="token delimiter variable">}</span></span> has wrong type <span class="token interpolation"><span class="token delimiter variable">${</span>value<span class="token punctuation">.</span>javaClass<span class="token punctuation">.</span>name<span class="token delimiter variable">}</span></span>&quot;</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">is</span> Byte <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putByte</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> ByteArray <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putByteArray</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> IntArray <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putIntArray</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> LongArray <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putLongArray</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> FloatArray <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putFloatArray</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> DoubleArray <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putDoubleArray</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> CharArray <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putCharArray</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> ShortArray <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putShortArray</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">is</span> BooleanArray <span class="token operator">-&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putBooleanArray</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>first<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+            <span class="token keyword">else</span> <span class="token operator">-&gt;</span> <span class="token keyword">throw</span> <span class="token function">AnkoException</span><span class="token punctuation">(</span><span class="token string">&quot;Intent extra <span class="token interpolation"><span class="token delimiter variable">${</span>it<span class="token punctuation">.</span>first<span class="token delimiter variable">}</span></span> has wrong type <span class="token interpolation"><span class="token delimiter variable">${</span>value<span class="token punctuation">.</span>javaClass<span class="token punctuation">.</span>name<span class="token delimiter variable">}</span></span>&quot;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x90E8;&#x5206;&#x4EE3;&#x7801;&#x53C2;&#x8003;Anko &#x4E2D;fillIntentArguments &#x65B9;&#x6CD5;</p>
+<ol>
+<li>&#x5C01;&#x88C5;&#x540E;&#x4F7F;&#x7528;
+&#x7B80;&#x5355;&#x5C01;&#x88C5;&#x540E;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x542F;&#x52A8;Fragment <code>startFragment<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>BillingObtainFragment</span><span class="token punctuation">&gt;</span></span>()</code></li>
+</ol>
+<pre class="language-"><code class="lang-kotlin">startFragment<span class="token operator">&lt;</span>CameraFaceFragment<span class="token operator">&gt;</span><span class="token punctuation">(</span>
+                        CameraFaceFragment<span class="token punctuation">.</span>ORDER_BEAN <span class="token keyword">to</span> bean<span class="token punctuation">,</span>
+                        CameraFaceFragment<span class="token punctuation">.</span>CHECK_IN_NUMBER <span class="token keyword">to</span> count<span class="token punctuation">,</span>
+                        CameraFaceFragment<span class="token punctuation">.</span>FROM_ORDER <span class="token keyword">to</span> <span class="token boolean">true</span>
+                <span class="token punctuation">)</span>
+</code></pre>
+<p>&#x597D;&#x4E86;&#xFF0C;&#x4E0B;&#x9762;&#x5C31;&#x6B63;&#x5F0F;&#x5F00;&#x59CB;&#x5206;&#x6790;start &#x600E;&#x4E48;&#x5B9E;&#x73B0;&#x7684;&#x4E86;&#x3002;</p>
+<p><strong>1. SupportFragmentDelegate&#x4E2D;&#x7684;start&#x65B9;&#x6CD5;</strong></p>
+<p>&#x65E0;&#x8BBA;&#x662F;&#x7EE7;&#x627F;SupportFragment&#x8FD8;&#x662F;&#x5B9E;&#x73B0;ISupportFragment &#x63A5;&#x53E3;&#xFF0C;&#x8C03;&#x7528;Start&#x65B9;&#x6CD5;&#x65F6;&#x90FD;&#x662F;&#x8C03;&#x7528;&#x4EE3;&#x7406;&#x7C7B;&#xFF08;SupportFragmentDelegate&#xFF09;&#x7684; start &#x65B9;&#x6CD5;&#xFF0C;&#x800C;&#x91CC;&#x9762;&#x6700;&#x7EC8;&#x90FD;&#x662F;&#x8FD0;&#x884C;start &#x7684;&#x91CD;&#x8F7D;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java">    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">start</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">ISupportFragment</span> toFragment<span class="token punctuation">,</span> <span class="token annotation punctuation">@ISupportFragment</span><span class="token punctuation">.</span><span class="token class-name">LaunchMode</span> <span class="token keyword">int</span> launchMode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        mTransactionDelegate<span class="token punctuation">.</span><span class="token function">dispatchStartTransaction</span><span class="token punctuation">(</span>mFragment<span class="token punctuation">.</span><span class="token function">getFragmentManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> mSupportF<span class="token punctuation">,</span> toFragment<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> launchMode<span class="token punctuation">,</span> <span class="token class-name">TransactionDelegate</span><span class="token punctuation">.</span>TYPE_ADD<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x800C; mTransactionDelegate &#x53D8;&#x91CF;&#x660E;&#x663E;&#x4E5F;&#x662F;&#x4EE3;&#x7406;&#x5BF9;&#x8C61;&#xFF0C;&#x5728;onAttach&#x65B9;&#x6CD5;&#x5185;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java">    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onAttach</span><span class="token punctuation">(</span><span class="token class-name">Activity</span> activity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>activity <span class="token keyword">instanceof</span> <span class="token class-name">ISupportActivity</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>mSupport <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">ISupportActivity</span><span class="token punctuation">)</span> activity<span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>_mActivity <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">FragmentActivity</span><span class="token punctuation">)</span> activity<span class="token punctuation">;</span>
+            <span class="token comment">//&#x8FD9;&#x91CC;&#x521D;&#x59CB;&#x5316;&#x4E8B;&#x52A1;&#x4EE3;&#x7406;</span>
+            mTransactionDelegate <span class="token operator">=</span> mSupport<span class="token punctuation">.</span><span class="token function">getSupportDelegate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTransactionDelegate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span>activity<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSimpleName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&quot; must impl ISupportActivity!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x770B;&#x89C1;&#x5176;&#x5B9E; SupportFragmentDelegate &#x91CC;&#x9762;&#x7684;&#x4E8B;&#x52A1;&#x4EE3;&#x7406;&#x548C; SupportActivityDelegate &#x5176;&#x5B9E;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;</p>
+<p><strong>2.TransactionDelegate&#x4E2D;dispatchStartTransaction&#x65B9;&#x6CD5;</strong></p>
+<p>&#x524D;&#x9762;&#x63A5;&#x89E6;&#x8FC7;Transaction&#x4E2D;&#x7684;loadRootTransaction &#x65B9;&#x6CD5;&#xFF0C;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E0B;dispatchStartTransaction&#x4F1A;&#x7B80;&#x5355;&#x597D;&#x591A;&#x3002;</p>
+<pre class="language-"><code class="lang-java">    <span class="token keyword">void</span> <span class="token function">dispatchStartTransaction</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">FragmentManager</span> fm<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ISupportFragment</span> from<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ISupportFragment</span> <span class="token keyword">to</span><span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token keyword">int</span> requestCode<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token keyword">int</span> launchMode<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token keyword">int</span> type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">enqueue</span><span class="token punctuation">(</span>fm<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">Action</span><span class="token punctuation">(</span>launchMode <span class="token operator">==</span> <span class="token class-name">ISupportFragment</span><span class="token punctuation">.</span>SINGLETASK <span class="token operator">?</span> <span class="token class-name">Action</span><span class="token punctuation">.</span>ACTION_POP_MOCK <span class="token operator">:</span> <span class="token class-name">Action</span><span class="token punctuation">.</span>ACTION_NORMAL<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">doDispatchStartTransaction</span><span class="token punctuation">(</span>fm<span class="token punctuation">,</span> from<span class="token punctuation">,</span> <span class="token keyword">to</span><span class="token punctuation">,</span> requestCode<span class="token punctuation">,</span> launchMode<span class="token punctuation">,</span> type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x540C;&#x6837;&#x4E5F;&#x662F;&#x6784;&#x6210;Action&#x5BF9;&#x8C61;&#x653E;&#x5165;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x540C;&#x6837;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x5173;&#x5FC3;run&#x65B9;&#x6CD5;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x8FD9;&#x91CC;&#x628A;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x903B;&#x8F91;&#x653E;&#x5230;
+doDispatchStartTransaction&#x65B9;&#x6CD5;&#x3002;</p>
+<pre class="language-"><code class="lang-java">    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">doDispatchStartTransaction</span><span class="token punctuation">(</span><span class="token class-name">FragmentManager</span> fm<span class="token punctuation">,</span> <span class="token class-name">ISupportFragment</span> from<span class="token punctuation">,</span> <span class="token class-name">ISupportFragment</span> <span class="token keyword">to</span><span class="token punctuation">,</span> <span class="token keyword">int</span> requestCode<span class="token punctuation">,</span> <span class="token keyword">int</span> launchMode<span class="token punctuation">,</span> <span class="token keyword">int</span> type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">checkNotNull</span><span class="token punctuation">(</span><span class="token keyword">to</span><span class="token punctuation">,</span> <span class="token string">&quot;toFragment == null&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// &#x5982;&#x679C;start&#x8981;&#x83B7;&#x53D6;&#x7ED3;&#x679C;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>type <span class="token operator">==</span> TYPE_ADD_RESULT <span class="token operator">||</span> type <span class="token operator">==</span> TYPE_ADD_RESULT_WITHOUT_HIDE<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> from <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// &#x5224;&#x65AD;&#x662F;&#x5426;attach &#x5230;Activity</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token class-name">Fragment</span><span class="token punctuation">)</span> from<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isAdded</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">w</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token class-name">Fragment</span><span class="token punctuation">)</span> from<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSimpleName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&quot; has not been attached yet! startForResult() converted to start()&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token comment">// &#x901A;&#x8FC7;Bundle &#x5B58;&#x50A8;&#x8BF7;&#x6C42;&#x7801;&#x5230;from &#x548C; to Fragment&#x4E2D;</span>
+                <span class="token function">saveRequestCode</span><span class="token punctuation">(</span>fm<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name">Fragment</span><span class="token punctuation">)</span> from<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name">Fragment</span><span class="token punctuation">)</span> <span class="token keyword">to</span><span class="token punctuation">,</span> requestCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// &#x73B0;&#x5728;&#x83B7;&#x53D6;&#x9876;&#x90E8;Fragment</span>
+        from <span class="token operator">=</span> <span class="token function">getTopFragmentForStart</span><span class="token punctuation">(</span>from<span class="token punctuation">,</span> fm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// &#x83B7;&#x53D6;&#x4E4B;&#x524D;replace&#x7684; containerId</span>
+        <span class="token keyword">int</span> containerId <span class="token operator">=</span> <span class="token function">getArguments</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token class-name">Fragment</span><span class="token punctuation">)</span> <span class="token keyword">to</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span>FRAGMENTATION_ARG_CONTAINER<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// &#x5904;&#x7406;&#x6808;&#x9876;Fragment&#x4E3A;&#x7A7A;&#x548C;containerId&#x4E3A;&#x7A7A;&#x7684;&#x60C5;&#x51B5;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>from <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> containerId <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;There is no Fragment in the FragmentManager, maybe you need to call loadRootFragment()!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// &#x5F53; containerId &#x4E3A;&#x7A7A;&#x65F6;&#x5019;&#xFF0C;&#x653E;&#x5165;Fragment &#x7684;argument&#x4E2D;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>from <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> containerId <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">bindContainerId</span><span class="token punctuation">(</span>from<span class="token punctuation">.</span><span class="token function">getSupportDelegate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>mContainerId<span class="token punctuation">,</span> <span class="token keyword">to</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// process ExtraTransaction</span>
+        <span class="token class-name">String</span> toFragmentTag <span class="token operator">=</span> <span class="token keyword">to</span><span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">boolean</span> dontAddToBackStack <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TransactionRecord</span><span class="token punctuation">.</span><span class="token class-name">SharedElement</span><span class="token punctuation">&gt;</span></span> sharedElementList <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token class-name">TransactionRecord</span> transactionRecord <span class="token operator">=</span> <span class="token keyword">to</span><span class="token punctuation">.</span><span class="token function">getSupportDelegate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>mTransactionRecord<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>transactionRecord <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>transactionRecord<span class="token punctuation">.</span>tag <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                toFragmentTag <span class="token operator">=</span> transactionRecord<span class="token punctuation">.</span>tag<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            dontAddToBackStack <span class="token operator">=</span> transactionRecord<span class="token punctuation">.</span>dontAddToBackStack<span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>transactionRecord<span class="token punctuation">.</span>sharedElementList <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                sharedElementList <span class="token operator">=</span> transactionRecord<span class="token punctuation">.</span>sharedElementList<span class="token punctuation">;</span>
+                <span class="token comment">// Compat SharedElement</span>
+                <span class="token class-name">FragmentationMagician</span><span class="token punctuation">.</span><span class="token function">reorderIndices</span><span class="token punctuation">(</span>fm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// &#x5904;&#x7406;&#x542F;&#x52A8;&#x6A21;&#x5F0F;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">handleLaunchMode</span><span class="token punctuation">(</span>fm<span class="token punctuation">,</span> from<span class="token punctuation">,</span> <span class="token keyword">to</span><span class="token punctuation">,</span> toFragmentTag<span class="token punctuation">,</span> launchMode<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token comment">// &#x5B9E;&#x9645;&#x542F;&#x52A8;</span>
+        <span class="token function">start</span><span class="token punctuation">(</span>fm<span class="token punctuation">,</span> from<span class="token punctuation">,</span> <span class="token keyword">to</span><span class="token punctuation">,</span> toFragmentTag<span class="token punctuation">,</span> dontAddToBackStack<span class="token punctuation">,</span> sharedElementList<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">,</span> type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x4EE3;&#x7801;&#x91CF;&#x6BD4;&#x4E4B;&#x524D;&#x591A;&#xFF0C;&#x9664;&#x53BB;&#x5904;&#x7406;&#x5F02;&#x5E38;&#x573A;&#x666F;&#xFF0C;&#x91CD;&#x8981;&#x903B;&#x8F91;&#x5C31;&#x4E24;&#x4E2A;&#x3002;1. &#x5904;&#x7406;&#x5E26;&#x6709;&#x7C7B;&#x4F3C;&#x542F;&#x52A8;&#x6A21;&#x5F0F;&#x7684;start&#xFF1B;2. &#x8C03;&#x7528;start &#x65B9;&#x6CD5;&#x5B9E;&#x9645;&#x542F;&#x52A8;Fragment&#x3002;</p>
+<p><strong>3.1 TransactionDelegate&#x7684;handleLaunchMode&#x65B9;&#x6CD5;</strong></p>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E3B;&#x8981;&#x4ECE;&#x5904;&#x7406;&#x5E26;&#x6709;&#x542F;&#x52A8;&#x6A21;&#x5F0F;&#x7684;start</p>
+<pre class="language-"><code class="lang-java">    <span class="token keyword">private</span> <span class="token keyword">boolean</span> <span class="token function">handleLaunchMode</span><span class="token punctuation">(</span><span class="token class-name">FragmentManager</span> fm<span class="token punctuation">,</span> <span class="token class-name">ISupportFragment</span> topFragment<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ISupportFragment</span> <span class="token keyword">to</span><span class="token punctuation">,</span> <span class="token class-name">String</span> toFragmentTag<span class="token punctuation">,</span> <span class="token keyword">int</span> launchMode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>topFragment <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token keyword">final</span> <span class="token class-name">ISupportFragment</span> stackToFragment <span class="token operator">=</span> <span class="token class-name">SupportHelper</span><span class="token punctuation">.</span><span class="token function">findBackStackFragment</span><span class="token punctuation">(</span><span class="token keyword">to</span><span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> toFragmentTag<span class="token punctuation">,</span> fm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>stackToFragment <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>launchMode <span class="token operator">==</span> <span class="token class-name">ISupportFragment</span><span class="token punctuation">.</span>SINGLETOP<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">to</span> <span class="token operator">==</span> topFragment <span class="token operator">||</span> <span class="token keyword">to</span><span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>topFragment<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">handleNewBundle</span><span class="token punctuation">(</span><span class="token keyword">to</span><span class="token punctuation">,</span> stackToFragment<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>launchMode <span class="token operator">==</span> <span class="token class-name">ISupportFragment</span><span class="token punctuation">.</span>SINGLETASK<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">doPopTo</span><span class="token punctuation">(</span>toFragmentTag<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">,</span> fm<span class="token punctuation">,</span> DEFAULT_POPTO_ANIM<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            mHandler<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token annotation punctuation">@Override</span>
+                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">handleNewBundle</span><span class="token punctuation">(</span><span class="token keyword">to</span><span class="token punctuation">,</span> stackToFragment<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x91CC;&#x9762;&#x903B;&#x8F91;&#x4E5F;&#x662F;&#x5F88;&#x7B80;&#x5355;&#x3002;&#x901A;&#x8FC7;TAG&#x540D;&#x5B57;&#x627E;&#x5230;&#x76EE;&#x6807;fragment&#xFF0C;&#x5982;&#x679C;&#x662F;SINGLETOP&#xFF0C;&#x68C0;&#x67E5;&#x6808;&#x9876;fragment&#x662F;&#x4E0D;&#x662F;&#x8981;&#x542F;&#x52A8;&#x7684;fragment&#xFF0C;&#x5982;&#x679C;&#x662F;&#x6267;&#x884C;handleNewBundle&#x65B9;&#x6CD5;&#xFF08;&#x91CC;&#x9762;&#x903B;&#x8F91;&#x662F;&#x66F4;&#x65B0;argument&#xFF0C;&#x6267;&#x884C;fragment&#x7684;onNewBundle&#x65B9;&#x6CD5;&#xFF09;&#x3002;&#x5982;&#x679C;&#x662F;SINGLETASK&#x6A21;&#x5F0F;&#xFF0C;&#x6267;&#x884C;doPopTo&#x65B9;&#x6CD5;&#xFF0C;&#x628A;&#x76EE;&#x6807;fragment&#x4E0A;&#x9762;&#x7684;&#x90FD;&#x79FB;&#x9664;&#x6389;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6267;&#x884C;handleNewBundle&#x65B9;&#x6CD5;&#x3002;</p>
+<p><strong>3.2 TransactionDelegate&#x7684;start&#x65B9;&#x6CD5;</strong></p>
+<p>&#x53C8;&#x56DE;&#x5230;&#x7684;&#x4E86;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x5728;&#x770B; loadRootFragment &#x65F6;&#x5019;&#x63A5;&#x89E6;&#x8FC7;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x8FC7;&#x5F88;&#x591A;&#x7EC6;&#x8282;&#x88AB;&#x6211;&#x4EEC;&#x9690;&#x85CF;,&#x4E0D;&#x8FC7;&#x62C6;&#x5206;&#x4E0B;&#x53BB;&#x4E5F;&#x6BD4;&#x8F83;&#x597D;&#x7406;&#x89E3;&#x3002;&#x5904;&#x7406;sharedElement&#x52A8;&#x753B;-&gt;&#x5904;&#x7406;loadRoot&#x60C5;&#x51B5;-&gt;&#x5904;&#x7406;&#x6B63;&#x5E38;&#x542F;&#x52A8;&#x60C5;&#x51B5;-&gt;&#x662F;&#x5426;&#x6DFB;&#x52A0;&#x5230;&#x56DE;&#x9000;&#x6808;addToBackStack-&gt;&#x63D0;&#x4EA4;&#x4E8B;&#x52A1;&#x3002;&#x800C;&#x5176;&#x4E2D;&#x548C;&#x6211;&#x4EEC;&#x6709;&#x5173;&#x7684;&#x903B;&#x8F91;&#x662F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java">            <span class="token keyword">if</span> <span class="token punctuation">(</span>addMode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                ft<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>from<span class="token punctuation">.</span><span class="token function">getSupportDelegate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>mContainerId<span class="token punctuation">,</span> toF<span class="token punctuation">,</span> toFragmentTag<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>type <span class="token operator">!=</span> TYPE_ADD_WITHOUT_HIDE <span class="token operator">&amp;&amp;</span> type <span class="token operator">!=</span> TYPE_ADD_RESULT_WITHOUT_HIDE<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    ft<span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span>fromF<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                ft<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>from<span class="token punctuation">.</span><span class="token function">getSupportDelegate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>mContainerId<span class="token punctuation">,</span> toF<span class="token punctuation">,</span> toFragmentTag<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E3B;&#x8981;&#x6839;&#x636E;&#x4E0D;&#x540C;type&#x8FDB;&#x884C;add&#x3001;hide&#x3001;replace&#x64CD;&#x4F5C;&#x3002;</p>
+<h2 id="pop&#x64CD;&#x4F5C;"><a name="pop&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#pop&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>pop&#x64CD;&#x4F5C;</h2>
+<p>&#x6839;&#x636E;&#x524D;&#x9762;&#x7684;&#x7ECF;&#x9A8C;&#xFF0C;&#x5B9E;&#x9645;&#x64CD;&#x4F5C;&#x770B;TransactionDelegate&#x7684;pop&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java">    <span class="token keyword">void</span> <span class="token function">pop</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">FragmentManager</span> fm<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">enqueue</span><span class="token punctuation">(</span>fm<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">Action</span><span class="token punctuation">(</span><span class="token class-name">Action</span><span class="token punctuation">.</span>ACTION_POP<span class="token punctuation">,</span> fm<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">handleAfterSaveInStateTransactionException</span><span class="token punctuation">(</span>fm<span class="token punctuation">,</span> <span class="token string">&quot;pop()&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">removeTopFragment</span><span class="token punctuation">(</span>fm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token class-name">FragmentationMagician</span><span class="token punctuation">.</span><span class="token function">popBackStackAllowingStateLoss</span><span class="token punctuation">(</span>fm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x91CC;&#x9762;&#x5B9E;&#x9645;&#x79FB;&#x9664;&#x7684;&#x65B9;&#x6CD5;&#x662F;removeTopFragment</p>
+<pre class="language-"><code class="lang-java">    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">removeTopFragment</span><span class="token punctuation">(</span><span class="token class-name">FragmentManager</span> fm<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ISupportFragment</span> top <span class="token operator">=</span> <span class="token class-name">SupportHelper</span><span class="token punctuation">.</span><span class="token function">getBackStackTopFragment</span><span class="token punctuation">(</span>fm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>top <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            fm<span class="token punctuation">.</span><span class="token function">beginTransaction</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">setTransition</span><span class="token punctuation">(</span><span class="token class-name">FragmentTransaction</span><span class="token punctuation">.</span>TRANSIT_FRAGMENT_CLOSE<span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token class-name">Fragment</span><span class="token punctuation">)</span> top<span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">commitAllowingStateLoss</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x89C1;&#x91CC;&#x9762;&#x5B9E;&#x9645;&#x4E0A;&#x8FDB;&#x884C;remove&#x4E8B;&#x52A1;&#x64CD;&#x4F5C;&#x3002;</p>
+<h1 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x603B;&#x7ED3;</h1>
+<p>&#x7ECF;&#x8FC7;&#x6E90;&#x7801;&#x5B66;&#x4E60;&#x53D1;&#x73B0;&#xFF0C;&#x91CC;&#x9762;&#x7528;&#x4E86;&#x5F88;&#x591A;&#x4EE3;&#x7406;&#x6A21;&#x5F0F;&#xFF0C;&#x4F46;&#x7ECF;&#x8FC7;&#x5256;&#x6790;&#x53EF;&#x4EE5;&#x5927;&#x6982;&#x5206;&#x6210;3&#x4E2A;&#x90E8;&#x5206;&#xFF1A;</p>
+<ol>
+<li>&#x5916;&#x89C2;&#x7C7B;
+&#x6BD4;&#x5982;SupportFragment&#xFF0C;ISupportFragment&#xFF0C;SupportActivity&#xFF0C;ISupportActivity&#xFF0C;SupportFragmentDelegate&#xFF0C;SupportActivityDelegate &#x8FD9;&#x4E9B;&#x5916;&#x89C2;&#x7C7B;&#x76F4;&#x63A5;&#x8DDF;&#x4F7F;&#x7528;&#x8005;&#x63A5;&#x89E6;&#x3002;</li>
+<li><p>&#x6838;&#x5FC3;&#x7C7B;
+&#x4E3B;&#x8981;&#x662F;&#x5B9E;&#x9645;&#x8FDB;&#x884C;&#x4E8B;&#x52A1;&#x64CD;&#x4F5C;&#x7684;TransactionDele&#x4EE3;&#x7406;&#x7C7B;&#xFF0C;&#x4EE5;&#x53CA;ActionQueue&#xFF0C;Action&#x8FD9;&#x4E9B;&#x5C01;&#x88C5;&#x64CD;&#x4F5C;&#x7684;&#x7C7B;&#x3002;&#x91CC;&#x9762;&#x5904;&#x7406;&#x4E86;&#x52A0;&#x8F7D;&#x6839;Fragment&#x3001;&#x66FF;&#x6362;&#x6839;Fragment&#x3001;add/replace &#x5B50;Fragment&#x3001;&#x9690;&#x85CF;/&#x663E;&#x793A;Fragment&#x3001;&#x542F;&#x52A8;Fragment&#xFF0C;&#x4EE5;&#x53CA;Fragment&#x51FA;&#x6808;&#xFF0C;&#x83B7;&#x53D6;&#x67D0;Fragment &#xFF0C;&#x5904;&#x7406;&#x8F6C;&#x573A;&#x52A8;&#x753B;&#x7B49;&#x64CD;&#x4F5C;&#x3002;</p>
+</li>
+<li><p>&#x5E2E;&#x52A9;&#x7C7B;
+&#x4E3B;&#x8981;&#x662F;&#x4E00;&#x4E9B;DebugStackDelegate&#xFF0C;SupportHelper&#xFF0C;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x7C7B;&#xFF0C;&#x52A8;&#x753B;&#x7C7B;&#x7B49;&#x3002; </p>
+</li>
+</ol>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; david 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-04-28 15:09:24
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ArrayList源码学习.html" class="navigation navigation-prev " aria-label="Previous page: ArrayList 源码学习">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="HashMap源码学习.html" class="navigation navigation-next " aria-label="Next page: HashMap 源码学习笔记">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Fragmentation 库学习笔记","level":"2.2","depth":1,"next":{"title":"HashMap 源码学习笔记","level":"2.3","depth":1,"path":"Android-old/HashMap源码学习.md","ref":"Android-old/HashMap源码学习.md","articles":[]},"previous":{"title":"ArrayList 源码学习","level":"2.1","depth":1,"path":"Android-old/ArrayList源码学习.md","ref":"Android-old/ArrayList源码学习.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","prism","-highlight","copy-code-button","search-pro","-search","-lunr","expandable-chapters","splitter","-sharing","github-buttons","tbfed-pagefooter","anchor-navigation-ex","summary"],"styles":{"website":"./public-repertory/css/gitbook-configure.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy david 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"summary":{},"splitter":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"github-buttons":{"buttons":[{"user":"DavidZhong003","width":"160","type":"follow","count":true,"size":"small"}]},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"zhongshan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"david zhong 的文档库","language":"zh-hans","gitbook":"*","description":"zhongshan 的文档库. 里面包含了个人撰写的文章"},"file":{"path":"Android-old/Fragmentation 库学习笔记.md","mtime":"2020-04-28T07:09:24.701Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-28T08:17:14.512Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

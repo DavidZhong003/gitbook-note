@@ -1,0 +1,54 @@
+{
+  "title": "david zhong 的文档库",
+  "author": "zhongshan",
+  "description": "zhongshan 的文档库. 里面包含了个人撰写的文章",
+  "language": "zh-hans",
+  "styles": {
+    "website": "./public-repertory/css/gitbook-configure.css"
+  },
+  "plugins": [
+    "theme-comscore",
+    "prism",
+    "-highlight",
+    "copy-code-button",
+    "search-pro",
+    "-search",
+    "-lunr",
+    "expandable-chapters",
+    "splitter",
+    "-sharing",
+    "github-buttons",
+    "tbfed-pagefooter",
+    "anchor-navigation-ex",
+    "summary"
+  ],
+  "pluginsConfig": {
+    "github-buttons": {
+      "buttons": [
+        {
+          "user": "DavidZhong003",
+          "width": "160", 
+          "type": "follow", 
+          "count": true,
+          "size": "small"
+        }
+      ]
+    },
+    "prism": {
+      "css": [
+        "prismjs/themes/prism-solarizedlight.css"
+      ],
+      "lang": {
+        "shell": "bash"
+      }
+    },
+    "tbfed-pagefooter": {
+      "copyright":"Copyright &copy david 2019",
+      "modify_label": "该文件修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "anchor-navigation-ex": {
+      "showLevel": false
+    }
+  }
+}

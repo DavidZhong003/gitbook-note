@@ -1,0 +1,684 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Flutter 应用启动分析 · david zhong 的文档库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zhongshan">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3-Flutter 混合工程.html" />
+    
+    
+    <link rel="prev" href="1-Flutter图片加载.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"DavidZhong003","width":"160","type":"follow","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">0-Flutter</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1-Flutter图片加载.html">
+            
+                <a href="1-Flutter图片加载.html">
+            
+                    
+                    Flutter 图片加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="2-Flutter 应用启动分析.html">
+            
+                <a href="2-Flutter 应用启动分析.html">
+            
+                    
+                    Flutter 应用启动分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3-Flutter 混合工程.html">
+            
+                <a href="3-Flutter 混合工程.html">
+            
+                    
+                    Flutter 混合工程搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4-Flutter 混合工程踩坑记录.html">
+            
+                <a href="4-Flutter 混合工程踩坑记录.html">
+            
+                    
+                    Flutter混合工程踩坑记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="5-Flutter 混合工程上传AAR.html">
+            
+                <a href="5-Flutter 混合工程上传AAR.html">
+            
+                    
+                    Flutter 混合工程上传AAR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="6-Flutter 引擎启动v1-9.html">
+            
+                <a href="6-Flutter 引擎启动v1-9.html">
+            
+                    
+                    Flutter 引擎启动（1.9）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="7-Flutter 引擎启动v1-12.html">
+            
+                <a href="7-Flutter 引擎启动v1-12.html">
+            
+                    
+                    Flutter引擎启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="8-Flutter Redux简单介绍.html">
+            
+                <a href="8-Flutter Redux简单介绍.html">
+            
+                    
+                    Redux 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Android-old</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Android-old/ArrayList源码学习.html">
+            
+                <a href="../Android-old/ArrayList源码学习.html">
+            
+                    
+                    ArrayList 源码学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Android-old/Fragmentation 库学习笔记.html">
+            
+                <a href="../Android-old/Fragmentation 库学习笔记.html">
+            
+                    
+                    Fragmentation 库学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Android-old/HashMap源码学习.html">
+            
+                <a href="../Android-old/HashMap源码学习.html">
+            
+                    
+                    HashMap 源码学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../Android-old/JVM学习笔记.html">
+            
+                <a href="../Android-old/JVM学习笔记.html">
+            
+                    
+                    JVM 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../Android-old/LinkedList源码学习.html">
+            
+                <a href="../Android-old/LinkedList源码学习.html">
+            
+                    
+                    LinkedList 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../Android-old/Okhttp源码学习.html">
+            
+                <a href="../Android-old/Okhttp源码学习.html">
+            
+                    
+                    Okhttp 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../Android-old/Retrofit 学习笔记.html">
+            
+                <a href="../Android-old/Retrofit 学习笔记.html">
+            
+                    
+                    Retrofit 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../Android-old/Set集合源码学习.html">
+            
+                <a href="../Android-old/Set集合源码学习.html">
+            
+                    
+                    Set 集合源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../Android-old/沉浸式状态栏.html">
+            
+                <a href="../Android-old/沉浸式状态栏.html">
+            
+                    
+                    沉浸式状态栏
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">machine</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../machine/1-机器学习学习笔记--基础.html">
+            
+                <a href="../machine/1-机器学习学习笔记--基础.html">
+            
+                    
+                    机器学习笔记-基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../machine/2- 机器学习学习笔记--autograd自动求导.html">
+            
+                <a href="../machine/2- 机器学习学习笔记--autograd自动求导.html">
+            
+                    
+                    机器学习笔记-autograd自动求导
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../machine/3- 机器学习学习笔记--NDArray处理数据.html">
+            
+                <a href="../machine/3- 机器学习学习笔记--NDArray处理数据.html">
+            
+                    
+                    机器学习笔记-NDArray处理数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../machine/4-Numpy 教程.html">
+            
+                <a href="../machine/4-Numpy 教程.html">
+            
+                    
+                    机器学习笔记-Numpy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../machine/5-机器学习笔记--矩阵.html">
+            
+                <a href="../machine/5-机器学习笔记--矩阵.html">
+            
+                    
+                    机器学习笔记-矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../machine/6-机器学习笔记--线性回归.html">
+            
+                <a href="../machine/6-机器学习笔记--线性回归.html">
+            
+                    
+                    机器学习笔记-线性回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../其他/1-Conda常用命令.html">
+            
+                <a href="../其他/1-Conda常用命令.html">
+            
+                    
+                    管理conda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../其他/2-Git学习笔记.html">
+            
+                <a href="../其他/2-Git学习笔记.html">
+            
+                    
+                    Git 学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../其他/3-UML类图.html">
+            
+                <a href="../其他/3-UML类图.html">
+            
+                    
+                    UML 类图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Flutter 应用启动分析</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#flutter-&#x5E94;&#x7528;&#x542F;&#x52A8;&#x5206;&#x6790;"><b></b>Flutter &#x5E94;&#x7528;&#x542F;&#x52A8;&#x5206;&#x6790;</a></li><li><span class="title-icon "></span><a href="#&#x6D41;&#x7A0B;"><b></b>&#x6D41;&#x7A0B;</a></li><ul><li><span class="title-icon "></span><a href="#1-runapp"><b></b>1. runApp</a></li><li><span class="title-icon "></span><a href="#11-ensureinitialized"><b></b>1.1 ensureInitialized</a></li></ul></ul></div><a href="#flutter-&#x5E94;&#x7528;&#x542F;&#x52A8;&#x5206;&#x6790;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="flutter-&#x5E94;&#x7528;&#x542F;&#x52A8;&#x5206;&#x6790;"><a name="flutter-&#x5E94;&#x7528;&#x542F;&#x52A8;&#x5206;&#x6790;" class="anchor-navigation-ex-anchor" href="#flutter-&#x5E94;&#x7528;&#x542F;&#x52A8;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>Flutter &#x5E94;&#x7528;&#x542F;&#x52A8;&#x5206;&#x6790;</h1>
+<p>dart &#x865A;&#x62DF;&#x673A;&#x542F;&#x52A8;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x5165;&#x53E3;&#x51FD;&#x6570;main&#xFF0C;&#x800C;&#x901A;&#x5E38;&#x6211;&#x4EEC;&#x8C03;&#x7528;runApp&#x6765;&#x542F;&#x52A8;&#x6211;&#x4EEC;&#x7684;flutter &#x5E94;&#x7528;&#x3002;&#x800C;&#x91CC;&#x9762;&#x53C8;&#x505A;&#x4E86;&#x4EC0;&#x4E48;&#x4E8B;&#x60C5;&#x5462;&#xFF1F;&#x600E;&#x4E48;&#x5173;&#x8054;&#x6211;&#x4EEC;&#x7684;Widget&#xFF1F;</p>
+<h1 id="&#x6D41;&#x7A0B;"><a name="&#x6D41;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D41;&#x7A0B;</h1>
+<h2 id="1-runapp"><a name="1-runapp" class="anchor-navigation-ex-anchor" href="#1-runapp"><i class="fa fa-link" aria-hidden="true"></i></a>1. runApp</h2>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">void</span> <span class="token function">runApp</span><span class="token punctuation">(</span>Widget app<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  WidgetsFlutterBinding<span class="token punctuation">.</span><span class="token function">ensureInitialized</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token function">scheduleAttachRootWidget</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token function">scheduleWarmUpFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="11-ensureinitialized"><a name="11-ensureinitialized" class="anchor-navigation-ex-anchor" href="#11-ensureinitialized"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 ensureInitialized</h2>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">class</span> <span class="token class-name">WidgetsFlutterBinding</span> <span class="token keyword">extends</span> <span class="token class-name">BindingBase</span> <span class="token keyword">with</span> GestureBinding<span class="token punctuation">,</span> ServicesBinding<span class="token punctuation">,</span> SchedulerBinding<span class="token punctuation">,</span> PaintingBinding<span class="token punctuation">,</span> SemanticsBinding<span class="token punctuation">,</span> RendererBinding<span class="token punctuation">,</span> WidgetsBinding <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> WidgetsBinding <span class="token function">ensureInitialized</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>WidgetsBinding<span class="token punctuation">.</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+      <span class="token function">WidgetsFlutterBinding</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> WidgetsBinding<span class="token punctuation">.</span>instance<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;WidgetFlutterBinding&#x7C7B;with &#x4E86;&#x5F88;&#x591A;&#x7C7B;&#x3002;</p>
+<ul>
+<li><p>BindingBase &#x62BD;&#x8C61;&#x57FA;&#x7C7B;</p>
+</li>
+<li><p>GestureBinding &#x624B;&#x52BF;&#x7ED1;&#x5B9A;&#x7C7B;</p>
+</li>
+<li><p>ServicesBinding &#x5E73;&#x53F0;&#x670D;&#x52A1;&#x7ED1;&#x5B9A;&#x7C7B;</p>
+</li>
+<li><p>SchedulerBinding &#x8C03;&#x5EA6;&#x5E27;&#x7ED8;&#x5236;&#x7ED1;&#x5B9A;&#x7C7B;</p>
+</li>
+<li><p>PaintingBinding &#x7ED8;&#x5236;&#x7ED1;&#x5B9A;&#x7C7B;</p>
+</li>
+<li><p>SemanticsBinding &#x8BED;&#x4E49;&#x7ED1;&#x5B9A;&#x7C7B;</p>
+</li>
+<li><p>RendererBinding &#x6E32;&#x67D3;&#x7ED1;&#x5B9A;&#x7C7B;</p>
+</li>
+<li><p>WidgetsBinding widget&#x7EC4;&#x4EF6;&#x7ED1;&#x5B9A;&#x7C7B;</p>
+</li>
+</ul>
+<p>scheduleAttachRootWidget &#x8C03;&#x7528;&#xFF1A;</p>
+<p>---WidgetsBinding::scheduleAttachRootWidget</p>
+<p>&#x200B;    ---WidgetsBinding::attachRootWidget</p>
+<p>&#x200B;        ---RenderObjectToWidgetAdapter::attachToRenderTree</p>
+<p>&#x200B;             ---RenderObjectToWidgetAdapter::createElement</p>
+<p>&#x200B;             ---RenderObjectToWidgetElement::mout(null,null)</p>
+<p>&#x200B;                 ---RootRenderObjectElement::mount</p>
+<p>&#x200B;                     ---RenderObjectElement::mount </p>
+<p>&#x200B;                         ---Element::mount</p>
+<p>&#x200B;             --- RenderObjectToWidgetElement::_rebuild</p>
+<p>&#x200B;                  ---Element::updateChild</p>
+<p>&#x200B;                      ---Element::inflateWidget </p>
+<p>&#x200B;                           ---newWidget.createElement();     MyApp    </p>
+<p>&#x200B;                           ---Element::mout </p>
+<p>&#x6839;Element   RenderObjectToWidgetElement&#x76F4;&#x63A5;&#x7528;&#x4E86;&#x81EA;&#x8EAB;&#x6301;&#x6709;&#x7684;&#x6839;WidgetRenderObjectToWidgetAdapter&#x6301;&#x6709;&#x7684;child&#x6765;&#x5173;&#x8054;&#x4E86;&#x6211;&#x4EEC;&#x4F20;&#x5165;&#x7684;MyApp&#x4F5C;&#x4E3A;&#x5B50;Widget</p>
+<blockquote>
+<p>&#x5EFA;&#x7ACB;Element&#x6811;&#x6700;&#x91CD;&#x8981;&#x7684;&#x64CD;&#x4F5C;&#x5C31;&#x662F;Element.mount&#x3002;
+&#x6BCF;&#x4E00;&#x79CD;&#x5177;&#x4F53;&#x7C7B;&#x578B;&#x7684;Element&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#x5982;&#x4F55;&#x5C06;&#x5F53;&#x524D;Element&#x6302;&#x63A5;(mount)&#x5230;&#x7236;&#x8282;&#x70B9;&#x4E0A;&#x7684;&#x64CD;&#x4F5C;&#xFF1B;&#x8FD9;&#x4E2A;&#x6302;&#x63A5;&#x64CD;&#x4F5C;&#x9664;&#x4E86;&#x4E0E;&#x7236;Element&#x5EFA;&#x7ACB;&#x6307;&#x5411;&#x5173;&#x7CFB;&#x5916;&#xFF0C;&#x8FD8;&#x89C4;&#x5B9A;&#x4E86;&#x5F53;&#x524D;Element&#x7684;&#x4E00;&#x4E9B;&#x5176;&#x5B83;&#x5C5E;&#x6027;&#x7684;&#x521B;&#x5EFA;&#x65F6;&#x673A;&#x548C;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Element&#x6700;&#x91CD;&#x8981;&#x7684;&#x64CD;&#x4F5C;&#x5C31;&#x662F;Element.updateChild&#x3002;
+&#x66F4;&#x5177;&#x4F53;&#x7684;&#x662F;Element.inflateWidget&#x65B9;&#x6CD5;&#xFF1B;&#x901A;&#x8FC7;&#x521B;&#x5EFA;&#x5B50;Widget&#x65B9;&#x5F0F;&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x533A;&#x5206;&#x4E86;&#x4E24;&#x5927;&#x7C7B;Element&#x548C;Widget: (StatelessElement, StatelessWidget)&#x548C;(StatefulElement, StatefulWidget)</p>
+<p>&#x6240;&#x8C13;&#x7684;Element&#x6811;&#x66F4;&#x50CF;&#x662F;&#x524D;&#x5411;&#x5355;&#x94FE;&#x8868;&#x7F51;&#xFF0C;&#x5355;&#x94FE;&#x8868;&#x6709;&#x5171;&#x540C;&#x7684;&#x8868;&#x5934;&#x3002;
+&#x7236;&#x7C7B;Element&#x4E0D;&#x6301;&#x6709;Element&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x800C;&#x662F;&#x901A;&#x8FC7;Element.visitChildren&#x628A;&#x904D;&#x5386;&#x64CD;&#x4F5C;&#x4EA4;&#x7ED9;&#x5177;&#x4F53;&#x7684;Element&#x5B50;&#x7C7B;&#x578B;&#x6765;&#x5B9E;&#x73B0;&#x3002;</p>
+<p>&#x4F46;&#x662F;RenderObject&#x5374;&#x50CF;&#x666E;&#x901A;&#x7684;&#x5355;&#x94FE;&#x8868;&#xFF0C;&#x56E0;&#x4E3A;&#x901A;&#x8FC7;mixin RenderObjectWithChildMixin<renderobject>&#x63D0;&#x4F9B;&#x7684;child, RenderObject&#x80FD;&#x591F;&#x76F4;&#x63A5;&#x904D;&#x5386;&#x5B50;&#x8282;&#x70B9;&#x3002;</renderobject></p>
+</blockquote>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; david 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-04-28 15:22:20
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1-Flutter图片加载.html" class="navigation navigation-prev " aria-label="Previous page: Flutter 图片加载">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3-Flutter 混合工程.html" class="navigation navigation-next " aria-label="Next page: Flutter 混合工程搭建">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Flutter 应用启动分析","level":"1.3","depth":1,"next":{"title":"Flutter 混合工程搭建","level":"1.4","depth":1,"path":"0-Flutter/3-Flutter 混合工程.md","ref":"0-Flutter/3-Flutter 混合工程.md","articles":[]},"previous":{"title":"Flutter 图片加载","level":"1.2","depth":1,"path":"0-Flutter/1-Flutter图片加载.md","ref":"0-Flutter/1-Flutter图片加载.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","prism","-highlight","copy-code-button","search-pro","-search","-lunr","expandable-chapters","splitter","-sharing","github-buttons","tbfed-pagefooter","anchor-navigation-ex","summary"],"styles":{"website":"./public-repertory/css/gitbook-configure.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy david 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"summary":{},"splitter":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"github-buttons":{"buttons":[{"user":"DavidZhong003","width":"160","type":"follow","count":true,"size":"small"}]},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"zhongshan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"david zhong 的文档库","language":"zh-hans","gitbook":"*","description":"zhongshan 的文档库. 里面包含了个人撰写的文章"},"file":{"path":"0-Flutter/2-Flutter 应用启动分析.md","mtime":"2020-04-28T07:22:20.309Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-28T08:17:14.512Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
